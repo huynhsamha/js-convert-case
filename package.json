@@ -1,0 +1,45 @@
+{
+  "name": "js-convert-case",
+  "version": "1.0.0",
+  "description": "convert-case the keys of an object",
+  "main": "index.js",
+  "scripts": {
+    "test": "node test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/huynhsamha/js-convert-case.git"
+  },
+  "keywords": [
+    "convert-case",
+    "js-convert-case",
+    "snake",
+    "underscore",
+    "underscore case",
+    "assign",
+    "extend",
+    "case",
+    "browser",
+    "browserify"
+  ],
+  "author": {
+    "name": "huynhsamha",
+    "email": "huynhsamha@gmail.com",
+    "url": "https://github.com/huynhsamha"
+  },
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/huynhsamha/js-convert-case/issues"
+  },
+  "homepage": "https://github.com/huynhsamha/js-convert-case#readme",
+  "dependencies": {
+    "js-camelcase": "^1.1.0",
+    "js-dotcase": "^1.0.0",
+    "js-headercase": "^1.0.0",
+    "js-pascalcase": "^1.0.0",
+    "js-pathcase": "^1.0.0",
+    "js-sentencecase": "^1.0.0",
+    "js-snakecase": "^1.1.0",
+    "js-textcase": "^1.0.0"
+  }
+}
