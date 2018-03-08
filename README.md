@@ -84,16 +84,16 @@ console.log(jsConvert.toUpperCase('param-case')); // PARAM-CASE
 
 ### Available Methods
 
-* [`toCamelCase`](#toCamelCase)
-* [`toSnakeCase`](#toSnakeCase)
-* [`toPascalCase`](#toPascalCase)
-* [`toDotCase`](#toDotCase)
-* [`toPathCase`](#toPathCase)
-* [`toTextCase`](#toTextCase)
-* [`toSentenceCase`](#toSentenceCase)
-* [`toHeaderCase`](#toHeaderCase)
-* [`toLowerCase`](#toLowerCase)
-* [`toUpperCase`](#toUpperCase)
+* [`toCamelCase`](#tocamelcase)
+* [`toSnakeCase`](#tosnakecase)
+* [`toPascalCase`](#topascalcase)
+* [`toDotCase`](#todotcase)
+* [`toPathCase`](#topathcase)
+* [`toTextCase`](#totextcase)
+* [`toSentenceCase`](#tosentencecase)
+* [`toHeaderCase`](#toheadercase)
+* [`toLowerCase`](#tolowercase)
+* [`toUpperCase`](#touppercase)
 
 
 
@@ -102,8 +102,6 @@ console.log(jsConvert.toUpperCase('param-case')); // PARAM-CASE
 
 [![NPM version](https://img.shields.io/npm/v/js-camelcase.svg?style=flat)](https://npmjs.org/package/js-camelcase)
 [![NPM downloads](https://img.shields.io/npm/dm/js-camelcase.svg?style=flat)](https://npmjs.org/package/js-camelcase)
-[![Build status](https://img.shields.io/travis/huynhsamha/js-camelcase.svg?style=flat)](https://travis-ci.org/huynhsamha/js-camelcase)
-[![Test coverage](https://img.shields.io/coveralls/huynhsamha/js-camelcase.svg?style=flat)](https://coveralls.io/r/huynhsamha/js-camelcase?branch=master)
 
 Return as a string with the separators denoted by having the next letter capitalized.
 
@@ -118,8 +116,6 @@ console.log(jsConvert.toCamelCase('param-case')); // paramCase
 
 [![NPM version](https://img.shields.io/npm/v/js-snakecase.svg?style=flat)](https://npmjs.org/package/js-snakecase)
 [![NPM downloads](https://img.shields.io/npm/dm/js-snakecase.svg?style=flat)](https://npmjs.org/package/js-snakecase)
-[![Build status](https://img.shields.io/travis/huynhsamha/js-snakecase.svg?style=flat)](https://travis-ci.org/huynhsamha/js-snakecase)
-[![Test coverage](https://img.shields.io/coveralls/huynhsamha/js-snakecase.svg?style=flat)](https://coveralls.io/r/huynhsamha/js-snakecase?branch=master)
 
 Return as a lower case, underscore separated string.
 
@@ -135,8 +131,6 @@ console.log(jsConvert.toSnakeCase('camelCase')); // camel_case
 
 [![NPM version](https://img.shields.io/npm/v/js-pascalcase.svg?style=flat)](https://npmjs.org/package/js-pascalcase)
 [![NPM downloads](https://img.shields.io/npm/dm/js-pascalcase.svg?style=flat)](https://npmjs.org/package/js-pascalcase)
-[![Build status](https://img.shields.io/travis/huynhsamha/js-pascalcase.svg?style=flat)](https://travis-ci.org/huynhsamha/js-pascalcase)
-[![Test coverage](https://img.shields.io/coveralls/huynhsamha/js-pascalcase.svg?style=flat)](https://coveralls.io/r/huynhsamha/js-pascalcase?branch=master)
 
 Return as a string denoted in the same fashion as `camelCase`, but with the first letter also capitalized.
 
@@ -151,8 +145,6 @@ console.log(jsConvert.toPascalCase('param-case')); // ParamCase
 
 [![NPM version](https://img.shields.io/npm/v/js-dotcase.svg?style=flat)](https://npmjs.org/package/js-dotcase)
 [![NPM downloads](https://img.shields.io/npm/dm/js-dotcase.svg?style=flat)](https://npmjs.org/package/js-dotcase)
-[![Build status](https://img.shields.io/travis/huynhsamha/js-dotcase.svg?style=flat)](https://travis-ci.org/huynhsamha/js-dotcase)
-[![Test coverage](https://img.shields.io/coveralls/huynhsamha/js-dotcase.svg?style=flat)](https://coveralls.io/r/huynhsamha/js-dotcase?branch=master)
 
 Return as a lower case, period separated string.
 
@@ -169,8 +161,6 @@ console.log(jsConvert.toDotCase('Title Case')); // title.case
 
 [![NPM version](https://img.shields.io/npm/v/js-pathcase.svg?style=flat)](https://npmjs.org/package/js-pathcase)
 [![NPM downloads](https://img.shields.io/npm/dm/js-pathcase.svg?style=flat)](https://npmjs.org/package/js-pathcase)
-[![Build status](https://img.shields.io/travis/huynhsamha/js-pathcase.svg?style=flat)](https://travis-ci.org/huynhsamha/js-pathcase)
-[![Test coverage](https://img.shields.io/coveralls/huynhsamha/js-pathcase.svg?style=flat)](https://coveralls.io/r/huynhsamha/js-pathcase?branch=master)
 
 Return as a lower case, slash separated string.
 
@@ -184,8 +174,6 @@ console.log(jsConvert.toPathCase('camelCase')); // camel/case
 
 [![NPM version](https://img.shields.io/npm/v/js-textcase.svg?style=flat)](https://npmjs.org/package/js-textcase)
 [![NPM downloads](https://img.shields.io/npm/dm/js-textcase.svg?style=flat)](https://npmjs.org/package/js-textcase)
-[![Build status](https://img.shields.io/travis/huynhsamha/js-textcase.svg?style=flat)](https://travis-ci.org/huynhsamha/js-textcase)
-[![Test coverage](https://img.shields.io/coveralls/huynhsamha/js-textcase.svg?style=flat)](https://coveralls.io/r/huynhsamha/js-textcase?branch=master)
 
 Return the string without any casing (lower case, space separated).
 
@@ -202,8 +190,6 @@ console.log(jsConvert.toTextCase('camelCase')); // camel case
 
 [![NPM version](https://img.shields.io/npm/v/js-sentencecase.svg?style=flat)](https://npmjs.org/package/js-sentencecase)
 [![NPM downloads](https://img.shields.io/npm/dm/js-sentencecase.svg?style=flat)](https://npmjs.org/package/js-sentencecase)
-[![Build status](https://img.shields.io/travis/huynhsamha/js-sentencecase.svg?style=flat)](https://travis-ci.org/huynhsamha/js-sentencecase)
-[![Test coverage](https://img.shields.io/coveralls/huynhsamha/js-sentencecase.svg?style=flat)](https://coveralls.io/r/huynhsamha/js-sentencecase?branch=master)
 
 Return as a lower case, space separated string with the first letter upper case.
 
@@ -217,8 +203,6 @@ console.log(jsConvert.toSentenceCase('camelCase')); // Camel case
 
 [![NPM version](https://img.shields.io/npm/v/js-headercase.svg?style=flat)](https://npmjs.org/package/js-headercase)
 [![NPM downloads](https://img.shields.io/npm/dm/js-headercase.svg?style=flat)](https://npmjs.org/package/js-headercase)
-[![Build status](https://img.shields.io/travis/huynhsamha/js-headercase.svg?style=flat)](https://travis-ci.org/huynhsamha/js-headercase)
-[![Test coverage](https://img.shields.io/coveralls/huynhsamha/js-headercase.svg?style=flat)](https://coveralls.io/r/huynhsamha/js-headercase?branch=master)
 
 Return as a space separated string with the first character of every word upper cased.
 
@@ -230,7 +214,7 @@ console.log(jsConvert.toHeaderCase('param-case')); // Param Case
 
 
 
-#### toLowerCase
+#### [toLowerCase](#)
 
 Similar to `String.prototype.toLowerCase()`
 
@@ -239,7 +223,7 @@ console.log(jsConvert.toLowerCase('Title Case')); // title case
 ```
 
 
-#### toUpperCase
+#### [toUpperCase](#)
 
 Similar to `String.prototype.toUpperCase()`
 
