@@ -3,7 +3,7 @@
 [![NPM version][npm-image]][npm-url]
 [![NPM downloads][downloads-image]][downloads-url]
 
-JavaScript Convert strings between camelCase, PascalCase, Title Case, snake_case, lowercase, UPPERCASE, Header Case and more. Use for both node.js and browser
+JavaScript Convert string between cases (camelCase, snake_case, PascalCase, dot.case, path/case, text case, Sentence case, Header Case, UPPERCASE, lowercase)
 
 **Methods are also available on npm as an individual packages.**
 
@@ -170,6 +170,8 @@ console.log(jsConvert.toPathCase('camelCase')); // camel/case
 
 
 
+
+
 #### [toTextCase](https://github.com/huynhsamha/js-textcase)
 
 [![NPM version](https://img.shields.io/npm/v/js-textcase.svg?style=flat)](https://npmjs.org/package/js-textcase)
@@ -196,6 +198,8 @@ Return as a lower case, space separated string with the first letter upper case.
 ```js
 console.log(jsConvert.toSentenceCase('camelCase')); // Camel case
 ```
+
+
 
 
 
@@ -308,7 +312,7 @@ console.log(jsConvert.toHeaderCase(str)); // => 'Hello World 123 456 L Sn Ca Cm 
 
 
 
-## Related
+## Dependencies
 + [js-camelcase](https://github.com/huynhsamha/js-camelcase)
 + [js-snakecase](https://github.com/huynhsamha/js-snakecase)
 + [js-pascalcase](https://github.com/huynhsamha/js-pascalcase)
@@ -317,6 +321,8 @@ console.log(jsConvert.toHeaderCase(str)); // => 'Hello World 123 456 L Sn Ca Cm 
 + [js-textcase](https://github.com/huynhsamha/js-textcase)
 + [js-sentencecase](https://github.com/huynhsamha/js-sentencecase)
 + [js-headercase](https://github.com/huynhsamha/js-headercase)
+
+
 
 
 [npm-image]: https://img.shields.io/npm/v/js-convert-case.svg?style=flat
