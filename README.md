@@ -7,6 +7,8 @@ JavaScript Convert string between cases (camelCase, snake_case, PascalCase, dot.
 
 **Methods are also available on npm as an individual packages.**
 
+View [Demo on GitHub here](https://huynhsamha.github.io/js-convert-case/).
+
 ## Installation
 
 `$ npm install --save js-convert-case`
