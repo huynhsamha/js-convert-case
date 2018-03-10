@@ -2,7 +2,7 @@
 html,
 body {
     width: 100%;
-    font-size: 14px;
+    font-size: 16px;
 }
 
 body {
@@ -15,8 +15,7 @@ a {
 }
 
 .jsc-header {
-    background-color: darken($color-primary, 5%);
-    font-size: 1.2rem;
+    background-color: $color-hover-primary;
     z-index: 1000;
     .jsc-brand {
         font-weight: 900;
@@ -39,12 +38,10 @@ a {
     border-radius: 0px;
     padding-top: 30px;
     padding-bottom: 30px;
-		font-size: 1.2rem;
 }
 
 .jsc-footer {
-    margin-top: 30px;
-    padding: 15px 0;
+    padding: 25px 0;
     background-color: $color-primary;
     color: white;
     font-weight: 400;
@@ -85,7 +82,6 @@ a {
         textarea {
             width: 100%;
             padding: 10px 15px;
-            font-size: 1.2rem;
             border: 2px solid $color-primary;
             border-bottom-left-radius: 8px;
             border-bottom-right-radius: 8px;
@@ -109,7 +105,7 @@ a {
         color: white;
         padding: 4px 15px;
         color: white;
-				border-radius: 5px;
+        border-radius: 5px;
         .arrow-down {
             position: absolute;
             bottom: -6px;
@@ -118,6 +114,76 @@ a {
             border-left: 6px solid transparent;
             border-right: 6px solid transparent;
             border-top: 6px solid rgb(0, 0, 0);
+        }
+    }
+}
+
+.jsc-a-primary {
+	color: darken($color-primary, 15%);
+	&:hover {
+		color: $color-primary;
+	}
+}
+
+.jsc-input-group {
+    $border-radius: 8px;
+    margin: 10px 0;
+    input {
+        width: 70%;
+        padding: 6px 15px;
+        outline: none;
+        border: 2px solid $color-primary;
+        border-top-left-radius: $border-radius;
+        border-bottom-left-radius: $border-radius;
+    }
+    .input-group-append {
+        width: 30%;
+        button {
+            width: 100%;
+            outline: none;
+            background-color: $color-primary !important;
+            border: 2px solid $color-primary;
+            border-left-width: 0px;
+            color: white;
+            cursor: pointer;
+            background-color: white;
+            border-top-right-radius: $border-radius;
+            border-bottom-right-radius: $border-radius;
+            font-weight: 900;
+            transition-duration: 0.1s;
+            &:hover {
+                background-color: $color-hover-primary !important;
+                border-color: $color-hover-primary
+            }
+            i {
+                margin-right: 6px;
+            }
+            position: relative;
+            .popup {
+                font-weight: 400;
+                position: absolute;
+								left: 50%;
+								height: 30px;
+								line-height: 30px;
+                transform: translateX(-50%);
+								top: -38px;
+								padding-left: 20px;
+								padding-right: 20px;
+                background-color: black;
+                color: white;
+                border-radius: 5px;
+                .arrow-down {
+                    position: absolute;
+										bottom: -6px;
+										left: 50%;
+										transform: translateX(-50%);
+                    width: 0;
+                    height: 0;
+                    border-left: 6px solid transparent;
+                    border-right: 6px solid transparent;
+                    border-top: 6px solid rgb(0, 0, 0);
+                }
+            }
         }
     }
 }

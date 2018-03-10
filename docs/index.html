@@ -5,18 +5,25 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
   <title>Convert Case Online Free</title>
 
   <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
 
+  <!-- Google Font -->
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Quicksand:400,500,700">
+  <!-- Font Awesome -->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <!-- Bootstrap -->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+  <!-- styles -->
   <link rel="stylesheet" href="./css/style.min.css">
+
 </head>
 
 <body ng-controller="MainController">
 
+  <!-- Header -->
   <header>
     <nav class="navbar navbar-expand-md navbar-dark jsc-header">
       <a class="navbar-brand jsc-brand" href="#">
@@ -35,10 +42,10 @@
             </a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="./get-started">Get Started</a>
+            <a class="nav-link" href="./get-started.html">Get Started</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="./example">Example</a>
+            <a class="nav-link" href="./api.html">API</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="#download">Download</a>
@@ -65,6 +72,11 @@
   </header>
 
 
+
+
+
+
+  <!--Jumbotron  -->
   <div class="jumbotron jsc-jumbotron">
     <h1 class="display-4">jsConvert</h1>
     <p class="lead">jsConvert is a simple JavaScript library for string between cases (camelCase, snake_case, PascalCase, dot.case, path/case,
@@ -72,41 +84,40 @@
     <p>Using for both Node.JS and Browser. Available on NPM.</p>
   </div>
 
-  <div class="container-fluid">
-    <div class="row">
-      <div class="col-12 col-lg-6">
-        <div class="jsc-page-edit">
-          <div class="jsc-controll text-right">
-            <button ng-click="onReset()">
-              <i class="fa fa-cog"></i> Reset
+
+
+
+
+  <!-- Each Example -->
+  <div class="container">
+    <div class="row" ng-repeat="_ in converts track by $index" ng-cloak>
+      <div class="col-12">
+        <h5 class="mt-2">
+          <a href="{{'./api.html' + _.target}}" class="jsc-a-primary" target="_blank">
+            {{_.name}}
+          </a>
+        </h5>
+      </div>
+      <div class="col-12 col-lg-6 col-md-6">
+        <div class="input-group jsc-input-group">
+          <input type="text" ng-model="_.data">
+          <div class="input-group-append">
+            <button type="button" ng-click="_.data = ''">
+              <i class="fa fa-cog"></i> Clear
             </button>
-          </div>
-          <div class="jsc-sheet">
-            <textarea rows="10" ng-model="origin" ng-change="onChangeOrigin()"></textarea>
           </div>
         </div>
       </div>
-      <div class="col-12 col-lg-6">
-        <div class="jsc-page-edit">
-          <div class="jsc-controll">
-            <button ng-repeat="_ in converts track by $index" ng-click="onChangeConvert($index)" class="{{convertActive == $index ? 'active' : ''}}">
-              {{_.name}}
-            </button>
-            <!-- <div class="text-right">
-              <button>
-                <i class="fa fa-cog"></i> Reset
-              </button>
-            </div> -->
-            <button type="button" ngclipboard data-clipboard-target="#dest" id="copy" data-toggle="tooltip" data-placement="bottom" ng-click="onCopyDest()"
-              ng-mouseleave="onLeaveCopy()">
+      <div class="col-12 col-lg-6 col-md-6">
+        <div class="input-group jsc-input-group">
+          <input type="text" readonly select-on-click ng-value="_.func(_.data)" id="{{'dest-' + $index}}">
+          <div class="input-group-append">
+            <button type="button" ngclipboard data-clipboard-target="{{'#dest-' + $index}}" ng-click="_.showCopied = true" ng-mouseleave="_.showCopied = false">
               <i class="fa fa-copy"></i> Copy
-              <span class="popup" ng-show="copied">Copied
+              <span class="popup" ng-show="_.showCopied">Copied
                 <div class="arrow-down"></div>
               </span>
             </button>
-          </div>
-          <div class="jsc-sheet">
-            <textarea rows="10" readonly ng-model="dest" id="dest" select-on-click></textarea>
           </div>
         </div>
       </div>
@@ -114,7 +125,13 @@
   </div>
 
 
-  <footer>
+
+
+
+
+
+  <!-- Footer -->
+  <footer style="margin-top: 60px">
     <div class="text-center jsc-footer">
       <div class="py-1">
         <i class="fa fa-copyright"></i> Copyright 2018 - Created By
@@ -148,15 +165,23 @@
 
 
 
+
+  <!-- jQuery -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <!-- Bootstrap -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+  <!-- AngularJS -->
   <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
   <script src="https://cdn.rawgit.com/zenorocha/clipboard.js/master/dist/clipboard.min.js"></script>
   <script src="./lib/ngclipboard/dist/ngclipboard.min.js"></script>
+  <!-- jsConvert -->
   <script src="./lib/jsConvert/dist/js-convert-case.min.js"></script>
+  <!-- scripts -->
+  <script src="./js/script.min.js"></script>
   <script src="./js/config.js"></script>
   <script src="./js/index.js"></script>
+
 </body>
 
 </html>

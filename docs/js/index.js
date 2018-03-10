@@ -4,43 +4,20 @@
 
   app.controller('MainController', ['$scope', ($scope) => {
 
-    $scope.origin = '';
-    $scope.dest = '';
-    $scope.convertActive = 0;
     $scope.converts = [
-      { name: 'camelCase', func: jsConvert.toCamelCase },
-      { name: 'snake_Case', func: jsConvert.toSnakeCase },
-      { name: 'PascalCase', func: jsConvert.toPascalCase },
-      { name: 'dot.case', func: jsConvert.toDotCase },
-      { name: 'path/case', func: jsConvert.toPathCase },
-      { name: 'text case', func: jsConvert.toTextCase },
-      { name: 'Sentence case', func: jsConvert.toSentenceCase },
-      { name: 'Header Case', func: jsConvert.toHeaderCase },
-      { name: 'UPPERCASE', func: jsConvert.toUpperCase },
-      { name: 'lowercase', func: jsConvert.toLowerCase }
+      { name: 'camelCase', func: jsConvert.toCamelCase, target: '#camel-case' },
+      { name: 'snake_Case', func: jsConvert.toSnakeCase, target: '#snake-case' },
+      { name: 'PascalCase', func: jsConvert.toPascalCase, target: '#pascal-case' },
+      { name: 'dot.case', func: jsConvert.toDotCase, target: '#dot-case' },
+      { name: 'path/case', func: jsConvert.toPathCase, target: '#path-case' },
+      { name: 'text case', func: jsConvert.toTextCase, target: '#text-case' },
+      { name: 'Sentence case', func: jsConvert.toSentenceCase, target: '#sentence-case' },
+      { name: 'Header Case', func: jsConvert.toHeaderCase, target: '#header-case' },
+      { name: 'UPPERCASE', func: jsConvert.toUpperCase, target: '#upper-case' },
+      { name: 'lowercase', func: jsConvert.toLowerCase, target: '#lower-case' }
     ]
 
-    $scope.onChangeOrigin = () => {
-      $scope.dest = $scope.converts[$scope.convertActive].func($scope.origin);
-    }
-
-    $scope.onChangeConvert = (index) => {
-      $scope.convertActive = index;
-      $scope.dest = $scope.converts[index].func($scope.origin);
-    }
-
-    $scope.onReset = () => {
-      $scope.origin = '';
-      $scope.dest = '';
-    }
-
-    $scope.onCopyDest = () => {
-      $scope.copied = true;
-    }
-
-    $scope.onLeaveCopy = () => {
-      $scope.copied = false;
-    }
+    $scope.converts.forEach((_) => { _.data = 'param-case'; _.showCopied = false });
 
   }]);
 
