@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="jsConvertApp" ng-cloak>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+  <title>Convert Case Online Free</title>
+
+  <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+
+  <!-- Google Font -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Quicksand:400,500,700">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <!-- Bootstrap -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+  <!-- styles -->
+  <link rel="stylesheet" href="./css/style.min.css">
+
+</head>
+
+<body ng-controller="MainController">
+
+  <!-- Header -->
+  <header>
+    <nav class="navbar navbar-expand-md navbar-dark jsc-header">
+      <a class="navbar-brand jsc-brand" href="#">
+        <img src="favicon.ico" width="30" height="30" class="d-inline-block align-top" alt=""> jsConvert
+      </a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-container" aria-controls="navbar-container"
+        aria-expanded="false" aria-label="Toggle navigation">
+        <span>
+          <i class="fa fa-bars"></i>
+        </span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbar-container">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="./index.html">Convert Online
+              <span class="sr-only">(current)</span>
+            </a>
+          </li>
+          <li class="nav-item active">
+            <a class="nav-link" href="#">Get Started</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="./api.html">API</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="./download/js-convert-case.zip" download>Download</a>
+          </li>
+        </ul>
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+            <a class="nav-link jsc-link" href="https://github.com/huynhsamha/js-convert-case" target="_blank">
+              <img src="./img/github.png" alt="GitHub" height="25">
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link jsc-link" href="https://www.npmjs.com/package/js-convert-case" target="_blank">
+              <img src="./img/npm.png" alt="NPM" height="20">
+            </a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+
+
+
+
+
+
+  <!--Jumbotron  -->
+  <div class="jumbotron jsc-jumbotron position-relative">
+    <h1 class="display-4">
+      <i class="fa fa-play"></i> Get Started
+    </h1>
+    <p class="lead text-justify">Easy ways to get jsConvert onto your website.</p>
+    <div class="jsc-background"></div>
+  </div>
+
+
+
+
+
+
+  <div class="container jsc-first-block">
+
+    <!-- introduction -->
+    <div class="row">
+      <div class="col-12">
+        <h1>
+          <a href="#introduction" class="">
+            Introduction
+          </a>
+        </h1>
+      </div>
+      <div class="col-12 my-3">
+        <p class="lead text-justify">
+          jsConvert is a simple JavaScript library for string between cases (camelCase, snake_case, PascalCase, dot.case, path/case,
+          text case, Sentence case, Header Case, UPPERCASE, lowercase).
+        </p>
+        <p class="lead">
+          Using for both Node.JS and Browser. Available on NPM.
+        </p>
+      </div>
+    </div>
+
+
+
+    <!-- quickstart -->
+    <div class="row">
+      <div class="col-12">
+        <hr>
+        <h1>
+          <a href="#quickstart">
+            Quickstart
+          </a>
+        </h1>
+        <!-- github -->
+        <div class="col-12 my-3">
+          <h3 class="mb-3">
+            <a href="#download">
+              1. Download from GitHub
+            </a>
+          </h3>
+          jsConvert is available on
+          <a href="https://github.com/huynhsamha/js-convert-case" target="_blank">GitHub
+            <i class="fa fa-external-link"></i>
+          </a>. You can download from my repository.
+          <div class="text-center mt-3">
+            <a href="https://github.com/huynhsamha/js-convert-case" target="_blank">
+              <button class="btn btn-success px-5">
+                Go to GitHub
+                <i class="fa fa-external-link ml-2"></i>
+              </button>
+            </a>
+          </div>
+        </div>
+        <!-- directly -->
+        <div class="col-12 my-3">
+          <h3 class="mb-3">
+            <a href="#download">
+              2. Download directly
+            </a>
+          </h3>
+          You can download source code directly
+          <a href="./download/js-convert-case.zip" download>here</a>.
+          <div class="text-center mt-3">
+            <a href="./download/js-convert-case.zip" download>
+              <button class="btn btn-success px-5">
+                Download
+                <i class="fa fa-download ml-2"></i>
+              </button>
+            </a>
+          </div>
+        </div>
+        <!-- NPM -->
+        <div class="col-12 my-3">
+          <h3 class="mb-3">
+            <a href="#download">
+              3. Installation via NPM
+            </a>
+          </h3>
+          You can also install package via NPM
+          <a href="https://www.npmjs.com/package/js-convert-case" target="_blank">here</a>.
+          <div class="text-center my-3">
+            <a href="https://www.npmjs.com/package/js-convert-case" target="_blank"></a>
+            <button class="btn btn-success px-5">
+              Go to NPM
+              <i class="fa fa-external-link ml-2"></i>
+            </button>
+            </a>
+          </div>
+          <script src="https://gist.github.com/huynhsamha/1f6ad44516f677d468b26cd98c3b5c8d.js"></script>
+        </div>
+      </div>
+    </div>
+
+
+    <!-- Usage -->
+    <div class="row">
+      <div class="col-12">
+        <hr>
+        <h1>
+          <a href="#usage">
+            Usage
+          </a>
+        </h1>
+
+        <!-- browser -->
+        <div class="col-12 my-3">
+          <h3 class="mb-3">
+            <a href="#include-website">
+              1. Simple include onto website
+            </a>
+          </h3>
+          <script src="https://gist.github.com/huynhsamha/18acab759595035812ce8128a63bd9aa.js"></script>
+        </div>
+
+        <!-- webpack or nodejs -->
+        <div class="col-12 my-5">
+          <h3 class="mb-3">
+            <a href="#include-website">
+              2. Usage with webpack or browserify
+            </a>
+          </h3>
+          <script src="https://gist.github.com/huynhsamha/404e41965f39889647e3e90876761ea9.js"></script>
+        </div>
+      </div>
+    </div>
+
+
+    <!-- Example -->
+    <div class="row">
+      <div class="col-12">
+        <hr>
+        <h1>
+          <a href="#example">
+            Example
+          </a>
+        </h1>
+        <div class="col-12 mt-3">
+          <script src="https://gist.github.com/huynhsamha/b65ed8037395476231afaab04c93216c.js"></script>
+        </div>
+      </div>
+    </div>
+
+
+  </div>
+
+
+
+
+
+
+  <!-- Footer -->
+  <footer style="margin-top: 60px">
+    <div class="text-center jsc-footer">
+      <div class="py-1">
+        <i class="fa fa-copyright"></i> Copyright 2018 - Created By
+        <a class="jsc-link" href="https://github.com/huynhsamha" target="_blank">
+          <span>huynhsamha
+            <i class="fa fa-external-link"></i>.
+          </span>
+        </a>
+      </div>
+      <div class="py-1">
+        <span>
+          Source available on
+          <a class="jsc-link" href="https://github.com/huynhsamha/js-convert-case" target="_blank">
+            <span>GitHub
+              <i class="fa fa-github"></i>.
+            </span>
+          </a>
+        </span>
+        <span>
+          Package available on
+          <a class="jsc-link" href="https://www.npmjs.com/package/js-convert-case" target="_blank">
+            <span>NPM
+              <i class="fa fa-external-link"></i>.
+            </span>
+          </a>
+        </span>
+      </div>
+    </div>
+  </footer>
+
+
+
+
+
+  <!-- jQuery -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <!-- Bootstrap -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+  <!-- AngularJS -->
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+  <script src="https://cdn.rawgit.com/zenorocha/clipboard.js/master/dist/clipboard.min.js"></script>
+  <script src="./lib/ngclipboard/dist/ngclipboard.min.js"></script>
+  <!-- jsConvert -->
+  <script src="./lib/jsConvert/dist/js-convert-case.min.js"></script>
+  <!-- scripts -->
+  <!-- <script src="./js/get-started.min.js"></script> -->
+  <script src="./js/get-started.js"></script>
+
+</body>
+
+</html>

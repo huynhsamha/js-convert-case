@@ -31,7 +31,9 @@
       </a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-container" aria-controls="navbar-container"
         aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
+        <span>
+          <i class="fa fa-bars"></i>
+        </span>
       </button>
 
       <div class="collapse navbar-collapse" id="navbar-container">
@@ -48,22 +50,20 @@
             <a class="nav-link" href="./api.html">API</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#download">Download</a>
+            <a class="nav-link" href="./download/js-convert-case.zip" download>
+              Download
+            </a>
           </li>
         </ul>
         <ul class="navbar-nav ml-auto">
           <li class="nav-item">
             <a class="nav-link jsc-link" href="https://github.com/huynhsamha/js-convert-case" target="_blank">
-              <span>GitHub
-                <i class="fa fa-external-link"></i>
-              </span>
+              <img src="./img/github.png" alt="GitHub" height="25">
             </a>
           </li>
           <li class="nav-item">
             <a class="nav-link jsc-link" href="https://www.npmjs.com/package/js-convert-case" target="_blank">
-              <span>NPM
-                <i class="fa fa-external-link"></i>
-              </span>
+              <img src="./img/npm.png" alt="NPM" height="20">
             </a>
           </li>
         </ul>
@@ -77,11 +77,15 @@
 
 
   <!--Jumbotron  -->
-  <div class="jumbotron jsc-jumbotron">
-    <h1 class="display-4">jsConvert</h1>
-    <p class="lead">jsConvert is a simple JavaScript library for string between cases (camelCase, snake_case, PascalCase, dot.case, path/case,
+  <div class="jumbotron jsc-jumbotron position-relative">
+    <h1 class="display-4">
+      <i class="fa fa-list-ul"></i>
+      jsConvert
+    </h1>
+    <p class="lead text-justify">jsConvert is a simple JavaScript library for string between cases (camelCase, snake_case, PascalCase, dot.case, path/case,
       text case, Sentence case, Header Case, UPPERCASE, lowercase).</p>
     <p>Using for both Node.JS and Browser. Available on NPM.</p>
+    <div class="jsc-background height-500"></div>
   </div>
 
 
@@ -89,11 +93,11 @@
 
 
   <!-- Each Example -->
-  <div class="container">
+  <div class="container jsc-first-block">
     <div class="row" ng-repeat="_ in converts track by $index" ng-cloak>
       <div class="col-12">
         <h5 class="mt-2">
-          <a href="{{'./api.html' + _.target}}" class="jsc-a-primary" target="_blank">
+          <a href="{{'./api.html' + _.target}}" class="" target="_blank">
             {{_.name}}
           </a>
         </h5>
@@ -146,7 +150,7 @@
           Source available on
           <a class="jsc-link" href="https://github.com/huynhsamha/js-convert-case" target="_blank">
             <span>GitHub
-              <i class="fa fa-external-link"></i>.
+              <i class="fa fa-github"></i>.
             </span>
           </a>
         </span>
@@ -178,8 +182,8 @@
   <!-- jsConvert -->
   <script src="./lib/jsConvert/dist/js-convert-case.min.js"></script>
   <!-- scripts -->
-  <script src="./js/index.min.js"></script>
-  <!-- <script src="./js/index.js"></script> -->
+  <!-- <script src="./js/index.min.js"></script> -->
+  <script src="./js/index.js"></script>
 
 </body>
 
