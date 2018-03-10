@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
-  <title>Convert Case Online</title>
+  <title>Examples - jsConvert</title>
 
   <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
 
@@ -38,8 +38,8 @@
 
       <div class="collapse navbar-collapse" id="navbar-container">
         <ul class="navbar-nav mr-auto">
-          <li class="nav-item active">
-            <a class="nav-link active" href="#">Convert Online
+          <li class="nav-item">
+            <a class="nav-link" href="./index.html">Convert Online
               <span class="sr-only">(current)</span>
             </a>
           </li>
@@ -49,13 +49,11 @@
           <li class="nav-item">
             <a class="nav-link" href="./api.html">API</a>
           </li>
-          <li class="nav-item">
-            <a class="nav-link" href="./examples.html">Examples</a>
+          <li class="nav-item active">
+            <a class="nav-link" href="#">Examples</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="./download/js-convert-case.zip" download>
-              Download
-            </a>
+            <a class="nav-link" href="./download/js-convert-case.zip" download>Download</a>
           </li>
         </ul>
         <ul class="navbar-nav ml-auto">
@@ -82,54 +80,33 @@
   <!--Jumbotron  -->
   <div class="jumbotron jsc-jumbotron position-relative">
     <h1 class="display-4">
-      <i class="fa fa-list-ul"></i>
-      jsConvert
+      <i class="fa fa-cubes"></i> Examples
     </h1>
-    <p class="lead text-justify">jsConvert is a simple JavaScript library for string between cases (camelCase, snake_case, PascalCase, dot.case, path/case,
-      text case, Sentence case, Header Case, UPPERCASE, lowercase).</p>
-    <p>Using for both Node.JS and Browser. Available on NPM.</p>
-    <div class="jsc-background height-500"></div>
+    <p class="lead text-justify">From simple to complicated examples.</p>
+    <div class="jsc-background"></div>
   </div>
 
 
 
 
 
-  <!-- Each Example -->
   <div class="container jsc-first-block">
-    <div class="row" ng-repeat="_ in converts track by $index" ng-cloak>
-      <div class="col-12">
-        <h5 class="mt-2">
-          <a href="{{'./api.html#' + _.target}}" target="_blank" ng-cloak>
-            {{_.name}}
-          </a>
-        </h5>
-      </div>
-      <div class="col-12 col-lg-6 col-md-6">
-        <div class="input-group jsc-input-group">
-          <input type="text" ng-cloak ng-model="_.data">
-          <div class="input-group-append">
-            <button type="button" ng-cloak ng-click="_.data = ''">
-              <i class="fa fa-cog"></i> Clear
-            </button>
-          </div>
-        </div>
-      </div>
-      <div class="col-12 col-lg-6 col-md-6">
-        <div class="input-group jsc-input-group">
-          <input type="text" ng-cloak readonly select-on-click ng-value="_.func(_.data)" id="{{'dest-' + $index}}">
-          <div class="input-group-append">
-            <button type="button" ngclipboard data-clipboard-target="{{'#dest-' + $index}}" ng-click="_.showCopied = true" ng-mouseleave="_.showCopied = false">
-              <i class="fa fa-copy"></i> Copy
-              <span class="popup" ng-cloak ng-show="_.showCopied">Copied
-                <div class="arrow-down"></div>
-              </span>
-            </button>
-          </div>
-        </div>
-      </div>
+
+    <div class="col-12">
+
+      <h4 class="mt-3 mb-4">1. Basic Examples</h4>
+      <script src="https://gist.github.com/huynhsamha/5e43db609fd24bec2a697ccd371e7b58.js"></script>
+
+      <h4 class="mt-5 mb-4">2. Specific values</h4>
+      <script src="https://gist.github.com/huynhsamha/056c509f048864c8bb487926ee5cc5dd.js"></script>
+
+      <h4 class="mt-5 mb-4">3. Complicated Examples</h4>
+      <script src="https://gist.github.com/huynhsamha/73da96fca088706c033e7924022b0e01.js"></script>
+
     </div>
+
   </div>
+
 
 
 
@@ -185,8 +162,8 @@
   <!-- jsConvert -->
   <script src="./lib/jsConvert/dist/js-convert-case.min.js"></script>
   <!-- scripts -->
-  <script src="./js/index.min.js"></script>
-  <!-- <script src="./js/index.js"></script> -->
+  <script src="./js/get-started.min.js"></script>
+  <!-- <script src="./js/api.js"></script> -->
 
 </body>
 
