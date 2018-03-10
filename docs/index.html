@@ -100,9 +100,9 @@
       </div>
       <div class="col-12 col-lg-6 col-md-6">
         <div class="input-group jsc-input-group">
-          <input type="text" ng-model="_.data">
+          <input type="text" ng-cloak ng-model="_.data">
           <div class="input-group-append">
-            <button type="button" ng-click="_.data = ''">
+            <button type="button" ng-cloak ng-click="_.data = ''">
               <i class="fa fa-cog"></i> Clear
             </button>
           </div>
@@ -110,11 +110,11 @@
       </div>
       <div class="col-12 col-lg-6 col-md-6">
         <div class="input-group jsc-input-group">
-          <input type="text" readonly select-on-click ng-value="_.func(_.data)" id="{{'dest-' + $index}}">
+          <input type="text" ng-cloak readonly select-on-click ng-value="_.func(_.data)" id="{{'dest-' + $index}}">
           <div class="input-group-append">
             <button type="button" ngclipboard data-clipboard-target="{{'#dest-' + $index}}" ng-click="_.showCopied = true" ng-mouseleave="_.showCopied = false">
               <i class="fa fa-copy"></i> Copy
-              <span class="popup" ng-show="_.showCopied">Copied
+              <span class="popup" ng-cloak ng-show="_.showCopied">Copied
                 <div class="arrow-down"></div>
               </span>
             </button>
@@ -178,9 +178,8 @@
   <!-- jsConvert -->
   <script src="./lib/jsConvert/dist/js-convert-case.min.js"></script>
   <!-- scripts -->
-  <script src="./js/script.min.js"></script>
-  <script src="./js/config.js"></script>
-  <script src="./js/index.js"></script>
+  <script src="./js/index.min.js"></script>
+  <!-- <script src="./js/index.js"></script> -->
 
 </body>
 
