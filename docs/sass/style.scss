@@ -1,0 +1,123 @@
+@import './_variables.scss';
+html,
+body {
+    width: 100%;
+    font-size: 14px;
+}
+
+body {
+    font-family: 'Quicksand', sans-serif;
+    font-weight: 500;
+}
+
+a {
+    text-decoration: none !important;
+}
+
+.jsc-header {
+    background-color: darken($color-primary, 5%);
+    font-size: 1.2rem;
+    z-index: 1000;
+    .jsc-brand {
+        font-weight: 900;
+        img {
+            margin-right: 10px;
+        }
+        padding-right: 15px;
+    }
+    .jsc-link {
+        color: white !important;
+        i {
+            margin-left: 3px;
+        }
+    }
+}
+
+.jsc-jumbotron {
+    background-color: $color-primary;
+    color: white;
+    border-radius: 0px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+		font-size: 1.2rem;
+}
+
+.jsc-footer {
+    margin-top: 30px;
+    padding: 15px 0;
+    background-color: $color-primary;
+    color: white;
+    font-weight: 400;
+    a {
+        font-weight: 900;
+        color: white !important;
+    }
+}
+
+.jsc-page-edit {
+    .jsc-controll {
+        width: 100%;
+        overflow-x: auto;
+        button {
+            border: 2px solid $color-primary;
+            border-bottom: none;
+            background-color: white;
+            padding: 5px 12px;
+            cursor: pointer;
+            outline: none;
+            transition-duration: 0.1s;
+            &:hover,
+            &:active,
+            &.active {
+                background-color: $color-primary;
+                color: white;
+                outline: none;
+            }
+            &.active {
+                font-weight: 900;
+            }
+            border-radius: 0px;
+            border-top-left-radius: 8px;
+            border-top-right-radius: 8px;
+        }
+    }
+    .jsc-sheet {
+        textarea {
+            width: 100%;
+            padding: 10px 15px;
+            font-size: 1.2rem;
+            border: 2px solid $color-primary;
+            border-bottom-left-radius: 8px;
+            border-bottom-right-radius: 8px;
+            outline: none;
+        }
+    }
+}
+
+.jsc-popup {
+    position: absolute;
+    ;
+}
+
+#copy {
+    position: relative;
+    .popup {
+        position: absolute;
+        right: 0;
+        top: -30px;
+        background-color: black;
+        color: white;
+        padding: 4px 15px;
+        color: white;
+				border-radius: 5px;
+        .arrow-down {
+            position: absolute;
+            bottom: -6px;
+            width: 0;
+            height: 0;
+            border-left: 6px solid transparent;
+            border-right: 6px solid transparent;
+            border-top: 6px solid rgb(0, 0, 0);
+        }
+    }
+}

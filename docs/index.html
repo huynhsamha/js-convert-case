@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="jsConvertApp" ng-cloak>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Convert Case Online Free</title>
+
+  <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Quicksand:400,500,700">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+  <link rel="stylesheet" href="./css/style.min.css">
+</head>
+
+<body ng-controller="MainController">
+
+  <header>
+    <nav class="navbar navbar-expand-md navbar-dark jsc-header">
+      <a class="navbar-brand jsc-brand" href="#">
+        <img src="favicon.ico" width="30" height="30" class="d-inline-block align-top" alt=""> jsConvert
+      </a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-container" aria-controls="navbar-container"
+        aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbar-container">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item active">
+            <a class="nav-link active" href="#">Convert Online
+              <span class="sr-only">(current)</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="./get-started">Get Started</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="./example">Example</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#download">Download</a>
+          </li>
+        </ul>
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+            <a class="nav-link jsc-link" href="https://github.com/huynhsamha/js-convert-case" target="_blank">
+              <span>GitHub
+                <i class="fa fa-external-link"></i>
+              </span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link jsc-link" href="https://www.npmjs.com/package/js-convert-case" target="_blank">
+              <span>NPM
+                <i class="fa fa-external-link"></i>
+              </span>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+
+
+  <div class="jumbotron jsc-jumbotron">
+    <h1 class="display-4">jsConvert</h1>
+    <p class="lead">jsConvert is a simple JavaScript library for string between cases (camelCase, snake_case, PascalCase, dot.case, path/case,
+      text case, Sentence case, Header Case, UPPERCASE, lowercase).</p>
+    <p>Using for both Node.JS and Browser. Available on NPM.</p>
+  </div>
+
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-12 col-lg-6">
+        <div class="jsc-page-edit">
+          <div class="jsc-controll text-right">
+            <button ng-click="onReset()">
+              <i class="fa fa-cog"></i> Reset
+            </button>
+          </div>
+          <div class="jsc-sheet">
+            <textarea rows="10" ng-model="origin" ng-change="onChangeOrigin()"></textarea>
+          </div>
+        </div>
+      </div>
+      <div class="col-12 col-lg-6">
+        <div class="jsc-page-edit">
+          <div class="jsc-controll">
+            <button ng-repeat="_ in converts track by $index" ng-click="onChangeConvert($index)" class="{{convertActive == $index ? 'active' : ''}}">
+              {{_.name}}
+            </button>
+            <!-- <div class="text-right">
+              <button>
+                <i class="fa fa-cog"></i> Reset
+              </button>
+            </div> -->
+            <button type="button" ngclipboard data-clipboard-target="#dest" id="copy" data-toggle="tooltip" data-placement="bottom" ng-click="onCopyDest()"
+              ng-mouseleave="onLeaveCopy()">
+              <i class="fa fa-copy"></i> Copy
+              <span class="popup" ng-show="copied">Copied
+                <div class="arrow-down"></div>
+              </span>
+            </button>
+          </div>
+          <div class="jsc-sheet">
+            <textarea rows="10" readonly ng-model="dest" id="dest" select-on-click></textarea>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <footer>
+    <div class="text-center jsc-footer">
+      <div class="py-1">
+        <i class="fa fa-copyright"></i> Copyright 2018 - Created By
+        <a class="jsc-link" href="https://github.com/huynhsamha" target="_blank">
+          <span>huynhsamha
+            <i class="fa fa-external-link"></i>.
+          </span>
+        </a>
+      </div>
+      <div class="py-1">
+        <span>
+          Source available on
+          <a class="jsc-link" href="https://github.com/huynhsamha/js-convert-case" target="_blank">
+            <span>GitHub
+              <i class="fa fa-external-link"></i>.
+            </span>
+          </a>
+        </span>
+        <span>
+          Package available on
+          <a class="jsc-link" href="https://www.npmjs.com/package/js-convert-case" target="_blank">
+            <span>NPM
+              <i class="fa fa-external-link"></i>.
+            </span>
+          </a>
+        </span>
+      </div>
+    </div>
+  </footer>
+
+
+
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+  <script src="https://cdn.rawgit.com/zenorocha/clipboard.js/master/dist/clipboard.min.js"></script>
+  <script src="./lib/ngclipboard/dist/ngclipboard.min.js"></script>
+  <script src="./lib/jsConvert/dist/js-convert-case.min.js"></script>
+  <script src="./js/config.js"></script>
+  <script src="./js/index.js"></script>
+</body>
+
+</html>
