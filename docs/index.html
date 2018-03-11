@@ -1,12 +1,16 @@
 <!DOCTYPE html>
-<html lang="en" ng-app="jsConvertApp" ng-cloak>
+<html lang="en" ng-app="jsConvertApp" ng-cloak ng-controller="CommonController">
 
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta http-equiv="Cache-control" content="public">
+  <meta name="description" content="js-convert-case: jsConvert is JavaScript Library Convert string between cases (camelCase, snake_case, PascalCase, dot.case, path/case, text case, Sentence case, Header Case, UPPERCASE, lowercase). Use for both Node.JS and Browser" />
+  <meta name="author" content="js-convert-case">
+  <link rel="copyright" href="./tos.html">
 
-  <title>Convert Case Online</title>
+  <title>Online JavaScript Convert Case</title>
 
   <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
 
@@ -24,7 +28,7 @@
 <body ng-controller="MainController">
 
   <!-- Header -->
-  <header>
+  <header id="header">
     <nav class="navbar navbar-expand-md navbar-dark jsc-header">
       <a class="navbar-brand jsc-brand" href="#">
         <img src="favicon.ico" width="30" height="30" class="d-inline-block align-top" alt=""> jsConvert
@@ -97,6 +101,8 @@
 
   <!-- Each Example -->
   <div class="container jsc-first-block">
+    <h1>Online JavaScript Convert Case</h1>
+    <hr>
     <div class="row" ng-repeat="_ in converts track by $index" ng-cloak>
       <div class="col-12">
         <h5 class="mt-2">
@@ -133,6 +139,12 @@
 
 
 
+
+
+  <!-- scroll top -->
+  <span id="scroll-top" ng-href="#header" du-smooth-scroll ng-show="showScrollTop">
+    <i class="fa fa-caret-up"></i>
+  </span>
 
 
 
@@ -181,10 +193,15 @@
   <!-- AngularJS -->
   <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
   <script src="https://cdn.rawgit.com/zenorocha/clipboard.js/master/dist/clipboard.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-scroll/1.0.2/angular-scroll.min.js"></script>
   <script src="./lib/ngclipboard/dist/ngclipboard.min.js"></script>
+  <!-- Scroll Reveal -->
+  <script src="https://unpkg.com/scrollreveal/dist/scrollreveal.min.js"></script>
   <!-- jsConvert -->
   <script src="./lib/jsConvert/dist/js-convert-case.min.js"></script>
   <!-- scripts -->
+  <script src="./js/common.min.js"></script>
+  <!-- <script src="./js/common.js"></script> -->
   <script src="./js/index.min.js"></script>
   <!-- <script src="./js/index.js"></script> -->
 

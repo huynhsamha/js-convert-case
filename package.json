@@ -1,10 +1,11 @@
 {
   "name": "js-convert-case",
-  "version": "1.2.0",
+  "version": "2.0.0",
   "description": "JavaScript Convert string between cases (camelCase, snake_case, PascalCase, dot.case, path/case, text case, Sentence case, Header Case, UPPERCASE, lowercase). Use for both Node.JS and Browser",
   "main": "index.js",
   "scripts": {
-    "test": "node test"
+    "test": "node test",
+    "eslint": "eslint ./**/*.js"
   },
   "repository": {
     "type": "git",
@@ -51,5 +52,18 @@
     "js-sentencecase": "^1.0.0",
     "js-snakecase": "^1.1.0",
     "js-textcase": "^1.0.0"
+  },
+  "unpkg": "dist/js-convert-case.min.js",
+  "contributors": [
+    "huynhsamha"
+  ],
+  "icon": "./docs/favicon.ico",
+  "devDependencies": {
+    "babel-eslint": "^8.2.2",
+    "eslint": "^4.18.2",
+    "eslint-config-airbnb": "^16.1.0",
+    "eslint-plugin-import": "^2.9.0",
+    "eslint-plugin-jsx-a11y": "^6.0.3",
+    "eslint-plugin-react": "^7.7.0"
   }
 }

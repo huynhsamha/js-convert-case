@@ -1,22 +1,6 @@
 (() => {
 
-  const app = angular.module('jsConvertApp', ['ngclipboard']);
-
-  app.directive('selectOnClick', ['$window', function ($window) {
-    return {
-      restrict: 'A',
-      link: function (scope, element, attrs) {
-        element.on('click', function () {
-          if (!$window.getSelection().toString()) {
-            // Required for mobile Safari
-            this.setSelectionRange(0, this.value.length)
-          }
-        });
-      }
-    };
-  }]);
-
-
+  const app = angular.module('jsConvertApp');
 
   app.controller('MainController', ['$scope', ($scope) => {
 
@@ -31,9 +15,9 @@
       { name: 'Header Case', func: jsConvert.toHeaderCase, target: 'toHeaderCase' },
       { name: 'UPPERCASE', func: jsConvert.toUpperCase, target: 'toUpperCase' },
       { name: 'lowercase', func: jsConvert.toLowerCase, target: 'toLowerCase' }
-    ]
+    ];
 
-    $scope.converts.forEach((_) => { _.data = 'param-case'; _.showCopied = false });
+    $scope.converts.forEach((_) => { _.data = 'param-case'; _.showCopied = false; });
 
   }]);
 

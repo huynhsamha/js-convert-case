@@ -47,6 +47,11 @@ console.log(jsConvert.toUpperCase('param-case')); // PARAM-CASE
 ```html
 <script src="path/to/js-convert-case"></script>
 ```
+##### 3. Get from `unpkg.com`
+```html
+<script src="https://unpkg.com/js-convert-case/dist/js-convert-case.min.js"></script>
+```
+
 ##### Usage
 ```html
 <script>
