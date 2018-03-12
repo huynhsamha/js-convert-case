@@ -6,7 +6,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <meta http-equiv="Cache-control" content="public">
-  <meta name="description" content="js-convert-case: jsConvert is JavaScript Library Convert string between cases (camelCase, snake_case, PascalCase, dot.case, path/case, text case, Sentence case, Header Case, UPPERCASE, lowercase). Use for both Node.JS and Browser" />
+  <meta name="description" content="js-convert-case: jsConvert is JavaScript Library Convert string between cases (camelCase, snake_case, PascalCase, dot.case, path/case, text case, Sentence case, Header Case, UPPERCASE, lowercase). Use for both Node.JS and Browser"
+  />
   <meta name="author" content="js-convert-case">
   <link rel="copyright" href="./tos.html">
 
@@ -20,8 +21,12 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
   <!-- Bootstrap -->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+  <!-- Prism - highlight code -->
+  <link rel="stylesheet" href="./lib/prism/prism.min.css">
   <!-- styles -->
   <link rel="stylesheet" href="./css/style.min.css">
+
+
 
 </head>
 
@@ -58,6 +63,9 @@
           </li>
           <li class="nav-item">
             <a class="nav-link" href="./download/js-convert-case.zip" download>Download</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="./support.html">Support</a>
           </li>
         </ul>
         <ul class="navbar-nav ml-auto">
@@ -97,14 +105,15 @@
   <div class="container jsc-first-block">
 
     <h3 id="jsconvert" class="my-3">What is jsConvert?</h3>
-    <p>
+    <!-- NPM -->
+    <!-- <p>
       <a href="https://www.npmjs.com/package/js-convert-case">
         <img src="https://img.shields.io/npm/v/js-convert-case.svg?style=flat" alt="NPM version" />
       </a>
       <a href="https://www.npmjs.com/package/js-convert-case">
         <img src="https://img.shields.io/npm/dm/js-convert-case.svg?style=flat" alt="NPM downloads" />
       </a>
-    </p>
+    </p> -->
 
     <p class="lead text-justify">
       <strong>jsConvert</strong> is object containing function convert between cases. In browser, you should use correct name of
@@ -134,18 +143,19 @@
         <a ng-href="https://github.com/huynhsamha/{{_.package}}">{{_.method}}</a>
       </h4>
 
-      <p ng-if="_.package">
+      <!-- NPM -->
+      <!-- <p ng-if="_.package">
         <a ng-href="https://npmjs.org/package/{{_.package}}">
           <img ng-src="https://img.shields.io/npm/v/{{_.package}}.svg?style=flat" alt="NPM version" />
         </a>
         <a ng-href="https://npmjs.org/package/{{_.package}}">
           <img ng-src="https://img.shields.io/npm/dm/{{_.package}}.svg?style=flat" alt="NPM downloads" />
         </a>
-      </p>
+      </p> -->
 
       <p>{{_.description}}</p>
 
-      <pre><code>{{_.code}}</code></pre>
+      <pre ng-prism source="{{_.code}}" class="language-js"></pre>
     </div>
 
 
@@ -216,7 +226,7 @@
   <!-- jQuery -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <!-- Bootstrap -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+  <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script> -->
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
   <!-- AngularJS -->
   <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
@@ -224,14 +234,17 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-scroll/1.0.2/angular-scroll.min.js"></script>
   <script src="./lib/ngclipboard/dist/ngclipboard.min.js"></script>
   <!-- Scroll Reveal -->
-  <script src="https://unpkg.com/scrollreveal/dist/scrollreveal.min.js"></script>
+  <!-- <script src="https://unpkg.com/scrollreveal/dist/scrollreveal.min.js"></script> -->
   <!-- jsConvert -->
-  <script src="./lib/jsConvert/dist/js-convert-case.min.js"></script>
+  <!-- <script src="./lib/jsConvert/dist/js-convert-case.min.js"></script> -->
+  <!-- prism - highlight code -->
+  <script src="./lib/prism/prism.min.js"></script>
   <!-- scripts -->
   <script src="./js/common.min.js"></script>
   <!-- <script src="./js/common.js"></script> -->
   <script src="./js/api.min.js"></script>
   <!-- <script src="./js/api.js"></script> -->
+
 
 </body>
 
