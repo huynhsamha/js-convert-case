@@ -3,7 +3,7 @@
 [![NPM version][npm-image]][npm-url]
 [![NPM downloads][downloads-image]][downloads-url]
 
-JavaScript Convert String and Keys of Object between cases (camelCase, snake_case, PascalCase, dot.case, path/case, text case, Sentence case, Header Case, UPPERCASE, lowercase)
+JavaScript Convert String and Keys of Object between cases (camelCase, snake_case, PascalCase, dot.case, path/case, text case, Sentence case, Header Case, UPPERCASE, lowercase). Use for both Node.JS and Browser.
 
 **Methods are also available on npm as an individual packages.**
 
@@ -303,7 +303,7 @@ console.log(jsConvert.toUpperCase('param-case')); // PARAM-CASE
 [![NPM version](https://img.shields.io/npm/v/lowercase-keys-object.svg?style=flat)](https://npmjs.org/package/lowercase-keys-object)
 [![NPM downloads](https://img.shields.io/npm/dm/lowercase-keys-object.svg?style=flat)](https://npmjs.org/package/lowercase-keys-object)
 
-Lowercase the keys of an object
+Return a new object which keys is lowercase format.
 
 ```js
 console.log(jsConvert.lowerKeys(obj));
@@ -332,7 +332,7 @@ console.log(jsConvert.lowerKeys(obj));
 [![NPM version](https://img.shields.io/npm/v/uppercase-keys-object.svg?style=flat)](https://npmjs.org/package/uppercase-keys-object)
 [![NPM downloads](https://img.shields.io/npm/dm/uppercase-keys-object.svg?style=flat)](https://npmjs.org/package/uppercase-keys-object)
 
-Uppercase the keys of an object
+Return a new object which keys is uppercase format.
 
 ```js
 console.log(jsConvert.upperKeys(obj));
@@ -362,7 +362,7 @@ console.log(jsConvert.upperKeys(obj));
 [![NPM version](https://img.shields.io/npm/v/camelcase-keys-object.svg?style=flat)](https://npmjs.org/package/camelcase-keys-object)
 [![NPM downloads](https://img.shields.io/npm/dm/camelcase-keys-object.svg?style=flat)](https://npmjs.org/package/camelcase-keys-object)
 
-Camelcase the keys of an object
+Return a new object which keys is camelcase format.
 
 ```js
 console.log(jsConvert.camelKeys(obj));
@@ -391,7 +391,7 @@ console.log(jsConvert.camelKeys(obj));
 [![NPM version](https://img.shields.io/npm/v/snakecase-keys-object.svg?style=flat)](https://npmjs.org/package/snakecase-keys-object)
 [![NPM downloads](https://img.shields.io/npm/dm/snakecase-keys-object.svg?style=flat)](https://npmjs.org/package/snakecase-keys-object)
 
-Snakecase the keys of an object
+Return a new object which keys is snakecase format.
 
 ```js
 console.log(jsConvert.snakeKeys(obj));
@@ -420,7 +420,7 @@ console.log(jsConvert.snakeKeys(obj));
 [![NPM version](https://img.shields.io/npm/v/pascalcase-keys-object.svg?style=flat)](https://npmjs.org/package/pascalcase-keys-object)
 [![NPM downloads](https://img.shields.io/npm/dm/pascalcase-keys-object.svg?style=flat)](https://npmjs.org/package/pascalcase-keys-object)
 
-PascalCase the keys of an object
+Return a new object which keys is pascalcase format.
 
 ```js
 console.log(jsConvert.pascalKeys(obj));
@@ -527,21 +527,21 @@ console.log(jsConvert.camelKeys(null));
 ## Dependencies
 
 + Convert String Cases
-	+ [js-camelcase](https://github.com/huynhsamha/js-camelcase)
-	+ [js-snakecase](https://github.com/huynhsamha/js-snakecase)
-	+ [js-pascalcase](https://github.com/huynhsamha/js-pascalcase)
-	+ [js-dotcase](https://github.com/huynhsamha/js-dotcase)
-	+ [js-pathcase](https://github.com/huynhsamha/js-pathcase)
-	+ [js-textcase](https://github.com/huynhsamha/js-textcase)
-	+ [js-sentencecase](https://github.com/huynhsamha/js-sentencecase)
-	+ [js-headercase](https://github.com/huynhsamha/js-headercase)
+	- [js-camelcase](https://github.com/huynhsamha/js-camelcase)
+	- [js-snakecase](https://github.com/huynhsamha/js-snakecase)
+	- [js-pascalcase](https://github.com/huynhsamha/js-pascalcase)
+	- [js-dotcase](https://github.com/huynhsamha/js-dotcase)
+	- [js-pathcase](https://github.com/huynhsamha/js-pathcase)
+	- [js-textcase](https://github.com/huynhsamha/js-textcase)
+	- [js-sentencecase](https://github.com/huynhsamha/js-sentencecase)
+	- [js-headercase](https://github.com/huynhsamha/js-headercase)
 
 + Convert Keys of Object cases
-	+ [lowercase-keys-object](https://github.com/huynhsamha/lowercase-keys-object)
-	+ [uppercase-keys-object](https://github.com/huynhsamha/uppercase-keys-object)
-	+ [snakecase-keys-object](https://github.com/huynhsamha/snakecase-keys-object)
-	+ [camelcase-keys-object](https://github.com/huynhsamha/camelcase-keys-object)
-	+ [pascalcase-keys-object](https://github.com/huynhsamha/pascalcase-keys-object)
+	- [lowercase-keys-object](https://github.com/huynhsamha/lowercase-keys-object)
+	- [uppercase-keys-object](https://github.com/huynhsamha/uppercase-keys-object)
+	- [snakecase-keys-object](https://github.com/huynhsamha/snakecase-keys-object)
+	- [camelcase-keys-object](https://github.com/huynhsamha/camelcase-keys-object)
+	- [pascalcase-keys-object](https://github.com/huynhsamha/pascalcase-keys-object)
 
 
 

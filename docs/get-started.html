@@ -294,6 +294,29 @@
     })();
           </code></pre>
         </div>
+        <div class="col-12 mt-3 scrollreveal">
+            <pre><code class="language-js">
+	const obj = {
+      camelCase: 1,
+      UPPERCASE: 2,
+      lowercase: 3,
+      snake_case: 4,
+      PascalCase: 5,
+      'Title Case': 6,
+      'dot.case': 7,
+      'param-case': 8,
+      'Sentence case': 9,
+      'path/case': 10,
+      'Header-Case': 11
+	};
+
+	console.log(jsConvert.lowerKeys(obj));
+	console.log(jsConvert.upperKeys(obj));
+	console.log(jsConvert.camelKeys(obj));
+	console.log(jsConvert.snakeKeys(obj));
+	console.log(jsConvert.pascalKeys(obj));
+            </code></pre>
+        </div>
       </div>
       <div class="col-12 text-lg-right text-sm-center mt-4 pr-4 scrollreveal">
         <a href="./examples.html">

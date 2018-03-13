@@ -76,6 +76,19 @@ console.log(jsConvert.camelKeys(obj));
 console.log(jsConvert.snakeKeys(obj));
 console.log(jsConvert.pascalKeys(obj));
 
+console.log(jsConvert.lowerKeys({
+  camelCase: 1,
+  UPPERCASE: 2,
+  lowercase: 3,
+  snake_case: 4,
+  PascalCase: 5,
+  'Title Case': 6,
+  'dot.case': 7,
+  'param-case': 8,
+  'Sentence case': 9,
+  'path/case': 10,
+  'Header-Case': 11
+}));
 
 /**
 { camelcase: 1,

@@ -4,7 +4,7 @@
 
   app.controller('MainController', ['$scope', ($scope) => {
 
-    $scope.apis = [
+    $scope.apiConvertString = [
       {
         name: 'camelCase',
         method: 'toCamelCase', package: 'js-camelcase',
@@ -64,6 +64,164 @@
         method: 'toLowerCase',
         description: 'Similar to <code>String.prototype.toUpperCase()</code>',
         code: 'console.log(jsConvert.toUpperCase(\'param-case\')); // PARAM-CASE'
+      }
+    ];
+
+    $scope.apiConvertKeysObject = [
+      {
+        name: 'lowerKeys',
+        method: 'lowerKeys', package: 'lowercase-keys-object',
+        description: 'Return new object which keys is lowercase format.',
+        code: `jsConvert.lowerKeys({
+  camelCase: 1,
+  UPPERCASE: 2,
+  lowercase: 3,
+  snake_case: 4,
+  PascalCase: 5,
+  'Title Case': 6,
+  'dot.case': 7,
+  'param-case': 8,
+  'Sentence case': 9,
+  'path/case': 10,
+  'Header-Case': 11
+});`,
+        output: `{
+  camelcase: 1,
+  uppercase: 2,
+  lowercase: 3,
+  snake_case: 4,
+  pascalcase: 5,
+  'title case': 6,
+  'dot.case': 7,
+  'param-case': 8,
+  'sentence case': 9,
+  'path/case': 10,
+  'header-case': 11
+}`
+      },
+      {
+        name: 'upperKeys',
+        method: 'upperKeys', package: 'uppercase-keys-object',
+        description: 'Return new object which keys is uppercase format.',
+        code: `jsConvert.upperKeys({
+  camelCase: 1,
+  UPPERCASE: 2,
+  lowercase: 3,
+  snake_case: 4,
+  PascalCase: 5,
+  'Title Case': 6,
+  'dot.case': 7,
+  'param-case': 8,
+  'Sentence case': 9,
+  'path/case': 10,
+  'Header-Case': 11
+});`,
+        output: `{
+  CAMELCASE: 1,
+  UPPERCASE: 2,
+  LOWERCASE: 3,
+  SNAKE_CASE: 4,
+  PASCALCASE: 5,
+  'TITLE CASE': 6,
+  'DOT.CASE': 7,
+  'PARAM-CASE': 8,
+  'SENTENCE CASE': 9,
+  'PATH/CASE': 10,
+  'HEADER-CASE': 11
+}`
+      },
+      {
+        name: 'camelKeys',
+        method: 'camelKeys', package: 'camelcase-keys-object',
+        description: 'Return new object which keys is camelcase format.',
+        code: `jsConvert.camelKeys({
+  camelCase: 1,
+  UPPERCASE: 2,
+  lowercase: 3,
+  snake_case: 4,
+  PascalCase: 5,
+  'Title Case': 6,
+  'dot.case': 7,
+  'param-case': 8,
+  'Sentence case': 9,
+  'path/case': 10,
+  'Header-Case': 11
+});`,
+        output: `{
+  camelCase: 1,
+  uppercase: 2,
+  lowercase: 3,
+  snakeCase: 4,
+  pascalCase: 5,
+  titleCase: 6,
+  dotCase: 7,
+  paramCase: 8,
+  sentenceCase: 9,
+  pathCase: 10,
+  headerCase: 11
+}`
+      },
+      {
+        name: 'snakeKeys',
+        method: 'snakeKeys', package: 'snakecase-keys-object',
+        description: 'Return new object which keys is snakecase format.',
+        code: `jsConvert.snakeKeys({
+  camelCase: 1,
+  UPPERCASE: 2,
+  lowercase: 3,
+  snake_case: 4,
+  PascalCase: 5,
+  'Title Case': 6,
+  'dot.case': 7,
+  'param-case': 8,
+  'Sentence case': 9,
+  'path/case': 10,
+  'Header-Case': 11
+});`,
+        output: `{
+  camel_case: 1,
+  uppercase: 2,
+  lowercase: 3,
+  snake_case: 4,
+  pascal_case: 5,
+  title_case: 6,
+  dot_case: 7,
+  param_case: 8,
+  sentence_case: 9,
+  path_case: 10,
+  header_case: 11
+}`
+      },
+      {
+        name: 'pascalKeys',
+        method: 'pascalKeys', package: 'pascalcase-keys-object',
+        description: 'Return new object which keys is pascalcase format.',
+        code: `jsConvert.pascalKeys({
+  camelCase: 1,
+  UPPERCASE: 2,
+  lowercase: 3,
+  snake_case: 4,
+  PascalCase: 5,
+  'Title Case': 6,
+  'dot.case': 7,
+  'param-case': 8,
+  'Sentence case': 9,
+  'path/case': 10,
+  'Header-Case': 11
+});`,
+        output: `{
+  CamelCase: 1,
+  Uppercase: 2,
+  Lowercase: 3,
+  SnakeCase: 4,
+  PascalCase: 5,
+  TitleCase: 6,
+  DotCase: 7,
+  ParamCase: 8,
+  SentenceCase: 9,
+  PathCase: 10,
+  HeaderCase: 11
+}`
       }
     ];
 
