@@ -9,6 +9,12 @@ const toTextCase = require('js-textcase');
 const toSentenceCase = require('js-sentencecase');
 const toHeaderCase = require('js-headercase');
 
+const lowerKeys = require('lowercase-keys-object');
+const upperKeys = require('uppercase-keys-object');
+const camelKeys = require('camelcase-keys-object');
+const snakeKeys = require('snakecase-keys-object');
+const pascalKeys = require('pascalcase-keys-object');
+
 const toUpperCase = str => String(str).toUpperCase();
 const toLowerCase = str => String(str).toLowerCase();
 
@@ -22,7 +28,12 @@ const jsConvert = {
   toSentenceCase,
   toHeaderCase,
   toUpperCase,
-  toLowerCase
+  toLowerCase,
+  lowerKeys,
+  upperKeys,
+  camelKeys,
+  snakeKeys,
+  pascalKeys
 };
 
 module.exports = jsConvert;

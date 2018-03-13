@@ -3,7 +3,7 @@
 [![NPM version][npm-image]][npm-url]
 [![NPM downloads][downloads-image]][downloads-url]
 
-JavaScript Convert string between cases (camelCase, snake_case, PascalCase, dot.case, path/case, text case, Sentence case, Header Case, UPPERCASE, lowercase)
+JavaScript Convert String and Keys of Object between cases (camelCase, snake_case, PascalCase, dot.case, path/case, text case, Sentence case, Header Case, UPPERCASE, lowercase)
 
 **Methods are also available on npm as an individual packages.**
 
@@ -24,6 +24,7 @@ or
 ```js
 const jsConvert = require('js-convert-case');
 
+// Convert String cases
 console.log(jsConvert.toCamelCase('param-case')); // paramCase
 console.log(jsConvert.toSnakeCase('param-case')); // param_case
 console.log(jsConvert.toPascalCase('param-case')); // ParamCase
@@ -34,6 +35,30 @@ console.log(jsConvert.toSentenceCase('param-case')); // Param case
 console.log(jsConvert.toHeaderCase('param-case')); // Param Case
 console.log(jsConvert.toLowerCase('param-case')); // param-case
 console.log(jsConvert.toUpperCase('param-case')); // PARAM-CASE
+
+// Convert Keys of Object case
+const obj = {
+  camelCase: 1,
+  UPPERCASE: 2,
+  lowercase: 3,
+  snake_case: 4,
+  PascalCase: 5,
+  'Title Case': 6,
+  'dot.case': 7,
+  'param-case': 8,
+  'Sentence case': 9,
+  'path/case': 10,
+  'Header-Case': 11
+};
+
+console.log(window.jsConvert);
+console.log(jsConvert);
+
+console.log(jsConvert.lowerKeys(obj));
+console.log(jsConvert.upperKeys(obj));
+console.log(jsConvert.camelKeys(obj));
+console.log(jsConvert.snakeKeys(obj));
+console.log(jsConvert.pascalKeys(obj));
 ```
 
 #### Browser
@@ -55,6 +80,7 @@ console.log(jsConvert.toUpperCase('param-case')); // PARAM-CASE
 ##### Usage
 ```html
 <script>
+	// Convert String cases
 	console.log(jsConvert.toCamelCase('param-case')); // paramCase
 	console.log(jsConvert.toSnakeCase('param-case')); // param_case
 	console.log(jsConvert.toPascalCase('param-case')); // ParamCase
@@ -65,6 +91,27 @@ console.log(jsConvert.toUpperCase('param-case')); // PARAM-CASE
 	console.log(jsConvert.toHeaderCase('param-case')); // Param Case
 	console.log(jsConvert.toLowerCase('param-case')); // param-case
 	console.log(jsConvert.toUpperCase('param-case')); // PARAM-CASE
+
+	// Convert Keys of Object case
+	const obj = {
+	camelCase: 1,
+	UPPERCASE: 2,
+	lowercase: 3,
+	snake_case: 4,
+	PascalCase: 5,
+	'Title Case': 6,
+	'dot.case': 7,
+	'param-case': 8,
+	'Sentence case': 9,
+	'path/case': 10,
+	'Header-Case': 11
+	};
+
+	console.log(jsConvert.lowerKeys(obj));
+	console.log(jsConvert.upperKeys(obj));
+	console.log(jsConvert.camelKeys(obj));
+	console.log(jsConvert.snakeKeys(obj));
+	console.log(jsConvert.pascalKeys(obj));
 </script>
 ```
 
@@ -91,6 +138,7 @@ console.log(jsConvert.toUpperCase('param-case')); // PARAM-CASE
 
 ### Available Methods
 
++ Convert String cases
 * [`toCamelCase`](#tocamelcase)
 * [`toSnakeCase`](#tosnakecase)
 * [`toPascalCase`](#topascalcase)
@@ -102,6 +150,12 @@ console.log(jsConvert.toUpperCase('param-case')); // PARAM-CASE
 * [`toLowerCase`](#tolowercase)
 * [`toUpperCase`](#touppercase)
 
++ Convert Keys of Object case
+* [`lowerKeys`](#lowerkeys)
+* [`upperKeys`](#upperkeys)
+* [`camelKeys`](#camelkeys)
+* [`snakeKeys`](#snakekeys)
+* [`pascalKeys`](#pascalkeys)
 
 
 
@@ -244,6 +298,148 @@ console.log(jsConvert.toUpperCase('param-case')); // PARAM-CASE
 
 
 
+#### [lowerKeys](https://github.com/huynhsamha/lowercase-keys-object)
+
+[![NPM version](https://img.shields.io/npm/v/lowercase-keys-object.svg?style=flat)](https://npmjs.org/package/lowercase-keys-object)
+[![NPM downloads](https://img.shields.io/npm/dm/lowercase-keys-object.svg?style=flat)](https://npmjs.org/package/lowercase-keys-object)
+
+Lowercase the keys of an object
+
+```js
+console.log(jsConvert.lowerKeys(obj));
+
+/**
+{ camelcase: 1,
+  uppercase: 2,
+  lowercase: 3,
+  snake_case: 4,
+  pascalcase: 5,
+  'title case': 6,
+  'dot.case': 7,
+  'param-case': 8,
+  'sentence case': 9,
+  'path/case': 10,
+  'header-case': 11 }
+**/
+```
+
+
+
+
+
+#### [upperKeys](https://github.com/huynhsamha/uppercase-keys-object)
+
+[![NPM version](https://img.shields.io/npm/v/uppercase-keys-object.svg?style=flat)](https://npmjs.org/package/uppercase-keys-object)
+[![NPM downloads](https://img.shields.io/npm/dm/uppercase-keys-object.svg?style=flat)](https://npmjs.org/package/uppercase-keys-object)
+
+Uppercase the keys of an object
+
+```js
+console.log(jsConvert.upperKeys(obj));
+
+/**
+{ CAMELCASE: 1,
+  UPPERCASE: 2,
+  LOWERCASE: 3,
+  SNAKE_CASE: 4,
+  PASCALCASE: 5,
+  'TITLE CASE': 6,
+  'DOT.CASE': 7,
+  'PARAM-CASE': 8,
+  'SENTENCE CASE': 9,
+  'PATH/CASE': 10,
+  'HEADER-CASE': 11 }
+**/
+```
+
+
+
+
+
+
+#### [camelKeys](https://github.com/huynhsamha/camelcase-keys-object)
+
+[![NPM version](https://img.shields.io/npm/v/camelcase-keys-object.svg?style=flat)](https://npmjs.org/package/camelcase-keys-object)
+[![NPM downloads](https://img.shields.io/npm/dm/camelcase-keys-object.svg?style=flat)](https://npmjs.org/package/camelcase-keys-object)
+
+Camelcase the keys of an object
+
+```js
+console.log(jsConvert.camelKeys(obj));
+
+/**
+{ camelCase: 1,
+  uppercase: 2,
+  lowercase: 3,
+  snakeCase: 4,
+  pascalCase: 5,
+  titleCase: 6,
+  dotCase: 7,
+  paramCase: 8,
+  sentenceCase: 9,
+  pathCase: 10,
+  headerCase: 11 }
+**/
+```
+
+
+
+
+
+#### [snakeKeys](https://github.com/huynhsamha/snakecase-keys-object)
+
+[![NPM version](https://img.shields.io/npm/v/snakecase-keys-object.svg?style=flat)](https://npmjs.org/package/snakecase-keys-object)
+[![NPM downloads](https://img.shields.io/npm/dm/snakecase-keys-object.svg?style=flat)](https://npmjs.org/package/snakecase-keys-object)
+
+Snakecase the keys of an object
+
+```js
+console.log(jsConvert.snakeKeys(obj));
+
+/**
+{ camel_case: 1,
+  uppercase: 2,
+  lowercase: 3,
+  snake_case: 4,
+  pascal_case: 5,
+  title_case: 6,
+  dot_case: 7,
+  param_case: 8,
+  sentence_case: 9,
+  path_case: 10,
+  header_case: 11 }
+**/
+```
+
+
+
+
+
+#### [pascalKeys](https://github.com/huynhsamha/pascalcase-keys-object)
+
+[![NPM version](https://img.shields.io/npm/v/pascalcase-keys-object.svg?style=flat)](https://npmjs.org/package/pascalcase-keys-object)
+[![NPM downloads](https://img.shields.io/npm/dm/pascalcase-keys-object.svg?style=flat)](https://npmjs.org/package/pascalcase-keys-object)
+
+PascalCase the keys of an object
+
+```js
+console.log(jsConvert.pascalKeys(obj));
+
+/**
+{ CamelCase: 1,
+  Uppercase: 2,
+  Lowercase: 3,
+  SnakeCase: 4,
+  PascalCase: 5,
+  TitleCase: 6,
+  DotCase: 7,
+  ParamCase: 8,
+  SentenceCase: 9,
+  PathCase: 10,
+  HeaderCase: 11 }
+**/
+```
+
 
 
 
@@ -302,6 +498,15 @@ console.log(jsConvert.toPathCase(str)); // => 'hello/world/123/456/l/sn/ca/cm/ca
 console.log(jsConvert.toTextCase(str)); // => 'hello world 123 456 l sn ca cm ca pc ca dot ca txt ca sen ca hd ca'
 console.log(jsConvert.toSentenceCase(str)); // => 'Hello world 123 456 l sn ca cm ca pc ca dot ca txt ca sen ca hd ca'
 console.log(jsConvert.toHeaderCase(str)); // => 'Hello World 123 456 L Sn Ca Cm Ca Pc Ca Dot Ca Txt Ca Sen Ca Hd Ca'
+
+
+// All outputs following are null
+console.log(jsConvert.lowerKeys(undefined));
+console.log(jsConvert.lowerKeys(null));
+console.log(jsConvert.upperKeys(undefined));
+console.log(jsConvert.upperKeys(null));
+console.log(jsConvert.camelKeys(undefined));
+console.log(jsConvert.camelKeys(null));
 ```
 
 
@@ -320,15 +525,23 @@ console.log(jsConvert.toHeaderCase(str)); // => 'Hello World 123 456 L Sn Ca Cm 
 
 
 ## Dependencies
-+ [js-camelcase](https://github.com/huynhsamha/js-camelcase)
-+ [js-snakecase](https://github.com/huynhsamha/js-snakecase)
-+ [js-pascalcase](https://github.com/huynhsamha/js-pascalcase)
-+ [js-dotcase](https://github.com/huynhsamha/js-dotcase)
-+ [js-pathcase](https://github.com/huynhsamha/js-pathcase)
-+ [js-textcase](https://github.com/huynhsamha/js-textcase)
-+ [js-sentencecase](https://github.com/huynhsamha/js-sentencecase)
-+ [js-headercase](https://github.com/huynhsamha/js-headercase)
 
++ Convert String Cases
+	+ [js-camelcase](https://github.com/huynhsamha/js-camelcase)
+	+ [js-snakecase](https://github.com/huynhsamha/js-snakecase)
+	+ [js-pascalcase](https://github.com/huynhsamha/js-pascalcase)
+	+ [js-dotcase](https://github.com/huynhsamha/js-dotcase)
+	+ [js-pathcase](https://github.com/huynhsamha/js-pathcase)
+	+ [js-textcase](https://github.com/huynhsamha/js-textcase)
+	+ [js-sentencecase](https://github.com/huynhsamha/js-sentencecase)
+	+ [js-headercase](https://github.com/huynhsamha/js-headercase)
+
++ Convert Keys of Object cases
+	+ [lowercase-keys-object](https://github.com/huynhsamha/lowercase-keys-object)
+	+ [uppercase-keys-object](https://github.com/huynhsamha/uppercase-keys-object)
+	+ [snakecase-keys-object](https://github.com/huynhsamha/snakecase-keys-object)
+	+ [camelcase-keys-object](https://github.com/huynhsamha/camelcase-keys-object)
+	+ [pascalcase-keys-object](https://github.com/huynhsamha/pascalcase-keys-object)
 
 
 

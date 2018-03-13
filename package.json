@@ -1,7 +1,7 @@
 {
   "name": "js-convert-case",
-  "version": "2.0.1",
-  "description": "JavaScript Convert string between cases (camelCase, snake_case, PascalCase, dot.case, path/case, text case, Sentence case, Header Case, UPPERCASE, lowercase). Use for both Node.JS and Browser",
+  "version": "3.0.0",
+  "description": "JavaScript Convert String and Keys of Object between cases (camelCase, snake_case, PascalCase, dot.case, path/case, text case, Sentence case, Header Case, UPPERCASE, lowercase). Use for both Node.JS and Browser",
   "main": "index.js",
   "scripts": {
     "test": "node test",
@@ -31,7 +31,17 @@
     "lowercase",
     "snake",
     "underscore",
-    "underscore case"
+    "underscore case",
+    "lowerKeys",
+    "upperKeys",
+    "camelKeys",
+    "snakeKeys",
+    "pascalKeys",
+    "lowercase-keys-object",
+    "uppercase-keys-object",
+    "snakecase-keys-object",
+    "camelcase-keys-object",
+    "pascalcase-keys-object"
   ],
   "author": {
     "name": "huynhsamha",
@@ -44,6 +54,7 @@
   },
   "homepage": "https://github.com/huynhsamha/js-convert-case#readme",
   "dependencies": {
+    "camelcase-keys-object": "^1.2.1",
     "js-camelcase": "^1.1.0",
     "js-dotcase": "^1.0.0",
     "js-headercase": "^1.0.0",
@@ -51,7 +62,11 @@
     "js-pathcase": "^1.0.0",
     "js-sentencecase": "^1.0.0",
     "js-snakecase": "^1.1.0",
-    "js-textcase": "^1.0.0"
+    "js-textcase": "^1.0.0",
+    "lowercase-keys-object": "^1.1.2",
+    "pascalcase-keys-object": "^1.0.0",
+    "snakecase-keys-object": "^1.0.1",
+    "uppercase-keys-object": "^1.1.3"
   },
   "unpkg": "dist/js-convert-case.min.js",
   "contributors": [
