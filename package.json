@@ -1,6 +1,6 @@
 {
   "name": "js-convert-case",
-  "version": "3.0.1",
+  "version": "3.0.2",
   "description": "JavaScript Convert String and Keys of Object between cases (camelCase, snake_case, PascalCase, dot.case, path/case, text case, Sentence case, Header Case, UPPERCASE, lowercase). Use for both Node.JS and Browser",
   "main": "index.js",
   "scripts": {
