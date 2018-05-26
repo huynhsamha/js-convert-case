@@ -38,17 +38,17 @@ console.log(jsConvert.toUpperCase('param-case')); // PARAM-CASE
 
 // Convert Keys of Object case
 const obj = {
-  camelCase: 1,
-  UPPERCASE: 2,
-  lowercase: 3,
-  snake_case: 4,
-  PascalCase: 5,
-  'Title Case': 6,
-  'dot.case': 7,
-  'param-case': 8,
-  'Sentence case': 9,
-  'path/case': 10,
-  'Header-Case': 11
+		camelCase: 1,
+		UPPERCASE: 2,
+		lowercase: 3,
+		snake_case: 4,
+		PascalCase: 5,
+		'Title Case': 6,
+		'dot.case': 7,
+		'param-case': 8,
+		'Sentence case': 9,
+		'path/case': 10,
+		'Header-Case': 11
 };
 
 console.log(window.jsConvert);
@@ -94,17 +94,17 @@ console.log(jsConvert.pascalKeys(obj));
 
 	// Convert Keys of Object case
 	const obj = {
-	camelCase: 1,
-	UPPERCASE: 2,
-	lowercase: 3,
-	snake_case: 4,
-	PascalCase: 5,
-	'Title Case': 6,
-	'dot.case': 7,
-	'param-case': 8,
-	'Sentence case': 9,
-	'path/case': 10,
-	'Header-Case': 11
+			camelCase: 1,
+			UPPERCASE: 2,
+			lowercase: 3,
+			snake_case: 4,
+			PascalCase: 5,
+			'Title Case': 6,
+			'dot.case': 7,
+			'param-case': 8,
+			'Sentence case': 9,
+			'path/case': 10,
+			'Header-Case': 11
 	};
 
 	console.log(jsConvert.lowerKeys(obj));
