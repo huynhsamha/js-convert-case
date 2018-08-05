@@ -6,9 +6,7 @@
 JavaScript Convert String and Keys of Object between cases (camelCase, snake_case, PascalCase, dot.case, path/case, text case, Sentence case, Header Case, UPPERCASE, lowercase). Use for both Node.JS and Browser.
 
 <br>
-<center>
-	<img src="https://github.com/huynhsamha/js-convert-case/raw/master/docs/img/banner.png" width="50%">
-</center>
+<img src="https://github.com/huynhsamha/js-convert-case/raw/master/docs/img/banner.png" width="50%" justify="center">
 <br>
 
 **Methods are also available on npm as an individual packages.**
