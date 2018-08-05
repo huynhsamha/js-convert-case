@@ -1,6 +1,5 @@
 node_modules/*
 coverage/*
-dist/*.min.js
+dist/*
 dll/*
 build/*
-*.min.js
