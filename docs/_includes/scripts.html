@@ -10,7 +10,7 @@
 <script src="//cdn.rawgit.com/zenorocha/clipboard.js/master/dist/clipboard.min.js"></script>
 <script src="//cdnjs.cloudflare.com/ajax/libs/angular-scroll/1.0.2/angular-scroll.min.js"></script>
 <!-- AngularJS Plugins -->
-<script src="/assets/lib/ngclipboard/dist/ngclipboard.min.js"></script>
+<script src="{{ site.baseurl }}/assets/lib/ngclipboard/dist/ngclipboard.min.js"></script>
 
 <!-- Scroll Reveal -->
 {% if page.sr %}
@@ -18,16 +18,16 @@
 {% endif %}
 
 <!-- jsConvert -->
-<script src="/assets/lib/jsConvert/dist/js-convert-case.min.js"></script>
+<script src="{{ site.baseurl }}/assets/lib/jsConvert/dist/js-convert-case.min.js"></script>
 
 <!-- Prism - highlight code -->
-<script src="/assets/lib/prism/prism.min.js"></script>
+<script src="{{ site.baseurl }}/assets/lib/prism/prism.min.js"></script>
 
 <!-- scripts -->
-<script src="/js/common.js"></script>
+<script src="{{ site.baseurl }}/js/common.js"></script>
 
 {% for i in page.scripts %}
-<script src="/js/{{ i }}.js"></script>
+<script src="{{ site.baseurl }}/js/{{ i }}.js"></script>
 {% endfor %}
 
 <!-- Global site tag (gtag.js) - Google Analytics -->

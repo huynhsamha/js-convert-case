@@ -1,5 +1,4 @@
 ---
-layout: compress
 ---
 
 <!DOCTYPE html>
@@ -12,8 +11,14 @@ layout: compress
     {% include header.html %}
     {% include jumbotron.html %}
 
+    <div class="container jsc-first-block">
+      {{ content }}
 
-    {{ content }}
+      <!-- banner -->
+      <div class="text-center jsc-banner">
+        <img src="{{ site.baseurl }}/img/banner.png" alt="Logo">
+      </div>
+    </div>
 
     <!-- scroll top -->
     <span id="scroll-top" ng-href="#header" du-smooth-scroll ng-show="showScrollTop">
@@ -24,5 +29,4 @@ layout: compress
     {% include scripts.html %}
 
   </body>
-
 </html>

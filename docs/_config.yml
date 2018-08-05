@@ -1,5 +1,7 @@
 title: jsConvert
 
+baseurl: /js-convert-case
+
 urls:
   - url: /
     text: Convert Online

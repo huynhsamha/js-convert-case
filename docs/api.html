@@ -1,14 +1,13 @@
 ---
 layout: default
 title: API
-url: /api
+path: /api
 icon: fa-cogs
 description: Easy and Simple APIs with jsConvert.
 scripts: [api]
 sr: true
 ---
 
-<div class="container jsc-first-block">
 
   <h3 id="jsconvert" class="my-3">What is jsConvert?</h3>
   <p class="lead text-justify">
@@ -20,8 +19,8 @@ sr: true
   <h6>Convert String cases</h6>
   <ul>
     <li ng-repeat="_ in apiConvertString" ng-cloak>
-      <a href="{{'#' + _.method}}" du-smooth-scroll>
-        <code>{{_.method}}</code>
+      <a href="{%raw%}{{'#' + _.method}}{%endraw%}" du-smooth-scroll>
+        <code>{% raw %}{{_.method}}{% endraw %}</code>
       </a>
     </li>
   </ul>
@@ -29,39 +28,39 @@ sr: true
   <h6>Convert Keys of Object case</h6>
   <ul>
     <li ng-repeat="_ in apiConvertKeysObject" ng-cloak>
-      <a href="{{'#' + _.method}}" du-smooth-scroll>
-        <code>{{_.method}}</code>
+      <a href="{%raw%}{{'#' + _.method}}{%endraw%}" du-smooth-scroll>
+        <code>{% raw %}{{_.method}}{% endraw %}</code>
       </a>
     </li>
   </ul>
 
   <hr>
 
-  <div ng-repeat="_ in apiConvertString" ng-cloak class="my-5" id="{{_.method}}">
+  <div ng-repeat="_ in apiConvertString" ng-cloak class="my-5" id="{% raw %}{{_.method}}{% endraw %}">
     <h4>
-      <a ng-href="//github.com/huynhsamha/{{_.package}}">{{_.method}}</a>
+      <a ng-href="//github.com/huynhsamha/{% raw %}{{_.package}}{% endraw %}">{% raw %}{{_.method}}{% endraw %}</a>
     </h4>
 
-    <p>{{_.description}}</p>
+    <p>{% raw %}{{_.description}}{% endraw %}</p>
 
-    <pre ng-prism source="{{_.code}}" class="language-js"></pre>
+    <pre ng-prism source="{% raw %}{{_.code}}{% endraw %}" class="language-js"></pre>
   </div>
 
   <hr>
 
-  <div ng-repeat="_ in apiConvertKeysObject" ng-cloak class="my-5" id="{{_.method}}">
+  <div ng-repeat="_ in apiConvertKeysObject" ng-cloak class="my-5" id="{% raw %}{{_.method}}">
     <h4>
-      <a ng-href="//github.com/huynhsamha/{{_.package}}">{{_.method}}</a>
+      <a ng-href="//github.com/huynhsamha/{% raw %}{{_.package}}{% endraw %}">{% raw %}{{_.method}}{% endraw %}</a>
     </h4>
 
-    <p>{{_.description}}</p>
+    <p>{% raw %}{{_.description}}{% endraw %}</p>
 
     <div class="row">
       <div class="col-12 col-lg-6 col-md-6">
-        <pre ng-prism source="{{_.code}}" class="language-js"></pre>
+        <pre ng-prism source="{% raw %}{{_.code}}{% endraw %}" class="language-js"></pre>
       </div>
       <div class="col-12 col-lg-6 col-md-6">
-        <pre ng-prism source="{{_.output}}" class="language-js"></pre>
+        <pre ng-prism source="{% raw %}{{_.output}}{% endraw %}" class="language-js"></pre>
       </div>
     </div>
   </div>
@@ -72,13 +71,13 @@ sr: true
 
   <ul>
     <li ng-repeat="_ in apiConvertString" ng-if="_.package" ng-cloak>
-      <a href="//github.com/huynhsamha/{{_.package}}">{{_.package}}</a>
+      <a href="//github.com/huynhsamha/{% raw %}{{_.package}}{% endraw %}">{% raw %}{{_.package}}{% endraw %}</a>
     </li>
   </ul>
 
   <ul>
     <li ng-repeat="_ in apiConvertKeysObject" ng-if="_.package" ng-cloak>
-      <a href="//github.com/huynhsamha/{{_.package}}">{{_.package}}</a>
+      <a href="//github.com/huynhsamha/{% raw %}{{_.package}}{% endraw %}">{% raw %}{{_.package}}{% endraw %}</a>
     </li>
   </ul>
 
@@ -87,7 +86,7 @@ sr: true
   <!-- navigation -->
   <div class="row">
     <div class="col-12 col-lg-6 col-md-6 text-center text-lg-left text-md-left mt-4 pl-4 scrollreveal">
-      <a href="/get-started.html">
+      <a href="{{ site.baseurl }}/get-started.html">
         <button class="btn btn-primary px-4">
           <i class="fa fa-arrow-left mr-2"></i>
           Getting Started
@@ -95,7 +94,7 @@ sr: true
       </a>
     </div>
     <div class="col-12 col-lg-6 col-md-6 text-center text-lg-right text-md-right mt-4 pr-4 scrollreveal">
-      <a href="/examples.html">
+      <a href="{{ site.baseurl }}/examples.html">
         <button class="btn btn-primary px-4">
           More Examples
           <i class="fa fa-arrow-right ml-2"></i>
@@ -103,4 +102,3 @@ sr: true
       </a>
     </div>
   </div>
-</div>

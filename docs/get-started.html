@@ -1,14 +1,13 @@
 ---
 layout: default
 title: Get Started
-url: /get-started
+path: /get-started
 icon: fa-play
 description: Easy ways to get jsConvert onto your website.
 scripts: [get-started]
 sr: true
 ---
 
-<div class="container jsc-first-block">
 
   <!-- introduction -->
   <div class="row">
@@ -29,7 +28,7 @@ sr: true
       </p>
     </div>
     <div class="col-12 text-center text-lg-right text pr-4">
-      <a href="/index.html">
+      <a href="{{ site.baseurl }}/index.html">
         <button class="btn btn-success px-4">
           Try it now
           <i class="fa fa-external-link ml-2"></i>
@@ -78,9 +77,9 @@ sr: true
           </a>
         </h3>
         You can download source code directly
-        <a href="/download/js-convert-case.zip" download>here</a>.
+        <a href="{{ site.baseurl }}/download/js-convert-case.zip" download>here</a>.
         <div class="text-center mt-3 scrollreveal">
-          <a href="/download/js-convert-case.zip" download>
+          <a href="{{ site.baseurl }}/download/js-convert-case.zip" download>
             <button class="btn btn-success px-5">
               Download
               <i class="fa fa-download ml-2"></i>
@@ -147,8 +146,8 @@ sr: true
         </h3>
         <div class="scrollreveal">
           + Download from NPM:
-          <pre><code class="language-markup">&lt;script src="/node_modules/js-convert-case/dist/js-convert-case.js"&gt;&lt;/script&gt;</code></pre>
-          <pre><code class="language-markup">&lt;script src="/node_modules/js-convert-case/dist/js-convert-case.min.js"&gt;&lt;/script&gt;</code></pre>
+          <pre><code class="language-markup">&lt;script src="{{ site.baseurl }}/node_modules/js-convert-case/dist/js-convert-case.js"&gt;&lt;/script&gt;</code></pre>
+          <pre><code class="language-markup">&lt;script src="{{ site.baseurl }}/node_modules/js-convert-case/dist/js-convert-case.min.js"&gt;&lt;/script&gt;</code></pre>
         </div>
         <div class="scrollreveal">
           + Download directly:
@@ -237,7 +236,7 @@ sr: true
   <!-- navigation -->
   <div class="row">
     <div class="col-12 col-lg-6 col-md-6 text-center text-lg-left text-md-left mt-4 pl-4 scrollreveal">
-      <a href="/index.html">
+      <a href="{{ site.baseurl }}/index.html">
         <button class="btn btn-primary px-4">
           <i class="fa fa-arrow-left mr-2"></i>
           Try convert
@@ -245,7 +244,7 @@ sr: true
       </a>
     </div>
     <div class="col-12 col-lg-6 col-md-6 text-center text-lg-right text-md-right mt-4 pr-4 scrollreveal">
-      <a href="/api.html">
+      <a href="{{ site.baseurl }}/api.html">
         <button class="btn btn-primary px-4">
           View APIs
           <i class="fa fa-arrow-right ml-2"></i>
@@ -253,4 +252,3 @@ sr: true
       </a>
     </div>
   </div>
-</div>

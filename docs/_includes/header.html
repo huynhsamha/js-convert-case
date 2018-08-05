@@ -1,7 +1,7 @@
 <header id="header">
   <nav class="navbar navbar-expand-md navbar-dark jsc-header">
-    <a class="navbar-brand jsc-brand" href="#">
-      <img src="/favicon.ico" width="30" height="30" class="d-inline-block align-top" alt=""> jsConvert
+    <a class="navbar-brand jsc-brand" href="{{ site.baseurl }}/">
+      <img src="{{ site.baseurl }}/favicon.png" width="35" height="35" class="d-inline-block align-top" alt=""> jsConvert
     </a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-container" aria-controls="navbar-container"
       aria-expanded="false" aria-label="Toggle navigation">
@@ -14,19 +14,19 @@
       <ul class="navbar-nav mr-auto">
         {% for i in site.urls %}
         <li class="nav-item">
-          <a class="nav-link {% if page.url == i.url %} active {% endif %}" href="{{ i.url }}">{{ i.text }}</a>
+          <a class="nav-link {% if page.path == i.url %} active {% endif %}" href="{{ i.url }}">{{ i.text }}</a>
         </li>
         {% endfor %}
       </ul>
       <ul class="navbar-nav ml-auto">
         <li class="nav-item">
           <a class="nav-link jsc-link" href="//github.com/huynhsamha/js-convert-case" target="_blank">
-            <img src="/img/github.png" alt="GitHub" height="25">
+            <img src="{{ site.baseurl }}/img/github.png" alt="GitHub" height="25">
           </a>
         </li>
         <li class="nav-item">
           <a class="nav-link jsc-link" href="//www.npmjs.com/package/js-convert-case" target="_blank">
-            <img src="/img/npm.png" alt="NPM" height="20">
+            <img src="{{ site.baseurl }}/img/npm.png" alt="NPM" height="20">
           </a>
         </li>
       </ul>

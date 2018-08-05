@@ -65,3 +65,6 @@ typings/
 
 # gem jekyll
 _site
+
+# macOS
+.DS_Store
