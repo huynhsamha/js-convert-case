@@ -1,6 +1,6 @@
 {
   "name": "js-convert-case",
-  "version": "3.1.3",
+  "version": "3.1.5",
   "description": "JavaScript Convert String and Keys of Object between cases (camelCase, snake_case, PascalCase, dot.case, path/case, text case, Sentence case, Header Case, UPPERCASE, lowercase). Use for both Node.JS and Browser",
   "main": "index.js",
   "scripts": {
@@ -9,27 +9,27 @@
     "eslint:fix": "node_modules/.bin/eslint ./ --fix"
   },
   "dependencies": {
-    "camelcase-keys-object": "^1.2.1",
-    "js-camelcase": "^1.1.0",
-    "js-dotcase": "^1.0.0",
-    "js-headercase": "^1.0.0",
-    "js-pascalcase": "^1.0.0",
-    "js-pathcase": "^1.0.0",
-    "js-sentencecase": "^1.0.0",
-    "js-snakecase": "^1.1.0",
-    "js-textcase": "^1.0.0",
-    "lowercase-keys-object": "^1.1.2",
-    "pascalcase-keys-object": "^1.0.0",
-    "snakecase-keys-object": "^1.0.1",
-    "uppercase-keys-object": "^1.1.3"
+    "camelcase-keys-object": "^1.2.2",
+    "js-camelcase": "^1.1.1",
+    "js-dotcase": "^1.2.1",
+    "js-headercase": "^1.2.1",
+    "js-pascalcase": "^1.2.1",
+    "js-pathcase": "^1.2.1",
+    "js-sentencecase": "^1.2.1",
+    "js-snakecase": "^1.2.0",
+    "js-textcase": "^1.2.2",
+    "lowercase-keys-object": "^1.1.3",
+    "pascalcase-keys-object": "^1.0.1",
+    "snakecase-keys-object": "^1.0.2",
+    "uppercase-keys-object": "^1.1.4"
   },
   "devDependencies": {
-    "babel-eslint": "^8.2.2",
-    "eslint": "^4.18.2",
+    "babel-eslint": "^8.2.6",
+    "eslint": "^4.19.1",
     "eslint-config-airbnb": "^16.1.0",
-    "eslint-plugin-import": "^2.9.0",
-    "eslint-plugin-jsx-a11y": "^6.0.3",
-    "eslint-plugin-react": "^7.7.0"
+    "eslint-plugin-import": "^2.13.0",
+    "eslint-plugin-jsx-a11y": "^6.1.1",
+    "eslint-plugin-react": "^7.10.0"
   },
   "repository": {
     "type": "git",
@@ -45,7 +45,6 @@
     "url": "https://github.com/huynhsamha/js-convert-case/issues"
   },
   "homepage": "https://github.com/huynhsamha/js-convert-case#readme",
-
   "unpkg": "dist/js-convert-case.min.js",
   "contributors": [
     "huynhsamha"
