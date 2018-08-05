@@ -62,3 +62,6 @@ typings/
 
 # extension IDE
 .vscode
+
+# gem jekyll
+_site

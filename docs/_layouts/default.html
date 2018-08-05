@@ -1,0 +1,28 @@
+---
+layout: compress
+---
+
+<!DOCTYPE html>
+<html lang="en" ng-app="jsConvertApp" ng-cloak ng-controller="CommonController">
+
+  {% include head.html %}
+
+  <body ng-controller="MainController">
+
+    {% include header.html %}
+    {% include jumbotron.html %}
+
+
+    {{ content }}
+
+    <!-- scroll top -->
+    <span id="scroll-top" ng-href="#header" du-smooth-scroll ng-show="showScrollTop">
+      <i class="fa fa-caret-up"></i>
+    </span>
+
+    {% include footer.html %}
+    {% include scripts.html %}
+
+  </body>
+
+</html>
