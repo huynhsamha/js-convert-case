@@ -11,6 +11,7 @@ dist
 .editorconfig
 .github
 docs
+CONTRIBUTING.md
 
 #### .gitignore
 # Logs
