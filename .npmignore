@@ -1,6 +1,5 @@
 test
 coverage
-dist
 .travis.yml
 .jenkins.yml
 .codeclimate.yml
