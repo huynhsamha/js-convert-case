@@ -14,7 +14,7 @@
       <ul class="navbar-nav mr-auto">
         {% for i in site.urls %}
         <li class="nav-item">
-          <a class="nav-link {% if page.path == i.url %} active {% endif %}" href="{{ i.url }}">{{ i.text }}</a>
+          <a class="nav-link {% if page.path == i.url %} active {% endif %}" href="{{ site.baseurl }}/{{ i.url }}">{{ i.text }}</a>
         </li>
         {% endfor %}
       </ul>
