@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="jsConvertApp" ng-cloak ng-controller="CommonController">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta http-equiv="Cache-control" content="public">
+  <meta name="description" content="js-convert-case: jsConvert is JavaScript Library Convert string between cases (camelCase, snake_case, PascalCase, dot.case, path/case, text case, Sentence case, Header Case, UPPERCASE, lowercase). Use for both Node.JS and Browser"
+  />
+  <meta name="author" content="js-convert-case">
+  <link rel="copyright" href="./tos.html">
+
+  <title>Terms of Service - jsConvert</title>
+
+  <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+
+  <!-- Google Font -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Quicksand:400,500,700">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <!-- Bootstrap -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+  <!-- styles -->
+  <link rel="stylesheet" href="./css/style.min.css">
+
+</head>
+
+<body ng-controller="MainController">
+
+  <!-- Header -->
+  <header id="header">
+    <nav class="navbar navbar-expand-md navbar-dark jsc-header">
+      <a class="navbar-brand jsc-brand" href="./">
+        <img src="favicon.ico" width="30" height="30" class="d-inline-block align-top" alt=""> jsConvert
+      </a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-container" aria-controls="navbar-container"
+        aria-expanded="false" aria-label="Toggle navigation">
+        <span>
+          <i class="fa fa-bars"></i>
+        </span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbar-container">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="./">Convert Online</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="./get-started">Get Started</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="./api">API</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="./examples">Examples</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="./download">Download</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="./support">Support</a>
+          </li>
+        </ul>
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+            <a class="nav-link jsc-link" href="https://github.com/huynhsamha/js-convert-case" target="_blank">
+              <img src="./img/github.png" alt="GitHub" height="25">
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link jsc-link" href="https://www.npmjs.com/package/js-convert-case" target="_blank">
+              <img src="./img/npm.png" alt="NPM" height="20">
+            </a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+
+
+
+
+
+
+  <!--Jumbotron  -->
+  <div class="jumbotron jsc-jumbotron position-relative">
+    <h1 class="display-4">
+      <i class="fa fa-list-ol"></i>
+      jsConvert Terms of Service
+    </h1>
+    <p class="lead text-justify">Last modified: April 25, 2018</p>
+    <div class="jsc-background"></div>
+  </div>
+
+
+
+
+
+  <!-- Each Example -->
+  <div class="container jsc-first-block">
+    <h3>Account Terms</h3>
+    <ol>
+      <li></li>
+      <li></li>
+    </ol>
+    <h3>Cancellation and Termination</h3>
+    <ol>
+      <li></li>
+      <li></li>
+      <li></li>
+    </ol>
+    <h3>Copyright and Content Ownership</h3>
+    <ol>
+      <li></li>
+      <li></li>
+      <li></li>
+    </ol>
+    <h3>General Conditions</h3>
+    <ol>
+      <li></li>
+      <li></li>
+    </ol>
+  </div>
+
+
+
+
+
+  <!-- scroll top -->
+  <span id="scroll-top" ng-href="#header" du-smooth-scroll ng-show="showScrollTop">
+    <i class="fa fa-caret-up"></i>
+  </span>
+
+
+
+
+  <!-- Footer -->
+  <footer style="margin-top: 60px">
+    <div class="text-center jsc-footer">
+      <div class="py-1">
+        <i class="fa fa-copyright"></i> Copyright 2018 - Created By
+        <a class="jsc-link" href="https://github.com/huynhsamha" target="_blank">
+          <span>huynhsamha
+            <i class="fa fa-external-link"></i>.
+          </span>
+        </a>
+      </div>
+      <div class="py-1">
+        <span>
+          Source available on
+          <a class="jsc-link" href="https://github.com/huynhsamha/js-convert-case" target="_blank">
+            <span>GitHub
+              <i class="fa fa-github"></i>.
+            </span>
+          </a>
+        </span>
+        <span>
+          Package available on
+          <a class="jsc-link" href="https://www.npmjs.com/package/js-convert-case" target="_blank">
+            <span>NPM
+              <i class="fa fa-external-link"></i>.
+            </span>
+          </a>
+        </span>
+      </div>
+    </div>
+  </footer>
+
+
+
+
+
+  <!-- jQuery -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <!-- Bootstrap -->
+  <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script> -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+  <!-- AngularJS -->
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+  <script src="https://cdn.rawgit.com/zenorocha/clipboard.js/master/dist/clipboard.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-scroll/1.0.2/angular-scroll.min.js"></script>
+  <script src="./lib/ngclipboard/dist/ngclipboard.min.js"></script>
+  <!-- Scroll Reveal -->
+  <!-- <script src="https://unpkg.com/scrollreveal/dist/scrollreveal.min.js"></script> -->
+  <!-- jsConvert -->
+  <script src="./lib/jsConvert/dist/js-convert-case.min.js"></script>
+  <!-- scripts -->
+  <script src="./js/common.min.js"></script>
+  <!-- <script src="./js/common.js"></script> -->
+  <script src="./js/index.min.js"></script>
+  <!-- <script src="./js/index.js"></script> -->
+
+</body>
+
+</html>

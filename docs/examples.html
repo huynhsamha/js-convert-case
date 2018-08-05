@@ -1,0 +1,558 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="jsConvertApp" ng-cloak ng-controller="CommonController">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta http-equiv="Cache-control" content="public">
+  <meta name="description" content="js-convert-case: jsConvert is JavaScript Library Convert string between cases (camelCase, snake_case, PascalCase, dot.case, path/case, text case, Sentence case, Header Case, UPPERCASE, lowercase). Use for both Node.JS and Browser"
+  />
+  <meta name="author" content="js-convert-case">
+  <link rel="copyright" href="./tos.html">
+
+  <title>Examples - jsConvert</title>
+
+  <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+
+  <!-- Google Font -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Quicksand:400,500,700">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <!-- Bootstrap -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+  <!-- Prism - highlight code -->
+  <link rel="stylesheet" href="./lib/prism/prism.min.css">
+  <!-- styles -->
+  <link rel="stylesheet" href="./css/style.min.css">
+
+</head>
+
+<body ng-controller="MainController">
+
+  <!-- Header -->
+  <header id="header">
+    <nav class="navbar navbar-expand-md navbar-dark jsc-header">
+      <a class="navbar-brand jsc-brand" href="./">
+        <img src="favicon.ico" width="30" height="30" class="d-inline-block align-top" alt=""> jsConvert
+      </a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-container" aria-controls="navbar-container"
+        aria-expanded="false" aria-label="Toggle navigation">
+        <span>
+          <i class="fa fa-bars"></i>
+        </span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbar-container">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="./">Convert Online
+              <span class="sr-only">(current)</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="./get-started">Get Started</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="./api">API</a>
+          </li>
+          <li class="nav-item active">
+            <a class="nav-link" href="#">Examples</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="./download">Download</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="./support">Support</a>
+          </li>
+        </ul>
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+            <a class="nav-link jsc-link" href="https://github.com/huynhsamha/js-convert-case" target="_blank">
+              <img src="./img/github.png" alt="GitHub" height="25">
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link jsc-link" href="https://www.npmjs.com/package/js-convert-case" target="_blank">
+              <img src="./img/npm.png" alt="NPM" height="20">
+            </a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+
+
+
+
+
+
+  <!--Jumbotron  -->
+  <div class="jumbotron jsc-jumbotron position-relative">
+    <h1 class="display-4">
+      <i class="fa fa-cubes"></i> Examples
+    </h1>
+    <p class="lead text-justify">From simple to complicated examples.</p>
+    <div class="jsc-background"></div>
+  </div>
+
+
+
+
+
+  <div class="container jsc-first-block">
+
+    <div class="col-12">
+
+      <h4 class="mt-3 mb-4">1. Basic Examples</h4>
+
+
+
+      <h5 class="mt-5 mb-4">Camel Case</h5>
+      <div class="scrollreveal">
+        <pre><code class="language-js">
+    console.log(jsConvert.toCamelCase('param-case')); // paramCase
+    console.log(jsConvert.toCamelCase('camelCase')); // camelCase
+    console.log(jsConvert.toCamelCase('Title Case')); // titleCase
+        </code></pre>
+      </div>
+      <div class="scrollreveal">
+        <div class="row">
+          <div class="col-12 col-lg-6 col-md-6">
+            <pre><code class="language-js">
+    jsConvert.camelKeys({
+      camelCase: 1,
+      UPPERCASE: 2,
+      lowercase: 3,
+      snake_case: 4,
+      PascalCase: 5,
+      'Title Case': 6,
+      'dot.case': 7,
+      'param-case': 8,
+      'Sentence case': 9,
+      'path/case': 10,
+      'Header-Case': 11
+    });
+            </code></pre>
+          </div>
+          <div class="col-12 col-lg-6 col-md-6">
+            <pre><code class="language-js">
+    {
+      camelCase: 1,
+      uppercase: 2,
+      lowercase: 3,
+      snakeCase: 4,
+      pascalCase: 5,
+      titleCase: 6,
+      dotCase: 7,
+      paramCase: 8,
+      sentenceCase: 9,
+      pathCase: 10,
+      headerCase: 11
+    }
+            </code></pre>
+          </div>
+        </div>
+      </div>
+
+
+
+      <h5 class="mt-5 mb-4">Snake Case</h5>
+      <div class="scrollreveal">
+        <pre><code class="language-js">
+    console.log(jsConvert.toSnakeCase('param-case')); // param_case
+    console.log(jsConvert.toSnakeCase('camelCase')); // camel_case
+    console.log(jsConvert.toSnakeCase('Title Case')); // title_case
+        </code></pre>
+      </div>
+      <div class="scrollreveal">
+        <div class="row">
+          <div class="col-12 col-lg-6 col-md-6">
+            <pre><code class="language-js">
+    jsConvert.snakeKeys({
+      camelCase: 1,
+      UPPERCASE: 2,
+      lowercase: 3,
+      snake_case: 4,
+      PascalCase: 5,
+      'Title Case': 6,
+      'dot.case': 7,
+      'param-case': 8,
+      'Sentence case': 9,
+      'path/case': 10,
+      'Header-Case': 11
+    });
+              </code></pre>
+          </div>
+          <div class="col-12 col-lg-6 col-md-6">
+            <pre><code class="language-js">
+    {
+      camel_case: 1,
+      uppercase: 2,
+      lowercase: 3,
+      snake_case: 4,
+      pascal_case: 5,
+      title_case: 6,
+      dot_case: 7,
+      param_case: 8,
+      sentence_case: 9,
+      path_case: 10,
+      header_case: 11
+    }
+              </code></pre>
+          </div>
+        </div>
+      </div>
+
+
+
+
+
+
+      <h5 class="mt-5 mb-4">Pascal Case</h5>
+      <div class="scrollreveal">
+        <pre><code class="language-js">
+    console.log(jsConvert.toPascalCase('param-case')); // ParamCase
+    console.log(jsConvert.toPascalCase('camelCase')); // CamelCase
+    console.log(jsConvert.toPascalCase('Title Case')); // TitleCase
+        </code></pre>
+      </div>
+      <div class="scrollreveal">
+        <div class="row">
+          <div class="col-12 col-lg-6 col-md-6">
+            <pre><code class="language-js">
+    jsConvert.pascalKeys({
+      camelCase: 1,
+      UPPERCASE: 2,
+      lowercase: 3,
+      snake_case: 4,
+      PascalCase: 5,
+      'Title Case': 6,
+      'dot.case': 7,
+      'param-case': 8,
+      'Sentence case': 9,
+      'path/case': 10,
+      'Header-Case': 11
+    });
+              </code></pre>
+          </div>
+          <div class="col-12 col-lg-6 col-md-6">
+            <pre><code class="language-js">
+    {
+      CamelCase: 1,
+      Uppercase: 2,
+      Lowercase: 3,
+      SnakeCase: 4,
+      PascalCase: 5,
+      TitleCase: 6,
+      DotCase: 7,
+      ParamCase: 8,
+      SentenceCase: 9,
+      PathCase: 10,
+      HeaderCase: 11
+    }
+              </code></pre>
+          </div>
+        </div>
+      </div>
+
+
+
+
+
+      <h5 class="mt-5 mb-4">Dot Case</h5>
+      <div class="scrollreveal">
+        <pre><code class="language-js">
+    console.log(jsConvert.toDotCase('param-case')); // param.case
+    console.log(jsConvert.toDotCase('camelCase')); // camel.case
+    console.log(jsConvert.toDotCase('Title Case')); // title.case
+        </code></pre>
+      </div>
+
+      <h5 class="mt-5 mb-4">Path Case</h5>
+      <div class="scrollreveal">
+        <pre><code class="language-js">
+    console.log(jsConvert.toPathCase('param-case')); // param/case
+    console.log(jsConvert.toPathCase('camelCase')); // camel/case
+    console.log(jsConvert.toPathCase('Title Case')); // title/case
+        </code></pre>
+      </div>
+
+      <h5 class="mt-5 mb-4">Text Case</h5>
+      <div class="scrollreveal">
+        <pre><code class="language-js">
+    console.log(jsConvert.toTextCase('param-case')); // param case
+    console.log(jsConvert.toTextCase('camelCase')); // camel case
+    console.log(jsConvert.toTextCase('Title Case')); // title case
+        </code></pre>
+      </div>
+
+      <h5 class="mt-5 mb-4">Sentence Case</h5>
+      <div class="scrollreveal">
+        <pre><code class="language-js">
+    console.log(jsConvert.toSentenceCase('param-case')); // Param case
+    console.log(jsConvert.toSentenceCase('camelCase')); // Camel case
+    console.log(jsConvert.toSentenceCase('Title Case')); // Title case
+        </code></pre>
+      </div>
+
+      <h5 class="mt-5 mb-4">Header Case</h5>
+      <div class="scrollreveal">
+        <pre><code class="language-js">
+    console.log(jsConvert.toHeaderCase('param-case')); // Param Case
+    console.log(jsConvert.toHeaderCase('camelCase')); // Camel Case
+    console.log(jsConvert.toHeaderCase('Title Case')); // Title Case
+        </code></pre>
+      </div>
+
+      <h5 class="mt-5 mb-4">Lower Case</h5>
+      <div class="scrollreveal">
+        <pre><code class="language-js">
+    console.log(jsConvert.toLowerCase('param-case')); // param-case
+    console.log(jsConvert.toLowerCase('Title Case')); // title case
+        </code></pre>
+      </div>
+      <div class="scrollreveal">
+        <div class="row">
+          <div class="col-12 col-lg-6 col-md-6">
+            <pre><code class="language-js">
+    jsConvert.lowerKeys({
+      camelCase: 1,
+      UPPERCASE: 2,
+      lowercase: 3,
+      snake_case: 4,
+      PascalCase: 5,
+      'Title Case': 6,
+      'dot.case': 7,
+      'param-case': 8,
+      'Sentence case': 9,
+      'path/case': 10,
+      'Header-Case': 11
+    });
+              </code></pre>
+          </div>
+          <div class="col-12 col-lg-6 col-md-6">
+            <pre><code class="language-js">
+    {
+      camelcase: 1,
+      uppercase: 2,
+      lowercase: 3,
+      snake_case: 4,
+      pascalcase: 5,
+      'title case': 6,
+      'dot.case': 7,
+      'param-case': 8,
+      'sentence case': 9,
+      'path/case': 10,
+      'header-case': 11
+    }
+              </code></pre>
+          </div>
+        </div>
+      </div>
+
+
+
+
+
+
+      <h5 class="mt-5 mb-4">Upper Case</h5>
+      <div class="scrollreveal">
+        <pre><code class="language-js">
+    console.log(jsConvert.toUpperCase('param-case')); // PARAM-CASE
+    console.log(jsConvert.toUpperCase('Title Case')); // TITLE CASE
+        </code></pre>
+      </div>
+      <div class="scrollreveal">
+        <div class="row">
+          <div class="col-12 col-lg-6 col-md-6">
+            <pre><code class="language-js">
+    jsConvert.upperKeys({
+      camelCase: 1,
+      UPPERCASE: 2,
+      lowercase: 3,
+      snake_case: 4,
+      PascalCase: 5,
+      'Title Case': 6,
+      'dot.case': 7,
+      'param-case': 8,
+      'Sentence case': 9,
+      'path/case': 10,
+      'Header-Case': 11
+    });
+              </code></pre>
+          </div>
+          <div class="col-12 col-lg-6 col-md-6">
+            <pre><code class="language-js">
+    {
+      CAMELCASE: 1,
+      UPPERCASE: 2,
+      LOWERCASE: 3,
+      SNAKE_CASE: 4,
+      PASCALCASE: 5,
+      'TITLE CASE': 6,
+      'DOT.CASE': 7,
+      'PARAM-CASE': 8,
+      'SENTENCE CASE': 9,
+      'PATH/CASE': 10,
+      'HEADER-CASE': 11
+    }
+              </code></pre>
+          </div>
+        </div>
+      </div>
+
+
+
+
+
+
+
+
+
+
+      <h4 class="mt-5 mb-4">2. Specific values</h4>
+      <div class="scrollreveal">
+        <pre><code class="language-js">
+    console.log(jsConvert.toCamelCase('')); // => ''
+    console.log(jsConvert.toSnakeCase(null)); // => ''
+    console.log(jsConvert.toPascalCase(undefined)); // => ''
+        </code></pre>
+      </div>
+      <div class="scrollreveal">
+        <pre><code class="language-js">
+      console.log(jsConvert.lowerKeys(undefined));  // null
+      console.log(jsConvert.lowerKeys(null));       // null
+      console.log(jsConvert.upperKeys(undefined));  // null
+      console.log(jsConvert.upperKeys(null));       // null
+      console.log(jsConvert.camelKeys(undefined));  // null
+      console.log(jsConvert.camelKeys(null));       // null
+          </code></pre>
+      </div>
+
+
+
+
+
+
+
+      <h4 class="mt-5 mb-4">3. Complicated Examples</h4>
+      <div class="scrollreveal">
+        <pre><code class="language-js">
+    // Complicated values
+    const str = '!@#$ &nbsp;-- Hello___world ..&lt;&gt;| \\ 123_ _456 &amp;\l sn_ca - cmCa - PcCa - dot.ca - txt ca - Sen ca - Hd Ca %^$^%&amp;';
+
+    console.log(jsConvert.toCamelCase(str));    // => 'helloWorld123456LSnCaCmCaPcCaDotCaTxtCaSenCaHdCa'
+    console.log(jsConvert.toPascalCase(str));   // => 'HelloWorld123456LSnCaCmCaPcCaDotCaTxtCaSenCaHdCa'
+    console.log(jsConvert.toSnakeCase(str));    // => 'hello_world_123_456_l_sn_ca_cm_ca_pc_ca_dot_ca_txt_ca_sen_ca_hd_ca'
+    console.log(jsConvert.toDotCase(str));      // => 'hello.world.123.456.l.sn.ca.cm.ca.pc.ca.dot.ca.txt.ca.sen.ca.hd.ca'
+    console.log(jsConvert.toPathCase(str));     // => 'hello/world/123/456/l/sn/ca/cm/ca/pc/ca/dot/ca/txt/ca/sen/ca/hd/ca'
+    console.log(jsConvert.toTextCase(str));     // => 'hello world 123 456 l sn ca cm ca pc ca dot ca txt ca sen ca hd ca'
+    console.log(jsConvert.toSentenceCase(str)); // => 'Hello world 123 456 l sn ca cm ca pc ca dot ca txt ca sen ca hd ca'
+    console.log(jsConvert.toHeaderCase(str));   // => 'Hello World 123 456 L Sn Ca Cm Ca Pc Ca Dot Ca Txt Ca Sen Ca Hd Ca'
+        </code></pre>
+      </div>
+
+
+
+
+    </div>
+
+
+
+    <hr class="mt-5">
+
+    <!-- navigation -->
+    <div class="row">
+      <div class="col-12 col-lg-6 col-md-6 text-center text-lg-left text-md-left mt-4 pl-4 scrollreveal">
+        <a href="./api.html">
+          <button class="btn btn-primary px-4">
+            <i class="fa fa-arrow-left mr-2"></i>
+             View APIs
+          </button>
+        </a>
+      </div>
+      <div class="col-12 col-lg-6 col-md-6 text-center text-lg-right text-md-right mt-4 pr-4 scrollreveal">
+        <a href="./download.html">
+          <button class="btn btn-primary px-4">
+            Download or Install now
+            <i class="fa fa-arrow-right ml-2"></i>
+          </button>
+        </a>
+      </div>
+    </div>
+
+  </div>
+
+
+
+
+
+  <!-- scroll top -->
+  <span id="scroll-top" ng-href="#header" du-smooth-scroll ng-show="showScrollTop">
+    <i class="fa fa-caret-up"></i>
+  </span>
+
+
+
+  <!-- Footer -->
+  <footer style="margin-top: 60px">
+    <div class="text-center jsc-footer">
+      <div class="py-1">
+        <i class="fa fa-copyright"></i> Copyright 2018 - Created By
+        <a class="jsc-link" href="https://github.com/huynhsamha" target="_blank">
+          <span>huynhsamha
+            <i class="fa fa-external-link"></i>.
+          </span>
+        </a>
+      </div>
+      <div class="py-1">
+        <span>
+          Source available on
+          <a class="jsc-link" href="https://github.com/huynhsamha/js-convert-case" target="_blank">
+            <span>GitHub
+              <i class="fa fa-github"></i>.
+            </span>
+          </a>
+        </span>
+        <span>
+          Package available on
+          <a class="jsc-link" href="https://www.npmjs.com/package/js-convert-case" target="_blank">
+            <span>NPM
+              <i class="fa fa-external-link"></i>.
+            </span>
+          </a>
+        </span>
+      </div>
+    </div>
+  </footer>
+
+
+
+
+
+  <!-- jQuery -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <!-- Bootstrap -->
+  <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script> -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+  <!-- AngularJS -->
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+  <script src="https://cdn.rawgit.com/zenorocha/clipboard.js/master/dist/clipboard.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-scroll/1.0.2/angular-scroll.min.js"></script>
+  <script src="./lib/ngclipboard/dist/ngclipboard.min.js"></script>
+  <!-- Scroll Reveal -->
+  <script src="https://unpkg.com/scrollreveal/dist/scrollreveal.min.js"></script>
+  <!-- jsConvert -->
+  <!-- <script src="./lib/jsConvert/dist/js-convert-case.min.js"></script> -->
+  <!-- prism - highlight code -->
+  <script src="./lib/prism/prism.min.js"></script>
+  <!-- scripts -->
+  <script src="./js/common.min.js"></script>
+  <!-- <script src="./js/common.js"></script> -->
+  <script src="./js/examples.min.js"></script>
+  <!-- <script src="./js/examples.js"></script> -->
+
+</body>
+
+</html>
