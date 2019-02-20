@@ -123,7 +123,9 @@ console.log(jsConvert.pascalKeys(obj));
 
 
 
+## Donate
 
+<a href="https://www.buymeacoffee.com/harisk" target="_blank"><img src="https://www.buymeacoffee.com/assets/img/custom_images/orange_img.png" alt="Buy Me A Coffee" style="height: auto !important;width: auto !important;" ></a>
 
 
 
@@ -553,3 +555,8 @@ console.log(jsConvert.camelKeys(null));
 [npm-url]: https://www.npmjs.com/package/js-convert-case
 [downloads-image]: https://img.shields.io/npm/dm/js-convert-case.svg?style=flat
 [downloads-url]: https://www.npmjs.com/package/js-convert-case
+
+
+## Donation
+
+<a href="https://www.buymeacoffee.com/harisk" target="_blank"><img src="https://www.buymeacoffee.com/assets/img/custom_images/orange_img.png" alt="Buy Me A Coffee" style="height: auto !important;width: auto !important;" ></a>
