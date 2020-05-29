@@ -1,0 +1,40 @@
+{
+  "name": "uppercase-keys-object",
+  "version": "1.1.4",
+  "description": "Uppercase the keys of an object",
+  "main": "index.js",
+  "scripts": {
+    "test": "node test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/huynhsamha/uppercase-keys-object.git"
+  },
+  "keywords": [
+    "uppercase",
+    "uppercase-keys",
+    "uppercase-keys-object",
+    "sql",
+    "oracledb",
+    "object",
+    "assign",
+    "extend",
+    "properties",
+    "upper-case",
+    "case",
+    "keys",
+    "key",
+    "browser",
+    "browserify"
+  ],
+  "author": {
+    "name": "huynhsamha",
+    "email": "huynhsamha@gmail.com",
+    "url": "https://github.com/huynhsamha"
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/huynhsamha/uppercase-keys-object/issues"
+  },
+  "homepage": "https://github.com/huynhsamha/uppercase-keys-object"
+}

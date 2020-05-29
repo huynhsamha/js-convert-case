@@ -1,0 +1,43 @@
+{
+  "name": "pascalcase-keys-object",
+  "version": "1.0.1",
+  "description": "Pascalcase the keys of an object",
+  "main": "index.js",
+  "scripts": {
+    "test": "node test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/huynhsamha/pascalcase-keys-object.git"
+  },
+  "keywords": [
+    "pascalcase",
+    "pascalcase-keys",
+    "pascalcase-keys-object",
+    "sql",
+    "oracledb",
+    "object",
+    "assign",
+    "extend",
+    "properties",
+    "camel-case",
+    "case",
+    "keys",
+    "key",
+    "browser",
+    "browserify"
+  ],
+  "author": {
+    "name": "huynhsamha",
+    "email": "huynhsamha@gmail.com",
+    "url": "https://github.com/huynhsamha"
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/huynhsamha/pascalcase-keys-object/issues"
+  },
+  "homepage": "https://github.com/huynhsamha/pascalcase-keys-object",
+  "dependencies": {
+    "js-pascalcase": "^1.0.0"
+  }
+}

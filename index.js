@@ -1,5 +1,3 @@
-'use strict';
-
 const toCamelCase = require('js-camelcase');
 const toSnakeCase = require('js-snakecase');
 const toPascalCase = require('js-pascalcase');
@@ -15,8 +13,8 @@ const camelKeys = require('camelcase-keys-object');
 const snakeKeys = require('snakecase-keys-object');
 const pascalKeys = require('pascalcase-keys-object');
 
-const toUpperCase = str => String(str).toUpperCase();
-const toLowerCase = str => String(str).toLowerCase();
+const toUpperCase = str => String(str || '').toUpperCase();
+const toLowerCase = str => String(str || '').toLowerCase();
 
 const jsConvert = {
   toCamelCase,

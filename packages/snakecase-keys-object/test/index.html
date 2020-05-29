@@ -1,0 +1,22 @@
+<script src="../dist/snakecase-keys-object.min.js"></script>
+<script>
+	const object = {
+		camelCase: 1,
+		UPPERCASE: 2,
+		lowercase: 3,
+		snake_case: 4,
+		PascalCase: 5,
+		'Title Case': 6,
+		'dot.case': 7,
+		'param-case': 8,
+		'Sentence case': 9,
+		'path/case': 10,
+		'Header-Case': 11
+	};
+
+	const res = snakeKeys(object);
+
+	console.log(res);
+	console.log(snakeKeys(null)); // null
+	console.log(snakeKeys(undefined)); // null
+</script>

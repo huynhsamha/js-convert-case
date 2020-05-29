@@ -1,0 +1,24 @@
+<script src="../dist/js-pathcase.min.js"></script>
+<script>
+	console.log(toTextCase('string')); // => string
+	console.log(toTextCase('camelCase')); // => camel case
+	console.log(toTextCase('param-case')); // => param case
+	console.log(toTextCase('PascalCase')); // => pascal case
+	console.log(toTextCase('UPPER_CASE')); // => upper case
+	console.log(toTextCase('snake_case')); // => snake case
+	console.log(toTextCase('sentence case')); // => sentence case
+	console.log(toTextCase('Title Case')); // => title case
+	console.log(toTextCase('dot.case')); // => // dot case
+
+	console.log(toTextCase('')); // => ''
+	console.log(toTextCase(null)); // => ''
+	console.log(toTextCase(undefined)); // => ''
+
+	console.log(toTextCase('Abc ___ 123 ___ xYz')); // => abc 123 x yz
+	console.log(toTextCase('123__abc  ... ?// {#} def 12')); // => 123 abc def 12
+	console.log(toTextCase('	tab space ??? ________')); // => tab space
+	console.log(toTextCase('___?||123  abc|| 123..123')); // => 123 abc 123 123
+	console.log(toTextCase('!@#$%  {}|":;" ABC XyZ G123H')); // => abc xy z g123h
+	console.log(toTextCase(' ^&* #DEFine x: 15 + ==')); // => define x 15
+	console.log(toTextCase('123456789')); // => 123456789
+</script>

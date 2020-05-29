@@ -1,0 +1,29 @@
+{
+  "name": "js-dotcase",
+  "version": "2.0.0",
+  "description": "JavaScript Convert text to dot.case",
+  "scripts": {},
+  "files": [
+    "dist/**/*",
+    "index.js"
+  ],
+  "homepage": "https://github.com/huynhsamha/js-convert-case/packages/js-dotcase",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/huynhsamha/js-convert-case.git"
+  },
+  "author": {
+    "name": "huynhsamha",
+    "email": "huynhsamha@gmail.com",
+    "url": "https://github.com/huynhsamha"
+  },
+  "bugs": {
+    "url": "https://github.com/huynhsamha/js-convert-case/issues"
+  },
+  "keywords": [
+    "js-convert-case",
+    "dotcase",
+    "js-dotcase"
+  ]
+}

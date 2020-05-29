@@ -1,0 +1,37 @@
+{
+  "name": "js-snakecase",
+  "version": "1.2.1",
+  "description": "JavaScript convert string to snake_case - Use for both Node.JS and Browser.",
+  "main": "index.js",
+  "scripts": {
+    "test": "node test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/huynhsamha/js-snakecase.git"
+  },
+  "keywords": [
+    "snakecase",
+    "js-snakecase",
+    "underscore",
+    "underscore case",
+    "assign",
+    "extend",
+    "case",
+    "browser",
+    "browserify",
+    "convert",
+    "js-convert-case",
+    "convert-case"
+  ],
+  "author": {
+    "name": "huynhsamha",
+    "email": "huynhsamha@gmail.com",
+    "url": "https://github.com/huynhsamha"
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/huynhsamha/js-snakecase/issues"
+  },
+  "homepage": "https://github.com/huynhsamha/js-snakecase"
+}
