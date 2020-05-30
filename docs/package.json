@@ -1,6 +1,0 @@
-{
-  "homepage": "https://huynhsamha.github.io/js-convert-case/",
-  "scripts": {
-    "start": "bundle exec jekyll serve"
-  }
-}
