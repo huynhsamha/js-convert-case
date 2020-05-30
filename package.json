@@ -3,40 +3,18 @@
   "version": "4.0.0",
   "description": "JavaScript Convert String and Keys of Object between cases (camelCase, snake_case, PascalCase, dot.case, path/case, text case, Sentence case, Header Case, UPPERCASE, lowercase). Use for both Node.JS and Browser",
   "scripts": {
-    "lint": "eslint ./",
-    "lint:fix": "eslint ./ --fix",
-    "dist:dep": "yarn dist:dep:1 && yarn dist:dep:2",
-    "dist:dep:1": "yarn js-camelcase && yarn js-dotcase && yarn js-headercase && yarn js-pascalcase && yarn js-pathcase&& yarn js-sentencecase && yarn js-snakecase && yarn js-textcase",
-    "dist:dep:2": "yarn camelcase-keys-object && yarn lowercase-keys-object && yarn pascalcase-keys-object && yarn snakecase-keys-object && yarn uppercase-keys-object",
-    "js-camelcase": "rollup -c packages/js-camelcase/rollup.config.js",
-    "js-dotcase": "rollup -c packages/js-dotcase/rollup.config.js",
-    "js-headercase": "rollup -c packages/js-headercase/rollup.config.js",
-    "js-pascalcase": "rollup -c packages/js-pascalcase/rollup.config.js",
-    "js-pathcase": "rollup -c packages/js-pathcase/rollup.config.js",
-    "js-sentencecase": "rollup -c packages/js-sentencecase/rollup.config.js",
-    "js-snakecase": "rollup -c packages/js-snakecase/rollup.config.js",
-    "js-textcase": "rollup -c packages/js-textcase/rollup.config.js",
-    "camelcase-keys-object": "rollup -c packages/camelcase-keys-object/rollup.config.js",
-    "lowercase-keys-object": "rollup -c packages/lowercase-keys-object/rollup.config.js",
-    "pascalcase-keys-object": "rollup -c packages/pascalcase-keys-object/rollup.config.js",
-    "snakecase-keys-object": "rollup -c packages/snakecase-keys-object/rollup.config.js",
-    "uppercase-keys-object": "rollup -c packages/uppercase-keys-object/rollup.config.js"
+    "build": "tsc",
+    "format": "prettier --write \"src/**/*.ts\"",
+    "lint": "tslint -p tsconfig.json",
+    "rollup": "rollup -c",
+    "clean": "yarn clean:node && yarn clean:browser",
+    "dist": "yarn dist:browser",
+    "clean:node": "rm -rf lib",
+    "clean:browser": "rm -rf dist",
+    "dist:node": "yarn clean:node && yarn format && yarn lint && yarn build",
+    "dist:browser": "yarn dist:node && yarn clean:browser && yarn rollup"
   },
-  "dependencies": {
-    "camelcase-keys-object": "file:./packages/camelcase-keys-object",
-    "js-camelcase": "file:./packages/js-camelcase",
-    "js-dotcase": "file:./packages/js-dotcase",
-    "js-headercase": "file:./packages/js-headercase",
-    "js-pascalcase": "file:./packages/js-pascalcase",
-    "js-pathcase": "file:./packages/js-pathcase",
-    "js-sentencecase": "file:./packages/js-sentencecase",
-    "js-snakecase": "file:./packages/js-snakecase",
-    "js-textcase": "file:./packages/js-textcase",
-    "lowercase-keys-object": "file:./packages/lowercase-keys-object",
-    "pascalcase-keys-object": "file:./packages/pascalcase-keys-object",
-    "snakecase-keys-object": "file:./packages/snakecase-keys-object",
-    "uppercase-keys-object": "file:./packages/uppercase-keys-object"
-  },
+  "dependencies": {},
   "devDependencies": {
     "babel-eslint": "^8.2.6",
     "eslint": "^4.19.1",
@@ -47,10 +25,15 @@
     "rollup": "^2.10.8",
     "rollup-plugin-babel-minify": "^10.0.0",
     "rollup-plugin-commonjs": "^10.1.0",
-    "rollup-plugin-node-resolve": "^5.2.0"
+    "rollup-plugin-node-resolve": "^5.2.0",
+    "prettier": "^2.0.5",
+    "tslint": "^6.1.2",
+    "tslint-config-prettier": "^1.18.0",
+    "typescript": "^3.9.2"
   },
   "files": [
     "dist/**/*",
+    "lib/**/*",
     "index.js"
   ],
   "repository": {
@@ -73,6 +56,7 @@
   "icon": "./docs/favicon.ico",
   "keywords": [
     "js-convert-case",
+    "jsConvert",
     "js-camelcase",
     "js-dotcase",
     "js-headercase",

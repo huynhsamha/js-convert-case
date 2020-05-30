@@ -1,0 +1,18 @@
+{
+  "name": "jsconvert-test-npm-pack",
+  "version": "1.0.0",
+  "license": "MIT",
+  "scripts": {
+    "es5": "node src/es5.js",
+    "es6": "babel-node src/es6.js",
+    "clean": "rm -rf *.tgz"
+  },
+  "dependencies": {
+    "js-convert-case": "file:js-convert-case-4.0.0.tgz"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.10.1",
+    "@babel/node": "^7.10.1",
+    "@babel/preset-env": "^7.10.1"
+  }
+}

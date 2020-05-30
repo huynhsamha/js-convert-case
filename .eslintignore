@@ -5,3 +5,5 @@ dll/*
 build/*
 docs/lib/*
 *.min.js
+lib/*
+dist/*
