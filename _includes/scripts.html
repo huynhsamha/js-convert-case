@@ -1,0 +1,41 @@
+<!-- jQuery -->
+<script src="//ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+<!-- Bootstrap -->
+<!-- <script src="//cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script> -->
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+
+<!-- AngularJS -->
+<script src="//ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+<script src="//cdn.rawgit.com/zenorocha/clipboard.js/master/dist/clipboard.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/angular-scroll/1.0.2/angular-scroll.min.js"></script>
+<!-- AngularJS Plugins -->
+<script src="{{ site.baseurl }}/assets/lib/ngclipboard/dist/ngclipboard.min.js"></script>
+
+<!-- Scroll Reveal -->
+{% if page.sr %}
+<script src="//unpkg.com/scrollreveal/dist/scrollreveal.min.js"></script>
+{% endif %}
+
+<!-- jsConvert -->
+<script src="{{ site.baseurl }}/assets/lib/jsConvert/dist/js-convert-case.min.js"></script>
+
+<!-- Prism - highlight code -->
+<script src="{{ site.baseurl }}/assets/lib/prism/prism.min.js"></script>
+
+<!-- scripts -->
+<script src="{{ site.baseurl }}/js/common.js"></script>
+
+{% for i in page.scripts %}
+<script src="{{ site.baseurl }}/js/{{ i }}.js"></script>
+{% endfor %}
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="//www.googletagmanager.com/gtag/js?id=UA-116052157-3"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag() { dataLayer.push(arguments); }
+  gtag('js', new Date());
+
+  gtag('config', 'UA-116052157-3');
+</script>

@@ -1,0 +1,61 @@
+---
+layout: default
+title: Online JavaScript Convert Case
+header: jsConvert
+path: /
+icon: fa-list-ul
+description: "jsConvert is a simple JavaScript Library for Converting string and keys of object between cases (camelCase, snake_case, PascalCase, dot.case, path/case, text case, Sentence case, Header Case, UPPERCASE, lowercase). <p>Using for both Node.JS and Browser. Available on NPM.</p>"
+scripts: [index]
+sr: true
+---
+
+<!-- Each Example -->
+  <h1>Online JavaScript Convert Case</h1>
+  <hr>
+  <div class="row" ng-repeat="_ in converts track by $index" ng-cloak>
+    <div class="col-12">
+      <h5 class="mt-2">
+        <a href="{% raw %}{{'./api.html#' + _.target}}{% endraw %}" target="_blank" ng-cloak>
+          {% raw %}{{ _.name }}{% endraw %}
+        </a>
+      </h5>
+    </div>
+    <div class="col-12 col-lg-6 col-md-6">
+      <div class="input-group jsc-input-group">
+        <input type="text" ng-cloak ng-model="_.data">
+        <div class="input-group-append">
+          <button type="button" ng-cloak ng-click="_.data = ''">
+            <i class="fa fa-cog"></i> Clear
+          </button>
+        </div>
+      </div>
+    </div>
+    <div class="col-12 col-lg-6 col-md-6">
+      <div class="input-group jsc-input-group">
+        <input type="text" ng-cloak readonly select-on-click ng-value="_.func(_.data)" id="{% raw %}{{'dest-' + $index}}{% endraw %}">
+        <div class="input-group-append">
+          <button type="button" ngclipboard data-clipboard-target="{% raw %}{{'#dest-' + $index}}{% endraw %}" ng-click="_.showCopied = true" ng-mouseleave="_.showCopied = false">
+            <i class="fa fa-copy"></i> Copy
+            <span class="popup" ng-cloak ng-show="_.showCopied">Copied
+              <div class="arrow-down"></div>
+            </span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <hr class="mt-5">
+
+  <h1>How to use in your NodeJS or Browser?</h1>
+  <!-- navigation -->
+  <div class="row">
+    <div class="col-12 text-center text-lg-right mt-4 pr-4 scrollreveal">
+      <a href="{{ site.baseurl }}/get-started.html">
+        <button class="btn btn-primary px-4">
+          Getting Started Now
+          <i class="fa fa-arrow-right ml-2"></i>
+        </button>
+      </a>
+    </div>
+  </div>
