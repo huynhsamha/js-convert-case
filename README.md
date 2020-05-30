@@ -3,7 +3,7 @@
 [![NPM version][npm-image]][npm-url]
 [![NPM downloads][downloads-image]][downloads-url]
 [![GitHub tag](https://img.shields.io/github/tag/huynhsamha/js-convert-case.svg)](https://GitHub.com/huynhsamha/js-convert-case/tags)
-![File size](https://img.badgesize.io/huynhsamha/js-convert-case/master/dist/js-convert-case.min.js.svg?label=js-convert-case.min.js)
+![File size](https://img.badgesize.io/huynhsamha/js-convert-case/master/dist/js-convert-case.min.js.svg?label=dist)
 [![MIT license](https://img.shields.io/badge/License-MIT-blue.svg)](https://lbesson.mit-license.org/)
 
 [npm-image]: https://img.shields.io/npm/v/js-convert-case.svg?style=flat
