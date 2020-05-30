@@ -1,0 +1,272 @@
+---
+layout: default
+title: QuickStart
+path: /quickstart
+icon: fa-play
+description: Easy ways to get jsConvert onto your website.
+scripts: [quickstart]
+sr: true
+---
+
+<!-- introduction -->
+<div class="row">
+  <div class="col-12">
+    <h1>
+      <a href="#introduction" class="">
+        Introduction
+      </a>
+    </h1>
+  </div>
+  <div class="col-12">
+    <p class="lead text-justify">
+      <b>jsConvert</b> is a simple library to convert string between cases (camelCase, snake_case, PascalCase, dot.case,
+      path/case, text case, Sentence case, Header Case, UPPERCASE, lowercase).
+    </p>
+    <p class="lead">
+      Use for both Node.JS and Browser. Available on NPM.
+    </p>
+  </div>
+  <div class="col-12 text-center text-lg-right text pr-4">
+    <a href="{{ site.baseurl }}" target="_blank">
+      <button class="btn btn-danger px-4">
+        Try on Playground
+        <i class="fa fa-play-circle ml-2"></i>
+      </button>
+    </a>
+  </div>
+</div>
+
+<!-- quickstart -->
+<div class="row">
+  <div class="col-12">
+    <hr>
+    <h1>
+      <a href="#installation">
+        Installation
+      </a>
+    </h1>
+    <!-- github -->
+    <div class="col-12 mt-4 mb-5">
+      <h3 class="mb-3">
+        <a href="#github">
+          1. GitHub
+        </a>
+      </h3>
+      jsConvert is available on
+      <a href="//github.com/huynhsamha/js-convert-case" target="_blank">GitHub</a>.
+      <div class="my-3 scrollreveal">
+        <pre><code class="language-git">git clone https://github.com/huynhsamha/js-convert-case.git</code></pre>
+      </div>
+      <div class="text-center my-3 scrollreveal">
+        <a href="//github.com/huynhsamha/js-convert-case" target="_blank">
+          <button class="btn btn-danger px-5">
+            Go to GitHub
+            <i class="fa fa-github ml-2"></i>
+          </button>
+        </a>
+      </div>
+    </div>
+    <!-- directly -->
+    <div class="col-12 mt-3 mb-5">
+      <h3 class="mb-3">
+        <a href="#download">
+          2. Download
+        </a>
+      </h3>
+      You can download <code>dist</code> folder directly here
+      <a href="{{ site.baseurl }}/download/js-convert-case.zip" download>here</a>.
+      <div class="text-center mt-3 scrollreveal">
+        <a href="{{ site.baseurl }}/download/js-convert-case.zip" download>
+          <button class="btn btn-danger px-5">
+            Download
+            <i class="fa fa-download ml-2"></i>
+          </button>
+        </a>
+      </div>
+    </div>
+    <!-- NPM -->
+    <div class="col-12 mt-3 mb-5">
+      <h3 class="mb-3">
+        <a href="#npm">
+          3. NPM
+        </a>
+      </h3>
+      You can also install package by NPM
+      <a href="//www.npmjs.com/package/js-convert-case" target="_blank">here</a>.
+      <div class="my-3 scrollreveal">
+        + Use <code>npm</code>:
+        <pre><code class="language-markup">npm install --save js-convert-case</code></pre>
+        </pre>
+        + Use <code>yarn</code>:
+        <pre><code class="language-markup">yarn add js-convert-case</code></pre>
+        </pre>
+      </div>
+      <div class="text-center my-3 scrollreveal">
+        <a href="//www.npmjs.com/package/js-convert-case" target="_blank">
+          <button class="btn btn-danger px-5">
+            Go to NPM
+            <i class="fa fa-external-link ml-2"></i>
+          </button>
+        </a>
+      </div>
+    </div>
+
+    <!-- CDN -->
+    <div class="col-12 mt-3 mb-5">
+      <h3 class="mb-3">
+        <a href="#cdn">
+          4. CDN
+        </a>
+      </h3>
+      You also can use CDN for NPM such as
+      <a href="//unpkg.com">unpkg</a> or <a href="//www.jsdelivr.com/">jsDelivr</a>.
+      <div class="my-3 scrollreveal">
+        + Use <code>unpkg</code>:
+        <pre><code class="language-markup">&lt;script src="https://unpkg.com/js-convert-case/dist/js-convert-case.min.js"&gt;&lt;/script&gt;</code></pre>
+        + Use <code>jsDelivr</code>:
+        <pre><code class="language-markup">&lt;script src="https://cdn.jsdelivr.net/js-convert-case/dist/js-convert-case.min.js"&gt;&lt;/script&gt;</code></pre>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Usage -->
+<div class="row">
+  <div class="col-12">
+    <hr>
+    <h1>
+      <a href="#usage">
+        Usage
+      </a>
+    </h1>
+
+    <!-- nodejs -->
+    <div class="col-12 mt-3">
+      <h3 class="mb-3">
+        <a href="#nodejs">
+          1. Node.JS
+        </a>
+      </h3>
+      <div class="mt-3 scrollreveal">
+        + Syntax <code>require</code>:
+        <pre><code class="language-js">const jsConvert = require('js-convert-case');
+// or
+const { toCamelCase, toDotCase, upperKeys, snakeKeys } = require('js-convert-case');</code></pre>
+      </div>
+      <div class="mt-3 scrollreveal">
+        + Syntax <code>import</code>:
+        <pre><code class="language-js">import js-convert-case from 'js-convert-case';
+// or
+import { toPascalCase, toPathCase, lowerKeys, camelKeys } from 'js-convert-case';</code></pre>
+      </div>
+    </div>
+
+
+    <!-- browser -->
+    <div class="col-12 my-5">
+      <h3 class="mb-3">
+        <a href="#browser">
+          2. Browser
+        </a>
+      </h3>
+      After file <code>js-convert-case.min.js</code> is loaded, object <code>jsConvert</code> will be exported globally
+      into <code>window</code> object.
+      <div class="mt-3 scrollreveal">
+        <pre><code class="language-js">console.log(window.jsConvert);
+console.log(jsConvert);</code></pre>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Example -->
+<div class="row">
+  <div class="col-12">
+    <hr>
+    <h1>
+      <a href="#examples">
+        Examples
+      </a>
+    </h1>
+    <div class="col-12 mt-3 scrollreveal">
+      <h4>1. Convert string</h4>
+      <pre><code class="language-js">
+    jsConvert.toCamelCase('param-case'); // paramCase
+    jsConvert.toSnakeCase('param-case'); // param_case
+    jsConvert.toPascalCase('param-case'); // ParamCase
+    jsConvert.toDotCase('param-case'); // param.case
+    jsConvert.toPathCase('param-case'); // param/case
+    jsConvert.toTextCase('param-case'); // param case
+    jsConvert.toSentenceCase('param-case'); // Param case
+    jsConvert.toHeaderCase('param-case'); // Param Case
+    jsConvert.toLowerCase('param-case'); // param-case
+    jsConvert.toUpperCase('param-case'); // PARAM-CASE
+          </code></pre>
+    </div>
+    <div class="col-12 mt-3 scrollreveal">
+      <h4>2. Convert keys in object</h4>
+      <pre><code class="language-js">
+    const obj = {
+        camelCase: 1,
+        UPPERCASE: 2,
+        lowercase: 3,
+        snake_case: 4,
+        PascalCase: 5,
+        'Title Case': 6,
+        'dot.case': 7,
+        'param-case': 8,
+        'Sentence case': 9,
+        'path/case': 10,
+        'Header-Case': 11
+    };
+
+    jsConvert.lowerKeys(obj);
+    jsConvert.upperKeys(obj);
+    jsConvert.camelKeys(obj);
+    jsConvert.snakeKeys(obj);
+    jsConvert.pascalKeys(obj);
+            </code></pre>
+    </div>
+    <div class="col-12 mt-3 scrollreveal">
+      <h4>3. Recursive convert in object</h4>
+      <pre><code class="language-js">
+    jsConvert.upperKeys(obj, { recursive: true });
+    jsConvert.lowerKeys(obj, { recursive: true });
+    jsConvert.snakeKeys(obj, { recursive: true });
+    jsConvert.camelKeys(obj, { recursive: true });
+    jsConvert.pascalKeys(obj, { recursive: true });
+      </code></pre>
+    </div>
+    <div class="col-12 mt-3 text-center">
+      <a href="//github.com/huynhsamha/js-convert-case#examples" target="_blank">
+        <button class="btn btn-danger px-5">
+          Read more examples
+          <i class="fa fa-book ml-2"></i>
+        </button>
+      </a>
+    </div>
+  </div>
+
+</div>
+
+<hr class="mt-5">
+
+<!-- navigation -->
+<div class="row">
+  <div class="col-12 col-lg-6 col-md-6 text-center text-lg-left text-md-left mt-4 pl-4 scrollreveal">
+    <a href="{{ site.baseurl }}">
+      <button class="btn btn-primary px-4">
+        <i class="fa fa-arrow-left mr-2"></i>
+        Try on Playground
+      </button>
+    </a>
+  </div>
+  <div class="col-12 col-lg-6 col-md-6 text-center text-lg-right text-md-right mt-4 pr-4 scrollreveal">
+    <a href="{{ site.baseurl }}/api">
+      <button class="btn btn-primary px-4">
+        View APIs
+        <i class="fa fa-arrow-right ml-2"></i>
+      </button>
+    </a>
+  </div>
+</div>

@@ -6,7 +6,7 @@
 
     $scope.converts = [
       { name: 'camelCase', func: jsConvert.toCamelCase, target: 'toCamelCase' },
-      { name: 'snake_Case', func: jsConvert.toSnakeCase, target: 'toSnakeCase' },
+      { name: 'snake_case', func: jsConvert.toSnakeCase, target: 'toSnakeCase' },
       { name: 'PascalCase', func: jsConvert.toPascalCase, target: 'toPascalCase' },
       { name: 'dot.case', func: jsConvert.toDotCase, target: 'toDotCase' },
       { name: 'path/case', func: jsConvert.toPathCase, target: 'toPathCase' },

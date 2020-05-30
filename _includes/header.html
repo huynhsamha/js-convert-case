@@ -1,10 +1,11 @@
 <header id="header">
   <nav class="navbar navbar-expand-md navbar-dark jsc-header">
     <a class="navbar-brand jsc-brand" href="{{ site.baseurl }}/">
-      <img src="{{ site.baseurl }}/favicon.png" width="35" height="35" class="d-inline-block align-top" alt=""> jsConvert
+      <img src="{{ site.baseurl }}/favicon.png" width="35" height="35" class="d-inline-block align-top" alt="">
+      jsConvert
     </a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-container" aria-controls="navbar-container"
-      aria-expanded="false" aria-label="Toggle navigation">
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-container"
+      aria-controls="navbar-container" aria-expanded="false" aria-label="Toggle navigation">
       <span>
         <i class="fa fa-bars"></i>
       </span>
@@ -14,7 +15,8 @@
       <ul class="navbar-nav mr-auto">
         {% for i in site.urls %}
         <li class="nav-item">
-          <a class="nav-link {% if page.path == i.url %} active {% endif %}" href="{{ site.baseurl }}{{ i.url }}">{{ i.text }}</a>
+          <a class="nav-link {% if page.path == i.url %} active {% endif %}"
+            href="{{ site.baseurl }}{{ i.url }}">{{ i.text }}</a>
         </li>
         {% endfor %}
       </ul>
@@ -26,7 +28,7 @@
         </li>
         <li class="nav-item">
           <a class="nav-link jsc-link" href="//www.npmjs.com/package/js-convert-case" target="_blank">
-            <img src="{{ site.baseurl }}/img/npm.png" alt="NPM" height="20">
+            <img src="{{ site.baseurl }}/img/npm.png" alt="NPM" height="14">
           </a>
         </li>
       </ul>

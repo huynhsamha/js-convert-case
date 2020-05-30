@@ -4,17 +4,13 @@ baseurl: /js-convert-case
 
 urls:
   - url: /
-    text: Convert Online
-  - url: /get-started
-    text: Get Started
+    text: Playground
+  - url: /quickstart
+    text: Quickstart
   - url: /api
     text: API
   - url: /examples
     text: Examples
-  - url: /download
-    text: Download
-  - url: /support
-    text: Support
 
 compress_html:
   clippings: all

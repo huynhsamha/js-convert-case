@@ -8,97 +8,75 @@ scripts: [api]
 sr: true
 ---
 
+<h3 class="mt-2 mb-3">Available Methods</h3>
 
-  <h3 id="jsconvert" class="my-3">What is jsConvert?</h3>
-  <p class="lead text-justify">
-    <strong>jsConvert</strong> is object containing function convert between cases. In browser, you should use correct name of this
-    object. In Node.JS or using with webpack or browerify, you can rename with your custom name for object.</p>
+<h6>Convert String</h6>
+<ul>
+  <li ng-repeat="_ in apiConvertString" ng-cloak>
+    <a href="{%raw%}{{'#' + _.method}}{%endraw%}" du-smooth-scroll>
+      <code>{% raw %}{{_.method}}{% endraw %}</code>
+    </a>
+  </li>
+</ul>
 
-  <h3 class="mt-5 mb-3">Available Methods</h3>
+<h6>Convert Keys of Object</h6>
+<ul>
+  <li ng-repeat="_ in apiConvertKeysObject" ng-cloak>
+    <a href="{%raw%}{{'#' + _.method}}{%endraw%}" du-smooth-scroll>
+      <code>{% raw %}{{_.method}}{% endraw %}</code>
+    </a>
+  </li>
+</ul>
 
-  <h6>Convert String cases</h6>
-  <ul>
-    <li ng-repeat="_ in apiConvertString" ng-cloak>
-      <a href="{%raw%}{{'#' + _.method}}{%endraw%}" du-smooth-scroll>
-        <code>{% raw %}{{_.method}}{% endraw %}</code>
-      </a>
-    </li>
-  </ul>
+<hr>
 
-  <h6>Convert Keys of Object case</h6>
-  <ul>
-    <li ng-repeat="_ in apiConvertKeysObject" ng-cloak>
-      <a href="{%raw%}{{'#' + _.method}}{%endraw%}" du-smooth-scroll>
-        <code>{% raw %}{{_.method}}{% endraw %}</code>
-      </a>
-    </li>
-  </ul>
+<div ng-repeat="_ in apiConvertString" ng-cloak class="my-5" id="{% raw %}{{_.method}}{% endraw %}">
+  <h4>
+    <a ng-href="#{% raw %}{{_.method}}{% endraw %}">{% raw %}{{_.method}}{% endraw %}</a>
+  </h4>
 
-  <hr>
+  <p>{% raw %}{{_.description}}{% endraw %}</p>
 
-  <div ng-repeat="_ in apiConvertString" ng-cloak class="my-5" id="{% raw %}{{_.method}}{% endraw %}">
-    <h4>
-      <a ng-href="//github.com/huynhsamha/{% raw %}{{_.package}}{% endraw %}">{% raw %}{{_.method}}{% endraw %}</a>
-    </h4>
+  <pre ng-prism source="{% raw %}{{_.code}}{% endraw %}" class="language-js"></pre>
+</div>
 
-    <p>{% raw %}{{_.description}}{% endraw %}</p>
+<hr>
 
-    <pre ng-prism source="{% raw %}{{_.code}}{% endraw %}" class="language-js"></pre>
-  </div>
+<div ng-repeat="_ in apiConvertKeysObject" ng-cloak class="my-5" id="{% raw %}{{_.method}}{% endraw %}">
+  <h4>
+    <a ng-href="#{% raw %}{{_.method}}{% endraw %}">{% raw %}{{_.method}}{% endraw %}</a>
+  </h4>
 
-  <hr>
+  <p>{% raw %}{{_.description}}{% endraw %}</p>
 
-  <div ng-repeat="_ in apiConvertKeysObject" ng-cloak class="my-5" id="{% raw %}{{_.method}}">
-    <h4>
-      <a ng-href="//github.com/huynhsamha/{% raw %}{{_.package}}{% endraw %}">{% raw %}{{_.method}}{% endraw %}</a>
-    </h4>
-
-    <p>{% raw %}{{_.description}}{% endraw %}</p>
-
-    <div class="row">
-      <div class="col-12 col-lg-6 col-md-6">
-        <pre ng-prism source="{% raw %}{{_.code}}{% endraw %}" class="language-js"></pre>
-      </div>
-      <div class="col-12 col-lg-6 col-md-6">
-        <pre ng-prism source="{% raw %}{{_.output}}{% endraw %}" class="language-js"></pre>
-      </div>
-    </div>
-  </div>
-
-  <hr>
-
-  <h2 id="dependencies" class="my-4">Dependencies</h2>
-
-  <ul>
-    <li ng-repeat="_ in apiConvertString" ng-if="_.package" ng-cloak>
-      <a href="//github.com/huynhsamha/{% raw %}{{_.package}}{% endraw %}">{% raw %}{{_.package}}{% endraw %}</a>
-    </li>
-  </ul>
-
-  <ul>
-    <li ng-repeat="_ in apiConvertKeysObject" ng-if="_.package" ng-cloak>
-      <a href="//github.com/huynhsamha/{% raw %}{{_.package}}{% endraw %}">{% raw %}{{_.package}}{% endraw %}</a>
-    </li>
-  </ul>
-
-  <hr class="mt-5">
-
-  <!-- navigation -->
   <div class="row">
-    <div class="col-12 col-lg-6 col-md-6 text-center text-lg-left text-md-left mt-4 pl-4 scrollreveal">
-      <a href="{{ site.baseurl }}/get-started.html">
-        <button class="btn btn-primary px-4">
-          <i class="fa fa-arrow-left mr-2"></i>
-          Getting Started
-        </button>
-      </a>
+    <div class="col-12 col-lg-6 col-md-6">
+      <pre ng-prism source="{% raw %}{{_.code}}{% endraw %}" class="language-js"></pre>
     </div>
-    <div class="col-12 col-lg-6 col-md-6 text-center text-lg-right text-md-right mt-4 pr-4 scrollreveal">
-      <a href="{{ site.baseurl }}/examples.html">
-        <button class="btn btn-primary px-4">
-          More Examples
-          <i class="fa fa-arrow-right ml-2"></i>
-        </button>
-      </a>
+    <div class="col-12 col-lg-6 col-md-6">
+      <pre ng-prism source="{% raw %}{{_.output}}{% endraw %}" class="language-js"></pre>
     </div>
   </div>
+</div>
+
+<hr class="mt-5">
+
+<!-- navigation -->
+<div class="row">
+  <div class="col-12 col-lg-6 col-md-6 text-center text-lg-left text-md-left mt-4 pl-4 scrollreveal">
+    <a href="{{ site.baseurl }}/quickstart">
+      <button class="btn btn-primary px-4">
+        <i class="fa fa-arrow-left mr-2"></i>
+        QuickStart
+      </button>
+    </a>
+  </div>
+  <div class="col-12 col-lg-6 col-md-6 text-center text-lg-right text-md-right mt-4 pr-4 scrollreveal">
+    <a href="{{ site.baseurl }}/examples">
+      <button class="btn btn-primary px-4">
+        More Examples
+        <i class="fa fa-arrow-right ml-2"></i>
+      </button>
+    </a>
+  </div>
+</div>

@@ -18,7 +18,7 @@
 {% endif %}
 
 <!-- jsConvert -->
-<script src="{{ site.baseurl }}/assets/lib/jsConvert/dist/js-convert-case.min.js"></script>
+<script src="//unpkg.com/js-convert-case/dist/js-convert-case.min.js"></script>
 
 <!-- Prism - highlight code -->
 <script src="{{ site.baseurl }}/assets/lib/prism/prism.min.js"></script>
@@ -29,13 +29,3 @@
 {% for i in page.scripts %}
 <script src="{{ site.baseurl }}/js/{{ i }}.js"></script>
 {% endfor %}
-
-<!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="//www.googletagmanager.com/gtag/js?id=UA-116052157-3"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag() { dataLayer.push(arguments); }
-  gtag('js', new Date());
-
-  gtag('config', 'UA-116052157-3');
-</script>

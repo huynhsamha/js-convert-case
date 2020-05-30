@@ -8,21 +8,56 @@ scripts: [examples]
 sr: true
 ---
 
-  <div class="col-12">
-    <h4 class="mt-3 mb-4">1. Basic Examples</h4>
+<h3 class="mt-2 mb-3">Examples</h3>
 
-    <h5 class="mt-5 mb-4">Camel Case</h5>
-    <div class="scrollreveal">
-      <pre><code class="language-js">
+<ol>
+  <li><a href="#basic-examples" du-smooth-scroll>Basic Examples</a></li>
+  <ul>
+    <li><a href="#camelcase" du-smooth-scroll>Camel Case</a></li>
+    <li><a href="#snakecase" du-smooth-scroll>Snake Case</a></li>
+    <li><a href="#pascalcase" du-smooth-scroll>Pascal Case</a></li>
+    <li><a href="#dotcase" du-smooth-scroll>Dot Case</a></li>
+    <li><a href="#pathcase" du-smooth-scroll>Path Case</a></li>
+    <li><a href="#textcase" du-smooth-scroll>Text Case</a></li>
+    <li><a href="#sentencecase" du-smooth-scroll>Sentence Case</a></li>
+    <li><a href="#headercase" du-smooth-scroll>Header Case</a></li>
+    <li><a href="#lowercase" du-smooth-scroll>Lower Case</a></li>
+    <li><a href="#uppercase" du-smooth-scroll>Upper Case</a></li>
+  </ul>
+  <li><a href="#special-values" du-smooth-scroll>Special Values</a></li>
+  <li><a href="#complicated" du-smooth-scroll>Complicated Values</a></li>
+  <li><a href="#recursive" du-smooth-scroll>Recursive Convert in Object</a></li>
+</ol>
+
+<hr>
+
+<div class="col-12">
+  <!-- 1 -->
+  <h4 class="mt-3 mb-4" id="basic-examples">1. Basic Examples</h4>
+
+  <!-- CamelCase -->
+  <h5 class="mt-5 mb-4" id="camelcase">Camel Case</h5>
+  <div class="scrollreveal">
+    <pre><code class="language-js">
     console.log(jsConvert.toCamelCase('param-case')); // paramCase
     console.log(jsConvert.toCamelCase('camelCase')); // camelCase
     console.log(jsConvert.toCamelCase('Title Case')); // titleCase
         </code></pre>
-    </div>
-    <div class="scrollreveal">
-      <div class="row">
-        <div class="col-12 col-lg-6 col-md-6">
-          <pre><code class="language-js">
+  </div>
+  <div class="scrollreveal">
+    <pre><code class="language-js">
+    // All output are `null`
+    console.log(jsConvert.camelKeys(undefined));
+    console.log(jsConvert.camelKeys(null));
+    console.log(jsConvert.camelKeys(1));
+    console.log(jsConvert.camelKeys('abc'));
+    console.log(jsConvert.camelKeys([1, 2, 3]));
+        </code></pre>
+  </div>
+  <div class="scrollreveal">
+    <div class="row">
+      <div class="col-12 col-lg-6 col-md-6">
+        <pre><code class="language-js">
     jsConvert.camelKeys({
       camelCase: 1,
       UPPERCASE: 2,
@@ -37,9 +72,9 @@ sr: true
       'Header-Case': 11
     });
             </code></pre>
-        </div>
-        <div class="col-12 col-lg-6 col-md-6">
-          <pre><code class="language-js">
+      </div>
+      <div class="col-12 col-lg-6 col-md-6">
+        <pre><code class="language-js">
     {
       camelCase: 1,
       uppercase: 2,
@@ -54,22 +89,33 @@ sr: true
       headerCase: 11
     }
             </code></pre>
-        </div>
       </div>
     </div>
+  </div>
 
-    <h5 class="mt-5 mb-4">Snake Case</h5>
-    <div class="scrollreveal">
-      <pre><code class="language-js">
+  <!-- SnakeCase -->
+  <h5 class="mt-5 mb-4" id="snakecase">Snake Case</h5>
+  <div class="scrollreveal">
+    <pre><code class="language-js">
     console.log(jsConvert.toSnakeCase('param-case')); // param_case
     console.log(jsConvert.toSnakeCase('camelCase')); // camel_case
     console.log(jsConvert.toSnakeCase('Title Case')); // title_case
         </code></pre>
-    </div>
-    <div class="scrollreveal">
-      <div class="row">
-        <div class="col-12 col-lg-6 col-md-6">
-          <pre><code class="language-js">
+  </div>
+  <div class="scrollreveal">
+    <pre><code class="language-js">
+    // All output are `null`
+    console.log(jsConvert.snakeKeys(undefined));
+    console.log(jsConvert.snakeKeys(null));
+    console.log(jsConvert.snakeKeys(1));
+    console.log(jsConvert.snakeKeys('abc'));
+    console.log(jsConvert.snakeKeys([1, 2, 3]));
+        </code></pre>
+  </div>
+  <div class="scrollreveal">
+    <div class="row">
+      <div class="col-12 col-lg-6 col-md-6">
+        <pre><code class="language-js">
     jsConvert.snakeKeys({
       camelCase: 1,
       UPPERCASE: 2,
@@ -84,9 +130,9 @@ sr: true
       'Header-Case': 11
     });
               </code></pre>
-        </div>
-        <div class="col-12 col-lg-6 col-md-6">
-          <pre><code class="language-js">
+      </div>
+      <div class="col-12 col-lg-6 col-md-6">
+        <pre><code class="language-js">
     {
       camel_case: 1,
       uppercase: 2,
@@ -101,22 +147,33 @@ sr: true
       header_case: 11
     }
               </code></pre>
-        </div>
       </div>
     </div>
+  </div>
 
-    <h5 class="mt-5 mb-4">Pascal Case</h5>
-    <div class="scrollreveal">
-      <pre><code class="language-js">
+  <!-- PascalCase -->
+  <h5 class="mt-5 mb-4" id="pascalcase">Pascal Case</h5>
+  <div class="scrollreveal">
+    <pre><code class="language-js">
     console.log(jsConvert.toPascalCase('param-case')); // ParamCase
     console.log(jsConvert.toPascalCase('camelCase')); // CamelCase
     console.log(jsConvert.toPascalCase('Title Case')); // TitleCase
         </code></pre>
-    </div>
-    <div class="scrollreveal">
-      <div class="row">
-        <div class="col-12 col-lg-6 col-md-6">
-          <pre><code class="language-js">
+  </div>
+  <div class="scrollreveal">
+    <pre><code class="language-js">
+    // All output are `null`
+    console.log(jsConvert.pascalKeys(undefined));
+    console.log(jsConvert.pascalKeys(null));
+    console.log(jsConvert.pascalKeys(1));
+    console.log(jsConvert.pascalKeys('abc'));
+    console.log(jsConvert.pascalKeys([1, 2, 3]));
+        </code></pre>
+  </div>
+  <div class="scrollreveal">
+    <div class="row">
+      <div class="col-12 col-lg-6 col-md-6">
+        <pre><code class="language-js">
     jsConvert.pascalKeys({
       camelCase: 1,
       UPPERCASE: 2,
@@ -131,9 +188,9 @@ sr: true
       'Header-Case': 11
     });
               </code></pre>
-        </div>
-        <div class="col-12 col-lg-6 col-md-6">
-          <pre><code class="language-js">
+      </div>
+      <div class="col-12 col-lg-6 col-md-6">
+        <pre><code class="language-js">
     {
       CamelCase: 1,
       Uppercase: 2,
@@ -148,66 +205,82 @@ sr: true
       HeaderCase: 11
     }
               </code></pre>
-        </div>
       </div>
     </div>
+  </div>
 
-    <h5 class="mt-5 mb-4">Dot Case</h5>
-    <div class="scrollreveal">
-      <pre><code class="language-js">
+  <!-- DotCase -->
+  <h5 class="mt-5 mb-4" id="dotcase">Dot Case</h5>
+  <div class="scrollreveal">
+    <pre><code class="language-js">
     console.log(jsConvert.toDotCase('param-case')); // param.case
     console.log(jsConvert.toDotCase('camelCase')); // camel.case
     console.log(jsConvert.toDotCase('Title Case')); // title.case
         </code></pre>
-    </div>
+  </div>
 
-    <h5 class="mt-5 mb-4">Path Case</h5>
-    <div class="scrollreveal">
-      <pre><code class="language-js">
+  <!-- PathCase -->
+  <h5 class="mt-5 mb-4" id="pathcase">Path Case</h5>
+  <div class="scrollreveal">
+    <pre><code class="language-js">
     console.log(jsConvert.toPathCase('param-case')); // param/case
     console.log(jsConvert.toPathCase('camelCase')); // camel/case
     console.log(jsConvert.toPathCase('Title Case')); // title/case
         </code></pre>
-    </div>
+  </div>
 
-    <h5 class="mt-5 mb-4">Text Case</h5>
-    <div class="scrollreveal">
-      <pre><code class="language-js">
+  <!-- TextCase -->
+  <h5 class="mt-5 mb-4" id="textcase">Text Case</h5>
+  <div class="scrollreveal">
+    <pre><code class="language-js">
     console.log(jsConvert.toTextCase('param-case')); // param case
     console.log(jsConvert.toTextCase('camelCase')); // camel case
     console.log(jsConvert.toTextCase('Title Case')); // title case
         </code></pre>
-    </div>
+  </div>
 
-    <h5 class="mt-5 mb-4">Sentence Case</h5>
-    <div class="scrollreveal">
-      <pre><code class="language-js">
+  <!-- SentenceCase -->
+  <h5 class="mt-5 mb-4" id="sentencecase">Sentence Case</h5>
+  <div class="scrollreveal">
+    <pre><code class="language-js">
     console.log(jsConvert.toSentenceCase('param-case')); // Param case
     console.log(jsConvert.toSentenceCase('camelCase')); // Camel case
     console.log(jsConvert.toSentenceCase('Title Case')); // Title case
         </code></pre>
-    </div>
+  </div>
 
-    <h5 class="mt-5 mb-4">Header Case</h5>
-    <div class="scrollreveal">
-      <pre><code class="language-js">
+  <!-- HeaderCase -->
+  <h5 class="mt-5 mb-4" id="headercase">Header Case</h5>
+  <div class="scrollreveal">
+    <pre><code class="language-js">
     console.log(jsConvert.toHeaderCase('param-case')); // Param Case
     console.log(jsConvert.toHeaderCase('camelCase')); // Camel Case
     console.log(jsConvert.toHeaderCase('Title Case')); // Title Case
         </code></pre>
-    </div>
+  </div>
 
-    <h5 class="mt-5 mb-4">Lower Case</h5>
-    <div class="scrollreveal">
-      <pre><code class="language-js">
+  <!-- LowerCase -->
+  <h5 class="mt-5 mb-4" id="lowercase">Lower Case</h5>
+  <div class="scrollreveal">
+    <pre><code class="language-js">
     console.log(jsConvert.toLowerCase('param-case')); // param-case
     console.log(jsConvert.toLowerCase('Title Case')); // title case
         </code></pre>
-    </div>
-    <div class="scrollreveal">
-      <div class="row">
-        <div class="col-12 col-lg-6 col-md-6">
-          <pre><code class="language-js">
+  </div>
+  <div class="scrollreveal">
+    <pre><code class="language-js">
+    // All output are `null`
+    console.log(jsConvert.lowerKeys(undefined));
+    console.log(jsConvert.lowerKeys(null));
+    console.log(jsConvert.lowerKeys(1));
+    console.log(jsConvert.lowerKeys('abc'));
+    console.log(jsConvert.lowerKeys([1, 2, 3]));
+        </code></pre>
+  </div>
+  <div class="scrollreveal">
+    <div class="row">
+      <div class="col-12 col-lg-6 col-md-6">
+        <pre><code class="language-js">
     jsConvert.lowerKeys({
       camelCase: 1,
       UPPERCASE: 2,
@@ -222,9 +295,9 @@ sr: true
       'Header-Case': 11
     });
               </code></pre>
-        </div>
-        <div class="col-12 col-lg-6 col-md-6">
-          <pre><code class="language-js">
+      </div>
+      <div class="col-12 col-lg-6 col-md-6">
+        <pre><code class="language-js">
     {
       camelcase: 1,
       uppercase: 2,
@@ -239,21 +312,32 @@ sr: true
       'header-case': 11
     }
               </code></pre>
-        </div>
       </div>
     </div>
+  </div>
 
-    <h5 class="mt-5 mb-4">Upper Case</h5>
-    <div class="scrollreveal">
-      <pre><code class="language-js">
+  <!-- UpperCase -->
+  <h5 class="mt-5 mb-4" id="uppercase">Upper Case</h5>
+  <div class="scrollreveal">
+    <pre><code class="language-js">
     console.log(jsConvert.toUpperCase('param-case')); // PARAM-CASE
     console.log(jsConvert.toUpperCase('Title Case')); // TITLE CASE
         </code></pre>
-    </div>
-    <div class="scrollreveal">
-      <div class="row">
-        <div class="col-12 col-lg-6 col-md-6">
-          <pre><code class="language-js">
+  </div>
+  <div class="scrollreveal">
+    <pre><code class="language-js">
+    // All output are `null`
+    console.log(jsConvert.upperKeys(undefined));
+    console.log(jsConvert.upperKeys(null));
+    console.log(jsConvert.upperKeys(1));
+    console.log(jsConvert.upperKeys('abc'));
+    console.log(jsConvert.upperKeys([1, 2, 3]));
+        </code></pre>
+  </div>
+  <div class="scrollreveal">
+    <div class="row">
+      <div class="col-12 col-lg-6 col-md-6">
+        <pre><code class="language-js">
     jsConvert.upperKeys({
       camelCase: 1,
       UPPERCASE: 2,
@@ -268,9 +352,9 @@ sr: true
       'Header-Case': 11
     });
               </code></pre>
-        </div>
-        <div class="col-12 col-lg-6 col-md-6">
-          <pre><code class="language-js">
+      </div>
+      <div class="col-12 col-lg-6 col-md-6">
+        <pre><code class="language-js">
     {
       CAMELCASE: 1,
       UPPERCASE: 2,
@@ -285,32 +369,26 @@ sr: true
       'HEADER-CASE': 11
     }
               </code></pre>
-        </div>
       </div>
     </div>
+  </div>
 
-    <h4 class="mt-5 mb-4">2. Specific values</h4>
-    <div class="scrollreveal">
-      <pre><code class="language-js">
+
+  <!-- 2 -->
+  <h4 class="mt-5 mb-4" id="special-values">2. Special Values</h4>
+  <div class="scrollreveal">
+    <pre><code class="language-js">
     console.log(jsConvert.toCamelCase('')); // => ''
     console.log(jsConvert.toSnakeCase(null)); // => ''
     console.log(jsConvert.toPascalCase(undefined)); // => ''
         </code></pre>
-    </div>
-    <div class="scrollreveal">
-      <pre><code class="language-js">
-      console.log(jsConvert.lowerKeys(undefined));  // null
-      console.log(jsConvert.lowerKeys(null));       // null
-      console.log(jsConvert.upperKeys(undefined));  // null
-      console.log(jsConvert.upperKeys(null));       // null
-      console.log(jsConvert.camelKeys(undefined));  // null
-      console.log(jsConvert.camelKeys(null));       // null
-          </code></pre>
-    </div>
+  </div>
 
-    <h4 class="mt-5 mb-4">3. Complicated Examples</h4>
-    <div class="scrollreveal">
-      <pre><code class="language-js">
+
+  <!-- 3 -->
+  <h4 class="mt-5 mb-4" id="complicated">3. Complicated Examples</h4>
+  <div class="scrollreveal">
+    <pre><code class="language-js">
     // Complicated values
     const str = '!@#$ &nbsp;-- Hello___world ..&lt;&gt;| \\ 123_ _456 &amp;\l sn_ca - cmCa - PcCa - dot.ca - txt ca - Sen ca - Hd Ca %^$^%&amp;';
 
@@ -323,27 +401,154 @@ sr: true
     console.log(jsConvert.toSentenceCase(str)); // => 'Hello world 123 456 l sn ca cm ca pc ca dot ca txt ca sen ca hd ca'
     console.log(jsConvert.toHeaderCase(str));   // => 'Hello World 123 456 L Sn Ca Cm Ca Pc Ca Dot Ca Txt Ca Sen Ca Hd Ca'
         </code></pre>
-    </div>
   </div>
 
-  <hr class="mt-5">
 
-  <!-- navigation -->
-  <div class="row">
-    <div class="col-12 col-lg-6 col-md-6 text-center text-lg-left text-md-left mt-4 pl-4 scrollreveal">
-      <a href="{{ site.baseurl }}/api.html">
-        <button class="btn btn-primary px-4">
-          <i class="fa fa-arrow-left mr-2"></i>
-          View APIs
-        </button>
-      </a>
-    </div>
-    <div class="col-12 col-lg-6 col-md-6 text-center text-lg-right text-md-right mt-4 pr-4 scrollreveal">
-      <a href="{{ site.baseurl }}/download.html">
-        <button class="btn btn-primary px-4">
-          Download or Install now
-          <i class="fa fa-arrow-right ml-2"></i>
-        </button>
-      </a>
+  <!-- 4 -->
+  <h4 class="mt-5 mb-4" id="recursive">4. Recursive Convert in Object</h4>
+  Multi-leveled object
+  <div class="scrollreveal">
+    <pre><code class="language-js">
+      const core = {
+        camelCase: 1,
+        UPPERCASE: 2,
+        lowercase: 3,
+        snake_case: 4,
+        PascalCase: 5,
+        'Title Case': 6,
+        'dot.case': 7,
+        'param-case': 8,
+        'Sentence case': 9,
+        'path/case': 10,
+        'Header-Case': 11
+      };
+      
+      const obj = {
+        ...core,
+        lv1: {
+          ...core,
+          lv2: {
+            ...core
+          }
+        }
+      };
+     </code></pre>
+  </div>
+  <div class="scrollreveal">
+    <div class="row">
+      <div class="col-12 col-lg-6 col-md-6">
+        <pre><code class="language-js">
+const res = jsConvert.upperKeys(obj, { recursive: true });
+console.log(JSON.stringify(res));
+              </code></pre>
+      </div>
+      <div class="col-12 col-lg-6 col-md-6">
+        <pre><code class="language-js">
+const res = jsConvert.pascalKeys(obj, { recursive: true });
+console.log(JSON.stringify(res));
+              </code></pre>
+      </div>
+      <div class="col-12 mt-2">Output</div>
+      <div class="col-12 col-lg-6 col-md-6">
+        <pre><code class="language-js">
+    {
+      "CAMELCASE": 1,
+      "UPPERCASE": 2,
+      "LOWERCASE": 3,
+      "SNAKE_CASE": 4,
+      "PASCALCASE": 5,
+      "TITLE CASE": 6,
+      "DOT.CASE": 7,
+      "PARAM-CASE": 8,
+      "SENTENCE CASE": 9,
+      "PATH/CASE": 10,
+      "HEADER-CASE": 11,
+      "LV1": {
+        "CAMELCASE": 1,
+        "UPPERCASE": 2,
+        "LOWERCASE": 3,
+        "SNAKE_CASE": 4,
+        "PASCALCASE": 5,
+        "TITLE CASE": 6,
+        "DOT.CASE": 7,
+        "PARAM-CASE": 8,
+        "SENTENCE CASE": 9,
+        "PATH/CASE": 10,
+        "HEADER-CASE": 11,
+        "LV2": {
+          "CAMELCASE": 1,
+          "UPPERCASE": 2,
+          "LOWERCASE": 3,
+          "SNAKE_CASE": 4,
+          "PASCALCASE": 5,
+          "TITLE CASE": 6,
+          "DOT.CASE": 7,
+          "PARAM-CASE": 8,
+          "SENTENCE CASE": 9,
+          "PATH/CASE": 10,
+          "HEADER-CASE": 11
+        }
+      }
+    }
+              </code></pre>
+      </div>
+      <div class="col-12 col-lg-6 col-md-6">
+        <pre><code class="language-js">
+    {
+      "CamelCase": 1,
+      "Uppercase": 2,
+      "Lowercase": 3,
+      "SnakeCase": 4,
+      "PascalCase": 5,
+      "TitleCase": 6,
+      "DotCase": 7,
+      "ParamCase": 8,
+      "SentenceCase": 9,
+      "PathCase": 10,
+      "HeaderCase": 11,
+      "Lv1": {
+        "CamelCase": 1,
+        "Uppercase": 2,
+        "Lowercase": 3,
+        "SnakeCase": 4,
+        "PascalCase": 5,
+        "TitleCase": 6,
+        "DotCase": 7,
+        "ParamCase": 8,
+        "SentenceCase": 9,
+        "PathCase": 10,
+        "HeaderCase": 11,
+        "Lv2": {
+          "CamelCase": 1,
+          "Uppercase": 2,
+          "Lowercase": 3,
+          "SnakeCase": 4,
+          "PascalCase": 5,
+          "TitleCase": 6,
+          "DotCase": 7,
+          "ParamCase": 8,
+          "SentenceCase": 9,
+          "PathCase": 10,
+          "HeaderCase": 11
+        }
+      }
+    }
+              </code></pre>
+      </div>
     </div>
   </div>
+</div>
+
+<hr class="mt-5">
+
+<!-- navigation -->
+<div class="row">
+  <div class="col-12 col-lg-6 col-md-6 text-center text-lg-left text-md-left mt-4 pl-4 scrollreveal">
+    <a href="{{ site.baseurl }}/api">
+      <button class="btn btn-primary px-4">
+        <i class="fa fa-arrow-left mr-2"></i>
+        View APIs
+      </button>
+    </a>
+  </div>
+</div>

@@ -12,7 +12,7 @@
         code: 'console.log(jsConvert.toCamelCase(\'param-case\')); // paramCase'
       },
       {
-        name: 'snake_Case',
+        name: 'snake_case',
         method: 'toSnakeCase', package: 'js-snakecase',
         description: 'Return as a lower case, underscore separated string.',
         code: 'console.log(jsConvert.toSnakeCase(\'camelCase\')); // camel_case'
@@ -56,13 +56,13 @@
       {
         name: 'lowercase',
         method: 'toUpperCase',
-        description: 'Similar to <code>String.prototype.toLowerCase()</code>',
+        description: 'Similar to String.prototype.toLowerCase().',
         code: 'console.log(jsConvert.toLowerCase(\'Title Case\')); // title case'
       },
       {
         name: 'UPPERCASE',
         method: 'toLowerCase',
-        description: 'Similar to <code>String.prototype.toUpperCase()</code>',
+        description: 'Similar to String.prototype.toUpperCase().',
         code: 'console.log(jsConvert.toUpperCase(\'param-case\')); // PARAM-CASE'
       }
     ];
@@ -71,7 +71,7 @@
       {
         name: 'lowerKeys',
         method: 'lowerKeys', package: 'lowercase-keys-object',
-        description: 'Return new object which keys is lowercase format.',
+        description: 'Return a new object which keys is lowercase format. Support lowerKeys recursively. Default is false.',
         code: `jsConvert.lowerKeys({
   camelCase: 1,
   UPPERCASE: 2,
@@ -102,7 +102,7 @@
       {
         name: 'upperKeys',
         method: 'upperKeys', package: 'uppercase-keys-object',
-        description: 'Return new object which keys is uppercase format.',
+        description: 'Return a new object which keys is UPPERCASE format. Support upperKeys recursively. Default is false',
         code: `jsConvert.upperKeys({
   camelCase: 1,
   UPPERCASE: 2,
@@ -133,7 +133,7 @@
       {
         name: 'camelKeys',
         method: 'camelKeys', package: 'camelcase-keys-object',
-        description: 'Return new object which keys is camelcase format.',
+        description: 'Return a new object which keys is camelCase format. Support camelKeys recursively. Default is false.',
         code: `jsConvert.camelKeys({
   camelCase: 1,
   UPPERCASE: 2,
@@ -164,7 +164,7 @@
       {
         name: 'snakeKeys',
         method: 'snakeKeys', package: 'snakecase-keys-object',
-        description: 'Return new object which keys is snakecase format.',
+        description: 'Return a new object which keys is snake_case format. Support snakeKeys recursively. Default is false.',
         code: `jsConvert.snakeKeys({
   camelCase: 1,
   UPPERCASE: 2,
@@ -195,7 +195,7 @@
       {
         name: 'pascalKeys',
         method: 'pascalKeys', package: 'pascalcase-keys-object',
-        description: 'Return new object which keys is pascalcase format.',
+        description: 'Return a new object which keys is PascalCase format. Support pascalKeys recursively. Default is false.',
         code: `jsConvert.pascalKeys({
   camelCase: 1,
   UPPERCASE: 2,

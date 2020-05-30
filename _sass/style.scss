@@ -1,9 +1,10 @@
 @import './_variables.scss';
+
 html,
 body {
-		width: 100%;
-		height: 100%;
-		font-size: 16px;
+    width: 100%;
+    height: 100%;
+    font-size: 15px;
 }
 
 body {
@@ -14,32 +15,35 @@ body {
 a {
     text-decoration: none !important;
     color: darken($color-primary, 15%);
+
     &:hover {
         color: $color-primary;
     }
 }
 
 #scroll-top {
-	position: fixed;
-	bottom: 50px;
-	right: 50px;
-	width: 40px;
-	height: 40px;
-	border-radius: 5px;
-	text-align: center;
-	font-size: 40px;
-	background-color: $color-hover-primary;
-	color: white !important;
-	cursor: pointer;
-	&:hover {
-		background-color: $color-primary;
-	}
-	i {
-		position: absolute;
-		top: 50%;
-		left: 50%;
-		transform: translate(-50%, -50%);
-	}
+    position: fixed;
+    bottom: 50px;
+    right: 50px;
+    width: 40px;
+    height: 40px;
+    border-radius: 5px;
+    text-align: center;
+    font-size: 40px;
+    background-color: $color-hover-primary;
+    color: white !important;
+    cursor: pointer;
+
+    &:hover {
+        background-color: $color-primary;
+    }
+
+    i {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
 }
 
 button.navbar-toggler:focus {
@@ -47,24 +51,28 @@ button.navbar-toggler:focus {
 }
 
 button:focus {
-	outline: none;
+    outline: none;
 }
 
 .jsc-header {
     background-color: $color-hover-primary;
     z-index: 1000;
+
     .jsc-brand {
         font-weight: 900;
+        margin-top: 5px;
+
         img {
-						margin-right: 10px;
-						padding: 5px;
-						background-color: #d6e6d8;
-						border-radius: 50%;
+            margin-right: 10px;
+            border-radius: 50%;
         }
+
         padding-right: 15px;
     }
+
     .jsc-link {
         color: white !important;
+
         i {
             margin-left: 3px;
         }
@@ -84,6 +92,7 @@ button:focus {
     background-color: $color-primary;
     color: white;
     font-weight: 400;
+
     a {
         font-weight: 900;
         color: white !important;
@@ -93,6 +102,7 @@ button:focus {
 .jsc-input-group {
     $border-radius: 8px;
     margin: 10px 0;
+
     input {
         width: 70%;
         padding: 6px 15px;
@@ -101,8 +111,10 @@ button:focus {
         border-top-left-radius: $border-radius;
         border-bottom-left-radius: $border-radius;
     }
+
     .input-group-append {
         width: 30%;
+
         button {
             width: 100%;
             outline: none;
@@ -116,14 +128,18 @@ button:focus {
             border-bottom-right-radius: $border-radius;
             font-weight: 900;
             transition-duration: 0.1s;
+
             &:hover {
                 background-color: $color-hover-primary !important;
                 border-color: $color-hover-primary
             }
+
             i {
                 margin-right: 6px;
             }
+
             position: relative;
+
             .popup {
                 font-weight: 400;
                 position: absolute;
@@ -137,6 +153,7 @@ button:focus {
                 background-color: black;
                 color: white;
                 border-radius: 5px;
+
                 .arrow-down {
                     position: absolute;
                     bottom: -6px;
@@ -162,6 +179,7 @@ button:focus {
     height: 150px;
     transform: translateY(100%);
     z-index: -1;
+
     &.height-500 {
         height: 500px;
     }
@@ -172,22 +190,5 @@ button:focus {
     padding: 30px 40px 25px;
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
-		box-shadow: 0px 0px 40px 5px #f3e7e7;
-}
-
-.jsc-banner {
-	padding: 25px;
-	margin-top: 20px;
-	background-color: #f7f7f7;
-	img {
-		width: 80%;
-	}
-}
-
-@media only screen and (min-width: 667px) {
-	.jsc-banner {
-		img {
-			width: 40%;
-		}
-	}
+    box-shadow: 0px 0px 8px 2px #f2f2f2;
 }

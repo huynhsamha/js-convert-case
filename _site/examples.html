@@ -1,124 +1,15 @@
-<!DOCTYPE html>
-<html lang="en" ng-app="jsConvertApp" ng-cloak ng-controller="CommonController">
-
-  <head>
-
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta http-equiv="X-UA-Compatible" content="ie=edge">
-<meta http-equiv="Cache-control" content="public">
-<meta name="description" content="js-convert-case: jsConvert is JavaScript Library Convert string between cases (camelCase, snake_case, PascalCase, dot.case, path/case, text case, Sentence case, Header Case, UPPERCASE, lowercase). Use for both Node.JS and Browser. From simple to complicated examples." />
-<meta name="author" content="js-convert-case">
-<meta name="theme-color" content="#ffffff">
-
-<title>Examples | jsConvert</title>
-
-<link rel="shortcut icon" href="{{ site.baseurl }}/favicon.png" type="image/x-icon">
-<link rel="manifest" href="{{ site.baseurl }}/manifest.json">
-<link rel="copyright" href="{{ site.baseurl }}/tos.html">
-
-<!-- Google Font -->
-<link rel="stylesheet" href="//fonts.googleapis.com/css?family=Quicksand:400,500,700">
-
-<!-- Font Awesome -->
-<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-
-<!-- Bootstrap -->
-<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
-
-<!-- Prism - Highlight Code -->
-<link rel="stylesheet" href="{{ site.baseurl }}/assets/lib/prism/prism.min.css">
-
-<!-- Styles -->
-<link rel="stylesheet" href="{{ site.baseurl }}/css/style.min.css">
-
-</head>
-
-
-  <body ng-controller="MainController">
-
-    <header id="header">
-  <nav class="navbar navbar-expand-md navbar-dark jsc-header">
-    <a class="navbar-brand jsc-brand" href="{{ site.baseurl }}/">
-      <img src="/favicon.png" width="35" height="35" class="d-inline-block align-top" alt=""> jsConvert
-    </a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-container" aria-controls="navbar-container"
-      aria-expanded="false" aria-label="Toggle navigation">
-      <span>
-        <i class="fa fa-bars"></i>
-      </span>
-    </button>
-
-    <div class="collapse navbar-collapse" id="navbar-container">
-      <ul class="navbar-nav mr-auto">
-        
-        <li class="nav-item">
-          <a class="nav-link " href="{{ site.baseurl }}/">Convert Online</a>
-        </li>
-        
-        <li class="nav-item">
-          <a class="nav-link " href="{{ site.baseurl }}/get-started">Get Started</a>
-        </li>
-        
-        <li class="nav-item">
-          <a class="nav-link " href="{{ site.baseurl }}/api">API</a>
-        </li>
-        
-        <li class="nav-item">
-          <a class="nav-link  active " href="{{ site.baseurl }}/examples">Examples</a>
-        </li>
-        
-        <li class="nav-item">
-          <a class="nav-link " href="{{ site.baseurl }}/download">Download</a>
-        </li>
-        
-        <li class="nav-item">
-          <a class="nav-link " href="{{ site.baseurl }}/support">Support</a>
-        </li>
-        
-      </ul>
-      <ul class="navbar-nav ml-auto">
-        <li class="nav-item">
-          <a class="nav-link jsc-link" href="//github.com/huynhsamha/js-convert-case" target="_blank">
-            <img src="/img/github.png" alt="GitHub" height="25">
-          </a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link jsc-link" href="//www.npmjs.com/package/js-convert-case" target="_blank">
-            <img src="/img/npm.png" alt="NPM" height="20">
-          </a>
-        </li>
-      </ul>
-    </div>
-  </nav>
-</header>
-
-    <div class="jumbotron jsc-jumbotron position-relative">
-  <h1 class="display-4">
-    <i class="fa fa-cubes"></i>
-     Examples 
-  </h1>
-  <p class="lead text-justify">From simple to complicated examples.</p>
-  <div class="jsc-background height-500"></div>
-</div>
-
-
-    <div class="container jsc-first-block">
-        <div class="col-12">
-    <h4 class="mt-3 mb-4">1. Basic Examples</h4>
-
-    <h5 class="mt-5 mb-4">Camel Case</h5>
-    <div class="scrollreveal">
-      <pre><code class="language-js">
+<!DOCTYPE html><html lang="en" ng-app="jsConvertApp" ng-cloak ng-controller="CommonController"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta http-equiv="X-UA-Compatible" content="ie=edge"><meta http-equiv="Cache-control" content="public"><meta name="description" content="js-convert-case: jsConvert is JavaScript Library Convert string between cases (camelCase, snake_case, PascalCase, dot.case, path/case, text case, Sentence case, Header Case, UPPERCASE, lowercase). Use for both Node.JS and Browser. From simple to complicated examples." /><meta name="author" content="js-convert-case"><meta name="theme-color" content="#ffffff"><title>Examples | jsConvert</title><link rel="shortcut icon" href="/js-convert-case/favicon.png" type="image/x-icon"><link rel="manifest" href="/js-convert-case/manifest.json"><link rel="copyright" href="/js-convert-case/tos.html"><link rel="stylesheet" href="//fonts.googleapis.com/css?family=Quicksand:400,500,700"><link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"><link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"><link rel="stylesheet" href="/js-convert-case/assets/lib/prism/prism.min.css"><link rel="stylesheet" href="/js-convert-case/css/style.min.css"><body ng-cloak ng-controller="MainController"><header id="header"><nav class="navbar navbar-expand-md navbar-dark jsc-header"> <a class="navbar-brand jsc-brand" href="/js-convert-case/"> <img src="/js-convert-case/favicon.png" width="35" height="35" class="d-inline-block align-top" alt=""> jsConvert </a> <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-container" aria-controls="navbar-container" aria-expanded="false" aria-label="Toggle navigation"> <span> <i class="fa fa-bars"></i> </span> </button><div class="collapse navbar-collapse" id="navbar-container"><ul class="navbar-nav mr-auto"><li class="nav-item"> <a class="nav-link " href="/js-convert-case/">Playground</a><li class="nav-item"> <a class="nav-link " href="/js-convert-case/quickstart">Quickstart</a><li class="nav-item"> <a class="nav-link " href="/js-convert-case/api">API</a><li class="nav-item"> <a class="nav-link active " href="/js-convert-case/examples">Examples</a></ul><ul class="navbar-nav ml-auto"><li class="nav-item"> <a class="nav-link jsc-link" href="//github.com/huynhsamha/js-convert-case" target="_blank"> <img src="/js-convert-case/img/github.png" alt="GitHub" height="25"> </a><li class="nav-item"> <a class="nav-link jsc-link" href="//www.npmjs.com/package/js-convert-case" target="_blank"> <img src="/js-convert-case/img/npm.png" alt="NPM" height="14"> </a></ul></div></nav></header><div class="jumbotron jsc-jumbotron position-relative"><h1 class="display-4"> <i class="fa fa-cubes"></i> Examples</h1><p class="lead text-justify">From simple to complicated examples.<div class="jsc-background height-500"></div></div><div class="container jsc-first-block"><h3 class="mt-2 mb-3">Examples</h3><ol><li><a href="#basic-examples" du-smooth-scroll>Basic Examples</a><ul><li><a href="#camelcase" du-smooth-scroll>Camel Case</a><li><a href="#snakecase" du-smooth-scroll>Snake Case</a><li><a href="#pascalcase" du-smooth-scroll>Pascal Case</a><li><a href="#dotcase" du-smooth-scroll>Dot Case</a><li><a href="#pathcase" du-smooth-scroll>Path Case</a><li><a href="#textcase" du-smooth-scroll>Text Case</a><li><a href="#sentencecase" du-smooth-scroll>Sentence Case</a><li><a href="#headercase" du-smooth-scroll>Header Case</a><li><a href="#lowercase" du-smooth-scroll>Lower Case</a><li><a href="#uppercase" du-smooth-scroll>Upper Case</a></ul><li><a href="#special-values" du-smooth-scroll>Special Values</a><li><a href="#complicated" du-smooth-scroll>Complicated Values</a><li><a href="#recursive" du-smooth-scroll>Recursive Convert in Object</a></ol><hr><div class="col-12"><h4 class="mt-3 mb-4" id="basic-examples">1. Basic Examples</h4><h5 class="mt-5 mb-4" id="camelcase">Camel Case</h5><div class="scrollreveal"><pre><code class="language-js">
     console.log(jsConvert.toCamelCase('param-case')); // paramCase
     console.log(jsConvert.toCamelCase('camelCase')); // camelCase
     console.log(jsConvert.toCamelCase('Title Case')); // titleCase
-        </code></pre>
-    </div>
-    <div class="scrollreveal">
-      <div class="row">
-        <div class="col-12 col-lg-6 col-md-6">
-          <pre><code class="language-js">
+        </code></pre></div><div class="scrollreveal"><pre><code class="language-js">
+    // All output are `null`
+    console.log(jsConvert.camelKeys(undefined));
+    console.log(jsConvert.camelKeys(null));
+    console.log(jsConvert.camelKeys(1));
+    console.log(jsConvert.camelKeys('abc'));
+    console.log(jsConvert.camelKeys([1, 2, 3]));
+        </code></pre></div><div class="scrollreveal"><div class="row"><div class="col-12 col-lg-6 col-md-6"><pre><code class="language-js">
     jsConvert.camelKeys({
       camelCase: 1,
       UPPERCASE: 2,
@@ -132,10 +23,7 @@
       'path/case': 10,
       'Header-Case': 11
     });
-            </code></pre>
-        </div>
-        <div class="col-12 col-lg-6 col-md-6">
-          <pre><code class="language-js">
+            </code></pre></div><div class="col-12 col-lg-6 col-md-6"><pre><code class="language-js">
     {
       camelCase: 1,
       uppercase: 2,
@@ -149,23 +37,18 @@
       pathCase: 10,
       headerCase: 11
     }
-            </code></pre>
-        </div>
-      </div>
-    </div>
-
-    <h5 class="mt-5 mb-4">Snake Case</h5>
-    <div class="scrollreveal">
-      <pre><code class="language-js">
+            </code></pre></div></div></div><h5 class="mt-5 mb-4" id="snakecase">Snake Case</h5><div class="scrollreveal"><pre><code class="language-js">
     console.log(jsConvert.toSnakeCase('param-case')); // param_case
     console.log(jsConvert.toSnakeCase('camelCase')); // camel_case
     console.log(jsConvert.toSnakeCase('Title Case')); // title_case
-        </code></pre>
-    </div>
-    <div class="scrollreveal">
-      <div class="row">
-        <div class="col-12 col-lg-6 col-md-6">
-          <pre><code class="language-js">
+        </code></pre></div><div class="scrollreveal"><pre><code class="language-js">
+    // All output are `null`
+    console.log(jsConvert.snakeKeys(undefined));
+    console.log(jsConvert.snakeKeys(null));
+    console.log(jsConvert.snakeKeys(1));
+    console.log(jsConvert.snakeKeys('abc'));
+    console.log(jsConvert.snakeKeys([1, 2, 3]));
+        </code></pre></div><div class="scrollreveal"><div class="row"><div class="col-12 col-lg-6 col-md-6"><pre><code class="language-js">
     jsConvert.snakeKeys({
       camelCase: 1,
       UPPERCASE: 2,
@@ -179,10 +62,7 @@
       'path/case': 10,
       'Header-Case': 11
     });
-              </code></pre>
-        </div>
-        <div class="col-12 col-lg-6 col-md-6">
-          <pre><code class="language-js">
+              </code></pre></div><div class="col-12 col-lg-6 col-md-6"><pre><code class="language-js">
     {
       camel_case: 1,
       uppercase: 2,
@@ -196,23 +76,18 @@
       path_case: 10,
       header_case: 11
     }
-              </code></pre>
-        </div>
-      </div>
-    </div>
-
-    <h5 class="mt-5 mb-4">Pascal Case</h5>
-    <div class="scrollreveal">
-      <pre><code class="language-js">
+              </code></pre></div></div></div><h5 class="mt-5 mb-4" id="pascalcase">Pascal Case</h5><div class="scrollreveal"><pre><code class="language-js">
     console.log(jsConvert.toPascalCase('param-case')); // ParamCase
     console.log(jsConvert.toPascalCase('camelCase')); // CamelCase
     console.log(jsConvert.toPascalCase('Title Case')); // TitleCase
-        </code></pre>
-    </div>
-    <div class="scrollreveal">
-      <div class="row">
-        <div class="col-12 col-lg-6 col-md-6">
-          <pre><code class="language-js">
+        </code></pre></div><div class="scrollreveal"><pre><code class="language-js">
+    // All output are `null`
+    console.log(jsConvert.pascalKeys(undefined));
+    console.log(jsConvert.pascalKeys(null));
+    console.log(jsConvert.pascalKeys(1));
+    console.log(jsConvert.pascalKeys('abc'));
+    console.log(jsConvert.pascalKeys([1, 2, 3]));
+        </code></pre></div><div class="scrollreveal"><div class="row"><div class="col-12 col-lg-6 col-md-6"><pre><code class="language-js">
     jsConvert.pascalKeys({
       camelCase: 1,
       UPPERCASE: 2,
@@ -226,10 +101,7 @@
       'path/case': 10,
       'Header-Case': 11
     });
-              </code></pre>
-        </div>
-        <div class="col-12 col-lg-6 col-md-6">
-          <pre><code class="language-js">
+              </code></pre></div><div class="col-12 col-lg-6 col-md-6"><pre><code class="language-js">
     {
       CamelCase: 1,
       Uppercase: 2,
@@ -243,67 +115,37 @@
       PathCase: 10,
       HeaderCase: 11
     }
-              </code></pre>
-        </div>
-      </div>
-    </div>
-
-    <h5 class="mt-5 mb-4">Dot Case</h5>
-    <div class="scrollreveal">
-      <pre><code class="language-js">
+              </code></pre></div></div></div><h5 class="mt-5 mb-4" id="dotcase">Dot Case</h5><div class="scrollreveal"><pre><code class="language-js">
     console.log(jsConvert.toDotCase('param-case')); // param.case
     console.log(jsConvert.toDotCase('camelCase')); // camel.case
     console.log(jsConvert.toDotCase('Title Case')); // title.case
-        </code></pre>
-    </div>
-
-    <h5 class="mt-5 mb-4">Path Case</h5>
-    <div class="scrollreveal">
-      <pre><code class="language-js">
+        </code></pre></div><h5 class="mt-5 mb-4" id="pathcase">Path Case</h5><div class="scrollreveal"><pre><code class="language-js">
     console.log(jsConvert.toPathCase('param-case')); // param/case
     console.log(jsConvert.toPathCase('camelCase')); // camel/case
     console.log(jsConvert.toPathCase('Title Case')); // title/case
-        </code></pre>
-    </div>
-
-    <h5 class="mt-5 mb-4">Text Case</h5>
-    <div class="scrollreveal">
-      <pre><code class="language-js">
+        </code></pre></div><h5 class="mt-5 mb-4" id="textcase">Text Case</h5><div class="scrollreveal"><pre><code class="language-js">
     console.log(jsConvert.toTextCase('param-case')); // param case
     console.log(jsConvert.toTextCase('camelCase')); // camel case
     console.log(jsConvert.toTextCase('Title Case')); // title case
-        </code></pre>
-    </div>
-
-    <h5 class="mt-5 mb-4">Sentence Case</h5>
-    <div class="scrollreveal">
-      <pre><code class="language-js">
+        </code></pre></div><h5 class="mt-5 mb-4" id="sentencecase">Sentence Case</h5><div class="scrollreveal"><pre><code class="language-js">
     console.log(jsConvert.toSentenceCase('param-case')); // Param case
     console.log(jsConvert.toSentenceCase('camelCase')); // Camel case
     console.log(jsConvert.toSentenceCase('Title Case')); // Title case
-        </code></pre>
-    </div>
-
-    <h5 class="mt-5 mb-4">Header Case</h5>
-    <div class="scrollreveal">
-      <pre><code class="language-js">
+        </code></pre></div><h5 class="mt-5 mb-4" id="headercase">Header Case</h5><div class="scrollreveal"><pre><code class="language-js">
     console.log(jsConvert.toHeaderCase('param-case')); // Param Case
     console.log(jsConvert.toHeaderCase('camelCase')); // Camel Case
     console.log(jsConvert.toHeaderCase('Title Case')); // Title Case
-        </code></pre>
-    </div>
-
-    <h5 class="mt-5 mb-4">Lower Case</h5>
-    <div class="scrollreveal">
-      <pre><code class="language-js">
+        </code></pre></div><h5 class="mt-5 mb-4" id="lowercase">Lower Case</h5><div class="scrollreveal"><pre><code class="language-js">
     console.log(jsConvert.toLowerCase('param-case')); // param-case
     console.log(jsConvert.toLowerCase('Title Case')); // title case
-        </code></pre>
-    </div>
-    <div class="scrollreveal">
-      <div class="row">
-        <div class="col-12 col-lg-6 col-md-6">
-          <pre><code class="language-js">
+        </code></pre></div><div class="scrollreveal"><pre><code class="language-js">
+    // All output are `null`
+    console.log(jsConvert.lowerKeys(undefined));
+    console.log(jsConvert.lowerKeys(null));
+    console.log(jsConvert.lowerKeys(1));
+    console.log(jsConvert.lowerKeys('abc'));
+    console.log(jsConvert.lowerKeys([1, 2, 3]));
+        </code></pre></div><div class="scrollreveal"><div class="row"><div class="col-12 col-lg-6 col-md-6"><pre><code class="language-js">
     jsConvert.lowerKeys({
       camelCase: 1,
       UPPERCASE: 2,
@@ -317,10 +159,7 @@
       'path/case': 10,
       'Header-Case': 11
     });
-              </code></pre>
-        </div>
-        <div class="col-12 col-lg-6 col-md-6">
-          <pre><code class="language-js">
+              </code></pre></div><div class="col-12 col-lg-6 col-md-6"><pre><code class="language-js">
     {
       camelcase: 1,
       uppercase: 2,
@@ -334,22 +173,17 @@
       'path/case': 10,
       'header-case': 11
     }
-              </code></pre>
-        </div>
-      </div>
-    </div>
-
-    <h5 class="mt-5 mb-4">Upper Case</h5>
-    <div class="scrollreveal">
-      <pre><code class="language-js">
+              </code></pre></div></div></div><h5 class="mt-5 mb-4" id="uppercase">Upper Case</h5><div class="scrollreveal"><pre><code class="language-js">
     console.log(jsConvert.toUpperCase('param-case')); // PARAM-CASE
     console.log(jsConvert.toUpperCase('Title Case')); // TITLE CASE
-        </code></pre>
-    </div>
-    <div class="scrollreveal">
-      <div class="row">
-        <div class="col-12 col-lg-6 col-md-6">
-          <pre><code class="language-js">
+        </code></pre></div><div class="scrollreveal"><pre><code class="language-js">
+    // All output are `null`
+    console.log(jsConvert.upperKeys(undefined));
+    console.log(jsConvert.upperKeys(null));
+    console.log(jsConvert.upperKeys(1));
+    console.log(jsConvert.upperKeys('abc'));
+    console.log(jsConvert.upperKeys([1, 2, 3]));
+        </code></pre></div><div class="scrollreveal"><div class="row"><div class="col-12 col-lg-6 col-md-6"><pre><code class="language-js">
     jsConvert.upperKeys({
       camelCase: 1,
       UPPERCASE: 2,
@@ -363,10 +197,7 @@
       'path/case': 10,
       'Header-Case': 11
     });
-              </code></pre>
-        </div>
-        <div class="col-12 col-lg-6 col-md-6">
-          <pre><code class="language-js">
+              </code></pre></div><div class="col-12 col-lg-6 col-md-6"><pre><code class="language-js">
     {
       CAMELCASE: 1,
       UPPERCASE: 2,
@@ -380,33 +211,11 @@
       'PATH/CASE': 10,
       'HEADER-CASE': 11
     }
-              </code></pre>
-        </div>
-      </div>
-    </div>
-
-    <h4 class="mt-5 mb-4">2. Specific values</h4>
-    <div class="scrollreveal">
-      <pre><code class="language-js">
+              </code></pre></div></div></div><h4 class="mt-5 mb-4" id="special-values">2. Special Values</h4><div class="scrollreveal"><pre><code class="language-js">
     console.log(jsConvert.toCamelCase('')); // => ''
     console.log(jsConvert.toSnakeCase(null)); // => ''
     console.log(jsConvert.toPascalCase(undefined)); // => ''
-        </code></pre>
-    </div>
-    <div class="scrollreveal">
-      <pre><code class="language-js">
-      console.log(jsConvert.lowerKeys(undefined));  // null
-      console.log(jsConvert.lowerKeys(null));       // null
-      console.log(jsConvert.upperKeys(undefined));  // null
-      console.log(jsConvert.upperKeys(null));       // null
-      console.log(jsConvert.camelKeys(undefined));  // null
-      console.log(jsConvert.camelKeys(null));       // null
-          </code></pre>
-    </div>
-
-    <h4 class="mt-5 mb-4">3. Complicated Examples</h4>
-    <div class="scrollreveal">
-      <pre><code class="language-js">
+        </code></pre></div><h4 class="mt-5 mb-4" id="complicated">3. Complicated Examples</h4><div class="scrollreveal"><pre><code class="language-js">
     // Complicated values
     const str = '!@#$ &nbsp;-- Hello___world ..&lt;&gt;| \\ 123_ _456 &amp;\l sn_ca - cmCa - PcCa - dot.ca - txt ca - Sen ca - Hd Ca %^$^%&amp;';
 
@@ -418,117 +227,114 @@
     console.log(jsConvert.toTextCase(str));     // => 'hello world 123 456 l sn ca cm ca pc ca dot ca txt ca sen ca hd ca'
     console.log(jsConvert.toSentenceCase(str)); // => 'Hello world 123 456 l sn ca cm ca pc ca dot ca txt ca sen ca hd ca'
     console.log(jsConvert.toHeaderCase(str));   // => 'Hello World 123 456 L Sn Ca Cm Ca Pc Ca Dot Ca Txt Ca Sen Ca Hd Ca'
-        </code></pre>
-    </div>
-  </div>
-
-  <hr class="mt-5">
-
-  <!-- navigation -->
-  <div class="row">
-    <div class="col-12 col-lg-6 col-md-6 text-center text-lg-left text-md-left mt-4 pl-4 scrollreveal">
-      <a href="{{ site.baseurl }}/api.html">
-        <button class="btn btn-primary px-4">
-          <i class="fa fa-arrow-left mr-2"></i>
-          View APIs
-        </button>
-      </a>
-    </div>
-    <div class="col-12 col-lg-6 col-md-6 text-center text-lg-right text-md-right mt-4 pr-4 scrollreveal">
-      <a href="{{ site.baseurl }}/download.html">
-        <button class="btn btn-primary px-4">
-          Download or Install now
-          <i class="fa fa-arrow-right ml-2"></i>
-        </button>
-      </a>
-    </div>
-  </div>
-
-
-      <!-- banner -->
-      <div class="text-center jsc-banner">
-        <img src="/img/banner.png" alt="Logo">
-      </div>
-    </div>
-
-    <!-- scroll top -->
-    <span id="scroll-top" ng-href="#header" du-smooth-scroll ng-show="showScrollTop">
-      <i class="fa fa-caret-up"></i>
-    </span>
-
-    <footer style="margin-top: 60px">
-  <div class="text-center jsc-footer">
-    <div class="py-1">
-      <i class="fa fa-copyright"></i> Copyright 2018 - Created By
-      <a class="jsc-link" href="//github.com/huynhsamha" target="_blank">
-        <span>huynhsamha
-          <i class="fa fa-external-link"></i>.
-        </span>
-      </a>
-    </div>
-    <div class="py-1">
-      <span>
-        Source available on
-        <a class="jsc-link" href="//github.com/huynhsamha/js-convert-case" target="_blank">
-          <span>GitHub
-            <i class="fa fa-github"></i>.
-          </span>
-        </a>
-      </span>
-      <span>
-        Package available on
-        <a class="jsc-link" href="//www.npmjs.com/package/js-convert-case" target="_blank">
-          <span>NPM
-            <i class="fa fa-external-link"></i>.
-          </span>
-        </a>
-      </span>
-    </div>
-  </div>
-</footer>
-
-    <!-- jQuery -->
-<script src="//ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-
-<!-- Bootstrap -->
-<!-- <script src="//cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script> -->
-<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
-
-<!-- AngularJS -->
-<script src="//ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
-<script src="//cdn.rawgit.com/zenorocha/clipboard.js/master/dist/clipboard.min.js"></script>
-<script src="//cdnjs.cloudflare.com/ajax/libs/angular-scroll/1.0.2/angular-scroll.min.js"></script>
-<!-- AngularJS Plugins -->
-<script src="/assets/lib/ngclipboard/dist/ngclipboard.min.js"></script>
-
-<!-- Scroll Reveal -->
-
-<script src="//unpkg.com/scrollreveal/dist/scrollreveal.min.js"></script>
-
-
-<!-- jsConvert -->
-<script src="/assets/lib/jsConvert/dist/js-convert-case.min.js"></script>
-
-<!-- Prism - highlight code -->
-<script src="/assets/lib/prism/prism.min.js"></script>
-
-<!-- scripts -->
-<script src="/js/common.js"></script>
-
-
-<script src="/js/examples.js"></script>
-
-
-<!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="//www.googletagmanager.com/gtag/js?id=UA-116052157-3"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag() { dataLayer.push(arguments); }
-  gtag('js', new Date());
-
-  gtag('config', 'UA-116052157-3');
-</script>
-
-
-  </body>
-</html>
+        </code></pre></div><h4 class="mt-5 mb-4" id="recursive">4. Recursive Convert in Object</h4>Multi-leveled object<div class="scrollreveal"><pre><code class="language-js">
+      const core = {
+        camelCase: 1,
+        UPPERCASE: 2,
+        lowercase: 3,
+        snake_case: 4,
+        PascalCase: 5,
+        'Title Case': 6,
+        'dot.case': 7,
+        'param-case': 8,
+        'Sentence case': 9,
+        'path/case': 10,
+        'Header-Case': 11
+      };
+      
+      const obj = {
+        ...core,
+        lv1: {
+          ...core,
+          lv2: {
+            ...core
+          }
+        }
+      };
+     </code></pre></div><div class="scrollreveal"><div class="row"><div class="col-12 col-lg-6 col-md-6"><pre><code class="language-js">
+const res = jsConvert.upperKeys(obj, { recursive: true });
+console.log(JSON.stringify(res));
+              </code></pre></div><div class="col-12 col-lg-6 col-md-6"><pre><code class="language-js">
+const res = jsConvert.pascalKeys(obj, { recursive: true });
+console.log(JSON.stringify(res));
+              </code></pre></div><div class="col-12 mt-2">Output</div><div class="col-12 col-lg-6 col-md-6"><pre><code class="language-js">
+    {
+      "CAMELCASE": 1,
+      "UPPERCASE": 2,
+      "LOWERCASE": 3,
+      "SNAKE_CASE": 4,
+      "PASCALCASE": 5,
+      "TITLE CASE": 6,
+      "DOT.CASE": 7,
+      "PARAM-CASE": 8,
+      "SENTENCE CASE": 9,
+      "PATH/CASE": 10,
+      "HEADER-CASE": 11,
+      "LV1": {
+        "CAMELCASE": 1,
+        "UPPERCASE": 2,
+        "LOWERCASE": 3,
+        "SNAKE_CASE": 4,
+        "PASCALCASE": 5,
+        "TITLE CASE": 6,
+        "DOT.CASE": 7,
+        "PARAM-CASE": 8,
+        "SENTENCE CASE": 9,
+        "PATH/CASE": 10,
+        "HEADER-CASE": 11,
+        "LV2": {
+          "CAMELCASE": 1,
+          "UPPERCASE": 2,
+          "LOWERCASE": 3,
+          "SNAKE_CASE": 4,
+          "PASCALCASE": 5,
+          "TITLE CASE": 6,
+          "DOT.CASE": 7,
+          "PARAM-CASE": 8,
+          "SENTENCE CASE": 9,
+          "PATH/CASE": 10,
+          "HEADER-CASE": 11
+        }
+      }
+    }
+              </code></pre></div><div class="col-12 col-lg-6 col-md-6"><pre><code class="language-js">
+    {
+      "CamelCase": 1,
+      "Uppercase": 2,
+      "Lowercase": 3,
+      "SnakeCase": 4,
+      "PascalCase": 5,
+      "TitleCase": 6,
+      "DotCase": 7,
+      "ParamCase": 8,
+      "SentenceCase": 9,
+      "PathCase": 10,
+      "HeaderCase": 11,
+      "Lv1": {
+        "CamelCase": 1,
+        "Uppercase": 2,
+        "Lowercase": 3,
+        "SnakeCase": 4,
+        "PascalCase": 5,
+        "TitleCase": 6,
+        "DotCase": 7,
+        "ParamCase": 8,
+        "SentenceCase": 9,
+        "PathCase": 10,
+        "HeaderCase": 11,
+        "Lv2": {
+          "CamelCase": 1,
+          "Uppercase": 2,
+          "Lowercase": 3,
+          "SnakeCase": 4,
+          "PascalCase": 5,
+          "TitleCase": 6,
+          "DotCase": 7,
+          "ParamCase": 8,
+          "SentenceCase": 9,
+          "PathCase": 10,
+          "HeaderCase": 11
+        }
+      }
+    }
+              </code></pre></div></div></div></div><hr class="mt-5"><div class="row"><div class="col-12 col-lg-6 col-md-6 text-center text-lg-left text-md-left mt-4 pl-4 scrollreveal"> <a href="/js-convert-case/api"> <button class="btn btn-primary px-4"> <i class="fa fa-arrow-left mr-2"></i> View APIs </button> </a></div></div></div><span id="scroll-top" ng-href="#header" du-smooth-scroll ng-show="showScrollTop"> <i class="fa fa-caret-up"></i> </span><footer style="margin-top: 60px"><div class="text-center jsc-footer"><div class="py-1"> Made with <i class="fa fa-heart" style="color: rgb(255, 56, 56) !important;"></i> by <a class="jsc-link" href="//github.com/huynhsamha" target="_blank"> <span>huynhsamha </span> </a></div><div class="py-1"> <span>Copyright <i class="fa fa-copyright"></i> 2018</span> <span> | </span> <span> <a class="jsc-link" href="//github.com/huynhsamha/js-convert-case" target="_blank"> <i class="fa fa-github"></i> <span>GitHub</span> </a> | </span> <span> <a class="jsc-link" href="//www.npmjs.com/package/js-convert-case" target="_blank"> <span>NPM</span> </a> </span></div></div></footer><script src="//ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script> <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script> <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script> <script src="//cdn.rawgit.com/zenorocha/clipboard.js/master/dist/clipboard.min.js"></script> <script src="//cdnjs.cloudflare.com/ajax/libs/angular-scroll/1.0.2/angular-scroll.min.js"></script> <script src="/js-convert-case/assets/lib/ngclipboard/dist/ngclipboard.min.js"></script> <script src="//unpkg.com/scrollreveal/dist/scrollreveal.min.js"></script> <script src="//unpkg.com/js-convert-case/dist/js-convert-case.min.js"></script> <script src="/js-convert-case/assets/lib/prism/prism.min.js"></script> <script src="/js-convert-case/js/common.js"></script> <script src="/js-convert-case/js/examples.js"></script>
