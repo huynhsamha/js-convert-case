@@ -13,7 +13,7 @@
 
 ⛹️‍♂️ JavaScript Convert Cases Package 🏌️‍♀️ Use for both Node.JS and Browser 🎯🎯
 
-JavaScript Convert String and Keys of Object between cases (camelCase, snake_case, PascalCase, dot.case, path/case, text case, Sentence case, Header Case, UPPERCASE, lowercase). Use for both Node.JS and Browser.
+Convert String and Keys of Object between cases (camelCase, snake_case, PascalCase, dot.case, path/case, text case, Sentence case, Header Case, UPPERCASE, lowercase).
 
 <!-- <br>
 <img src="https://github.com/huynhsamha/js-convert-case/raw/master/docs/img/banner.png" width="50%" justify="center">
@@ -46,8 +46,6 @@ Download file `js-convert-case.min.js` at [here](https://github.com/huynhsamha/j
 <script src="[path/to/dist]/js-convert-case.min.js"></script>
 ```
 
-
-
 ## Usage
 
 ### Node.JS
@@ -71,9 +69,7 @@ import { toPascalCase, toPathCase, lowerKeys, camelKeys } from 'js-convert-case'
 #### Example
 
 ```js
-const jsConvert = require('js-convert-case');
-
-// Convert String cases
+// Convert String
 console.log(jsConvert.toCamelCase('param-case')); // paramCase
 console.log(jsConvert.toSnakeCase('param-case')); // param_case
 console.log(jsConvert.toPascalCase('param-case')); // ParamCase
@@ -85,23 +81,20 @@ console.log(jsConvert.toHeaderCase('param-case')); // Param Case
 console.log(jsConvert.toLowerCase('param-case')); // param-case
 console.log(jsConvert.toUpperCase('param-case')); // PARAM-CASE
 
-// Convert Keys of Object case
+// Convert Keys of Object
 const obj = {
-		camelCase: 1,
-		UPPERCASE: 2,
-		lowercase: 3,
-		snake_case: 4,
-		PascalCase: 5,
-		'Title Case': 6,
-		'dot.case': 7,
-		'param-case': 8,
-		'Sentence case': 9,
-		'path/case': 10,
-		'Header-Case': 11
+	camelCase: 1,
+	UPPERCASE: 2,
+	lowercase: 3,
+	snake_case: 4,
+	PascalCase: 5,
+	'Title Case': 6,
+	'dot.case': 7,
+	'param-case': 8,
+	'Sentence case': 9,
+	'path/case': 10,
+	'Header-Case': 11
 };
-
-console.log(window.jsConvert);
-console.log(jsConvert);
 
 console.log(jsConvert.lowerKeys(obj));
 console.log(jsConvert.upperKeys(obj));
@@ -112,8 +105,13 @@ console.log(jsConvert.pascalKeys(obj));
 
 ### Browser
 
+After file `js-convert-case.min.js` is loaded, object `jsConvert` will be exported globally into `window` object.
+
 ```html
 <script>
+	console.log(window.jsConvert);
+	console.log(jsConvert);
+
 	// Convert String cases
 	console.log(jsConvert.toCamelCase('param-case')); // paramCase
 	console.log(jsConvert.toSnakeCase('param-case')); // param_case
@@ -128,17 +126,17 @@ console.log(jsConvert.pascalKeys(obj));
 
 	// Convert Keys of Object case
 	const obj = {
-			camelCase: 1,
-			UPPERCASE: 2,
-			lowercase: 3,
-			snake_case: 4,
-			PascalCase: 5,
-			'Title Case': 6,
-			'dot.case': 7,
-			'param-case': 8,
-			'Sentence case': 9,
-			'path/case': 10,
-			'Header-Case': 11
+		camelCase: 1,
+		UPPERCASE: 2,
+		lowercase: 3,
+		snake_case: 4,
+		PascalCase: 5,
+		'Title Case': 6,
+		'dot.case': 7,
+		'param-case': 8,
+		'Sentence case': 9,
+		'path/case': 10,
+		'Header-Case': 11
 	};
 
 	console.log(jsConvert.lowerKeys(obj));
@@ -153,13 +151,11 @@ console.log(jsConvert.pascalKeys(obj));
 
 You can see more examples in directory [`./test/browser`](./test/browser)
 
-
-## API - Methods
+## API
 
 ### jsConvert
 
-**jsConvert** is an object containing function which converts cases. In browser, `jsConvert` is exported globally to `window` object, you can access by `jsConvert` or `window.jsConvert`.
-
+**jsConvert** is an object containing function which converts cases. On browser, `jsConvert` is exported globally to `window` object, you can access by `jsConvert` or `window.jsConvert`.
 
 ### Available Methods
 
@@ -442,6 +438,8 @@ console.log(jsConvert.pascalKeys([1, 2, 3]));
 
 ## Examples
 
+### Convert string between cases
+
 ```js
 console.log(jsConvert.toCamelCase('param-case')); // paramCase
 console.log(jsConvert.toCamelCase('camelCase')); // camelCase
@@ -479,14 +477,19 @@ console.log(jsConvert.toLowerCase('param-case')); // param-case
 console.log(jsConvert.toLowerCase('Title Case')); // title case
 console.log(jsConvert.toUpperCase('param-case')); // PARAM-CASE
 console.log(jsConvert.toUpperCase('Title Case')); // TITLE CASE
+```
 
+### Speical values
 
-// Specific values
+```js
 console.log(jsConvert.toCamelCase('')); // => ''
 console.log(jsConvert.toSnakeCase(null)); // => ''
 console.log(jsConvert.toPascalCase(undefined)); // => ''
+```
 
-// Complicated values
+### Complicated values
+
+```js
 const str = '!@#$  	-- Hello___world ..<>| \\ 123_ _456 &\l sn_ca - cmCa - PcCa - dot.ca - txt ca - Sen ca - Hd Ca %^$^%&';
 console.log(jsConvert.toCamelCase(str)); // => 'helloWorld123456LSnCaCmCaPcCaDotCaTxtCaSenCaHdCa'
 console.log(jsConvert.toPascalCase(str)); // => 'HelloWorld123456LSnCaCmCaPcCaDotCaTxtCaSenCaHdCa'
@@ -498,37 +501,44 @@ console.log(jsConvert.toSentenceCase(str)); // => 'Hello world 123 456 l sn ca c
 console.log(jsConvert.toHeaderCase(str)); // => 'Hello World 123 456 L Sn Ca Cm Ca Pc Ca Dot Ca Txt Ca Sen Ca Hd Ca'
 ```
 
-**Recursive example**
+### Recursive convert in object
+
+**Multi-leveled object**
 
 ```js
-  const core = {
-    camelCase: 1,
-    UPPERCASE: 2,
-    lowercase: 3,
-    snake_case: 4,
-    PascalCase: 5,
-    'Title Case': 6,
-    'dot.case': 7,
-    'param-case': 8,
-    'Sentence case': 9,
-    'path/case': 10,
-    'Header-Case': 11
-  };
+const core = {
+  camelCase: 1,
+  UPPERCASE: 2,
+  lowercase: 3,
+  snake_case: 4,
+  PascalCase: 5,
+  'Title Case': 6,
+  'dot.case': 7,
+  'param-case': 8,
+  'Sentence case': 9,
+  'path/case': 10,
+  'Header-Case': 11
+};
 
-  const obj = {
+const obj = {
+  ...core,
+  lv1: {
     ...core,
-    lv1: {
-      ...core,
-      lv2: {
-        ...core
-      }
+    lv2: {
+      ...core
     }
-  };
-
-  console.log(JSON.stringify(jsConvert.upperKeys(obj, { recursive: true })));
+  }
+};
 ```
 
-Output:
+**Example with `upperKeys`**
+
+```js
+const res = jsConvert.upperKeys(obj, { recursive: true });
+console.log(JSON.stringify(res));
+```
+
+Output
 
 ```json
 {
@@ -572,10 +582,111 @@ Output:
 }
 ```
 
+**Example with `pascalKeys`**
+
+```js
+const res = jsConvert.pascalKeys(obj, { recursive: true });
+console.log(JSON.stringify(res));
+```
+
+Output
+
+```json
+{
+  "CamelCase": 1,
+  "Uppercase": 2,
+  "Lowercase": 3,
+  "SnakeCase": 4,
+  "PascalCase": 5,
+  "TitleCase": 6,
+  "DotCase": 7,
+  "ParamCase": 8,
+  "SentenceCase": 9,
+  "PathCase": 10,
+  "HeaderCase": 11,
+  "Lv1": {
+    "CamelCase": 1,
+    "Uppercase": 2,
+    "Lowercase": 3,
+    "SnakeCase": 4,
+    "PascalCase": 5,
+    "TitleCase": 6,
+    "DotCase": 7,
+    "ParamCase": 8,
+    "SentenceCase": 9,
+    "PathCase": 10,
+    "HeaderCase": 11,
+    "Lv2": {
+      "CamelCase": 1,
+      "Uppercase": 2,
+      "Lowercase": 3,
+      "SnakeCase": 4,
+      "PascalCase": 5,
+      "TitleCase": 6,
+      "DotCase": 7,
+      "ParamCase": 8,
+      "SentenceCase": 9,
+      "PathCase": 10,
+      "HeaderCase": 11
+    }
+  }
+}
+```
+
+*Note: You can browse more examples at folder [`./test/example`](./test/example)*.
+
 ## Dependencies
 
 No dependencies
 
-## Buy me a coffee :3
+## Development
 
-<a href="https://www.paypal.me/harisk305/5" target="_blank"><img src="https://i.imgur.com/4bN8fdy.jpg" alt="Donate to my paypal" width=150></a>
+### Quickstart
+
++ Clone the repository and enter the project
+
+```bash
+git clone https://github.com/huynhsamha/js-convert-case.git
+cd js-convert-case
+```
+
++ Install dependencies
+
+```bash
+yarn
+```
+
++ Lint and format source (directory `src`)
+
+```bash
+yarn format # defined in package.json
+yarn lint   # defined in package.json
+```
+
++ Build package for Node
+
+```bash
+yarn dist:node  # defined in package.json
+```
+
+Output directory is `dist` (defined in file `tsconfig.json`)
+
++ Build package for Browser
+
+```bash
+yarn dist:browser  # defined in package.json and rollup.config.js
+```
+
++ Build dist (both Node and Browser)
+
+```bash
+yarn dist  # defined in package.json
+```
+
+### Testing
+
+In directory `test`, we can test the package in environments NodeJS, Browser, pre-published NPM package and the released package.
+
+## Buy me a coffee
+
+<a href="https://www.paypal.me/harisk305/5" target="_blank"><img src="https://i.imgur.com/4bN8fdy.jpg" alt="Donate to my paypal" width=120></a>

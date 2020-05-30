@@ -14,7 +14,6 @@
     "dist:node": "yarn clean:node && yarn format && yarn lint && yarn build",
     "dist:browser": "yarn dist:node && yarn clean:browser && yarn rollup"
   },
-  "dependencies": {},
   "devDependencies": {
     "babel-eslint": "^8.2.6",
     "eslint": "^4.19.1",

@@ -1,0 +1,39 @@
+{
+  "CamelCase": 1,
+  "Uppercase": 2,
+  "Lowercase": 3,
+  "SnakeCase": 4,
+  "PascalCase": 5,
+  "TitleCase": 6,
+  "DotCase": 7,
+  "ParamCase": 8,
+  "SentenceCase": 9,
+  "PathCase": 10,
+  "HeaderCase": 11,
+  "Lv1": {
+    "CamelCase": 1,
+    "Uppercase": 2,
+    "Lowercase": 3,
+    "SnakeCase": 4,
+    "PascalCase": 5,
+    "TitleCase": 6,
+    "DotCase": 7,
+    "ParamCase": 8,
+    "SentenceCase": 9,
+    "PathCase": 10,
+    "HeaderCase": 11,
+    "Lv2": {
+      "CamelCase": 1,
+      "Uppercase": 2,
+      "Lowercase": 3,
+      "SnakeCase": 4,
+      "PascalCase": 5,
+      "TitleCase": 6,
+      "DotCase": 7,
+      "ParamCase": 8,
+      "SentenceCase": 9,
+      "PathCase": 10,
+      "HeaderCase": 11
+    }
+  }
+}

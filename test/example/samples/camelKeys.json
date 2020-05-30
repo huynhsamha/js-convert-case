@@ -1,0 +1,39 @@
+{
+  "camelCase": 1,
+  "uppercase": 2,
+  "lowercase": 3,
+  "snakeCase": 4,
+  "pascalCase": 5,
+  "titleCase": 6,
+  "dotCase": 7,
+  "paramCase": 8,
+  "sentenceCase": 9,
+  "pathCase": 10,
+  "headerCase": 11,
+  "lv1": {
+    "camelCase": 1,
+    "uppercase": 2,
+    "lowercase": 3,
+    "snakeCase": 4,
+    "pascalCase": 5,
+    "titleCase": 6,
+    "dotCase": 7,
+    "paramCase": 8,
+    "sentenceCase": 9,
+    "pathCase": 10,
+    "headerCase": 11,
+    "lv2": {
+      "camelCase": 1,
+      "uppercase": 2,
+      "lowercase": 3,
+      "snakeCase": 4,
+      "pascalCase": 5,
+      "titleCase": 6,
+      "dotCase": 7,
+      "paramCase": 8,
+      "sentenceCase": 9,
+      "pathCase": 10,
+      "headerCase": 11
+    }
+  }
+}
