@@ -1,0 +1,9 @@
+{
+  "name": "jsconvert-test-release",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "dependencies": {
+    "js-convert-case": "^4.0.1"
+  }
+}
