@@ -35,5 +35,5 @@ declare const jsConvert: {
     snakeKeys: typeof snakeKeys;
     pascalKeys: typeof pascalKeys;
 };
-export { toCamelCase, toSnakeCase, toPascalCase, toDotCase, toPathCase, toTextCase, toSentenceCase, toHeaderCase, toUpperCase, toLowerCase, lowerKeys, upperKeys, camelKeys, snakeKeys, pascalKeys, };
+export { toCamelCase, toSnakeCase, toPascalCase, toDotCase, toPathCase, toTextCase, toSentenceCase, toHeaderCase, toUpperCase, toLowerCase, lowerKeys, upperKeys, camelKeys, snakeKeys, pascalKeys };
 export default jsConvert;
