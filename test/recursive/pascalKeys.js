@@ -1,12 +1,13 @@
 const jsConvert = require('../../index');
-const obj = require('./object');
+const { obj, log } = require('./_shared');
 
-console.log(jsConvert.pascalKeys(obj));
+log(jsConvert.pascalKeys(obj));
 console.log('============================================');
-console.log(jsConvert.pascalKeys(obj, { recursive: true }));
+log(jsConvert.pascalKeys(obj, { recursive: true }));
 
 /**
-{ CamelCase: 1,
+{
+  CamelCase: 1,
   Uppercase: 2,
   Lowercase: 3,
   SnakeCase: 4,
@@ -17,32 +18,45 @@ console.log(jsConvert.pascalKeys(obj, { recursive: true }));
   SentenceCase: 9,
   PathCase: 10,
   HeaderCase: 11,
-  Lv11:
-   { camelCase: 1,
-     UPPERCASE: 2,
-     lowercase: 3,
-     snake_case: 4,
-     PascalCase: 5,
-     'Title Case': 6,
-     'dot.case': 7,
-     'param-case': 8,
-     'Sentence case': 9,
-     'path/case': 10,
-     'Header-Case': 11 },
-  Lv12:
-   { camelCase: 1,
-     UPPERCASE: 2,
-     lowercase: 3,
-     snake_case: 4,
-     PascalCase: 5,
-     'Title Case': 6,
-     'dot.case': 7,
-     'param-case': 8,
-     'Sentence case': 9,
-     'path/case': 10,
-     'Header-Case': 11,
-     lv21:
-      { camelCase: 1,
+  Lv11: {
+    camelCase: 1,
+    UPPERCASE: 2,
+    lowercase: 3,
+    snake_case: 4,
+    PascalCase: 5,
+    'Title Case': 6,
+    'dot.case': 7,
+    'param-case': 8,
+    'Sentence case': 9,
+    'path/case': 10,
+    'Header-Case': 11
+  },
+  Lv12: {
+    camelCase: 1,
+    UPPERCASE: 2,
+    lowercase: 3,
+    snake_case: 4,
+    PascalCase: 5,
+    'Title Case': 6,
+    'dot.case': 7,
+    'param-case': 8,
+    'Sentence case': 9,
+    'path/case': 10,
+    'Header-Case': 11,
+    lv21: {
+      camelCase: 1,
+      UPPERCASE: 2,
+      lowercase: 3,
+      snake_case: 4,
+      PascalCase: 5,
+      'Title Case': 6,
+      'dot.case': 7,
+      'param-case': 8,
+      'Sentence case': 9,
+      'path/case': 10,
+      'Header-Case': 11,
+      lv31: {
+        camelCase: 1,
         UPPERCASE: 2,
         lowercase: 3,
         snake_case: 4,
@@ -52,11 +66,10 @@ console.log(jsConvert.pascalKeys(obj, { recursive: true }));
         'param-case': 8,
         'Sentence case': 9,
         'path/case': 10,
-        'Header-Case': 11,
-        lv31: [Object],
-        lv32: [Object] },
-     lv22:
-      { camelCase: 1,
+        'Header-Case': 11
+      },
+      lv32: {
+        camelCase: 1,
         UPPERCASE: 2,
         lowercase: 3,
         snake_case: 4,
@@ -66,9 +79,98 @@ console.log(jsConvert.pascalKeys(obj, { recursive: true }));
         'param-case': 8,
         'Sentence case': 9,
         'path/case': 10,
-        'Header-Case': 11 } } }
+        'Header-Case': 11
+      }
+    },
+    lv22: {
+      camelCase: 1,
+      UPPERCASE: 2,
+      lowercase: 3,
+      snake_case: 4,
+      PascalCase: 5,
+      'Title Case': 6,
+      'dot.case': 7,
+      'param-case': 8,
+      'Sentence case': 9,
+      'path/case': 10,
+      'Header-Case': 11
+    },
+    lv23: [
+      {
+        camelCase: 1,
+        UPPERCASE: 2,
+        lowercase: 3,
+        snake_case: 4,
+        PascalCase: 5,
+        'Title Case': 6,
+        'dot.case': 7,
+        'param-case': 8,
+        'Sentence case': 9,
+        'path/case': 10,
+        'Header-Case': 11
+      },
+      {
+        lv31: [
+          1,
+          'A',
+          null,
+          {
+            camelCase: 1,
+            UPPERCASE: 2,
+            lowercase: 3,
+            snake_case: 4,
+            PascalCase: 5,
+            'Title Case': 6,
+            'dot.case': 7,
+            'param-case': 8,
+            'Sentence case': 9,
+            'path/case': 10,
+            'Header-Case': 11
+          },
+          '123',
+          undefined
+        ],
+        lv32: {
+          camelCase: 1,
+          UPPERCASE: 2,
+          lowercase: 3,
+          snake_case: 4,
+          PascalCase: 5,
+          'Title Case': 6,
+          'dot.case': 7,
+          'param-case': 8,
+          'Sentence case': 9,
+          'path/case': 10,
+          'Header-Case': 11
+        }
+      },
+      [
+        {
+          camelCase: 1,
+          UPPERCASE: 2,
+          lowercase: 3,
+          snake_case: 4,
+          PascalCase: 5,
+          'Title Case': 6,
+          'dot.case': 7,
+          'param-case': 8,
+          'Sentence case': 9,
+          'path/case': 10,
+          'Header-Case': 11
+        },
+        5,
+        '123',
+        { a: 1, b: 2 },
+        null
+      ],
+      null,
+      undefined
+    ]
+  }
+}
 ============================================
-{ CamelCase: 1,
+{
+  CamelCase: 1,
   Uppercase: 2,
   Lowercase: 3,
   SnakeCase: 4,
@@ -79,32 +181,45 @@ console.log(jsConvert.pascalKeys(obj, { recursive: true }));
   SentenceCase: 9,
   PathCase: 10,
   HeaderCase: 11,
-  Lv11:
-   { CamelCase: 1,
-     Uppercase: 2,
-     Lowercase: 3,
-     SnakeCase: 4,
-     PascalCase: 5,
-     TitleCase: 6,
-     DotCase: 7,
-     ParamCase: 8,
-     SentenceCase: 9,
-     PathCase: 10,
-     HeaderCase: 11 },
-  Lv12:
-   { CamelCase: 1,
-     Uppercase: 2,
-     Lowercase: 3,
-     SnakeCase: 4,
-     PascalCase: 5,
-     TitleCase: 6,
-     DotCase: 7,
-     ParamCase: 8,
-     SentenceCase: 9,
-     PathCase: 10,
-     HeaderCase: 11,
-     Lv21:
-      { CamelCase: 1,
+  Lv11: {
+    CamelCase: 1,
+    Uppercase: 2,
+    Lowercase: 3,
+    SnakeCase: 4,
+    PascalCase: 5,
+    TitleCase: 6,
+    DotCase: 7,
+    ParamCase: 8,
+    SentenceCase: 9,
+    PathCase: 10,
+    HeaderCase: 11
+  },
+  Lv12: {
+    CamelCase: 1,
+    Uppercase: 2,
+    Lowercase: 3,
+    SnakeCase: 4,
+    PascalCase: 5,
+    TitleCase: 6,
+    DotCase: 7,
+    ParamCase: 8,
+    SentenceCase: 9,
+    PathCase: 10,
+    HeaderCase: 11,
+    Lv21: {
+      CamelCase: 1,
+      Uppercase: 2,
+      Lowercase: 3,
+      SnakeCase: 4,
+      PascalCase: 5,
+      TitleCase: 6,
+      DotCase: 7,
+      ParamCase: 8,
+      SentenceCase: 9,
+      PathCase: 10,
+      HeaderCase: 11,
+      Lv31: {
+        CamelCase: 1,
         Uppercase: 2,
         Lowercase: 3,
         SnakeCase: 4,
@@ -114,11 +229,10 @@ console.log(jsConvert.pascalKeys(obj, { recursive: true }));
         ParamCase: 8,
         SentenceCase: 9,
         PathCase: 10,
-        HeaderCase: 11,
-        Lv31: [Object],
-        Lv32: [Object] },
-     Lv22:
-      { CamelCase: 1,
+        HeaderCase: 11
+      },
+      Lv32: {
+        CamelCase: 1,
         Uppercase: 2,
         Lowercase: 3,
         SnakeCase: 4,
@@ -128,5 +242,94 @@ console.log(jsConvert.pascalKeys(obj, { recursive: true }));
         ParamCase: 8,
         SentenceCase: 9,
         PathCase: 10,
-        HeaderCase: 11 } } }
+        HeaderCase: 11
+      }
+    },
+    Lv22: {
+      CamelCase: 1,
+      Uppercase: 2,
+      Lowercase: 3,
+      SnakeCase: 4,
+      PascalCase: 5,
+      TitleCase: 6,
+      DotCase: 7,
+      ParamCase: 8,
+      SentenceCase: 9,
+      PathCase: 10,
+      HeaderCase: 11
+    },
+    Lv23: [
+      {
+        camelCase: 1,
+        UPPERCASE: 2,
+        lowercase: 3,
+        snake_case: 4,
+        PascalCase: 5,
+        'Title Case': 6,
+        'dot.case': 7,
+        'param-case': 8,
+        'Sentence case': 9,
+        'path/case': 10,
+        'Header-Case': 11
+      },
+      {
+        lv31: [
+          1,
+          'A',
+          null,
+          {
+            camelCase: 1,
+            UPPERCASE: 2,
+            lowercase: 3,
+            snake_case: 4,
+            PascalCase: 5,
+            'Title Case': 6,
+            'dot.case': 7,
+            'param-case': 8,
+            'Sentence case': 9,
+            'path/case': 10,
+            'Header-Case': 11
+          },
+          '123',
+          undefined
+        ],
+        lv32: {
+          camelCase: 1,
+          UPPERCASE: 2,
+          lowercase: 3,
+          snake_case: 4,
+          PascalCase: 5,
+          'Title Case': 6,
+          'dot.case': 7,
+          'param-case': 8,
+          'Sentence case': 9,
+          'path/case': 10,
+          'Header-Case': 11
+        }
+      },
+      [
+        {
+          camelCase: 1,
+          UPPERCASE: 2,
+          lowercase: 3,
+          snake_case: 4,
+          PascalCase: 5,
+          'Title Case': 6,
+          'dot.case': 7,
+          'param-case': 8,
+          'Sentence case': 9,
+          'path/case': 10,
+          'Header-Case': 11
+        },
+        5,
+        '123',
+        { a: 1, b: 2 },
+        null
+      ],
+      null,
+      undefined
+    ]
+  }
+}
+
  */

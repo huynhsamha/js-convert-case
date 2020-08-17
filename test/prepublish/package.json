@@ -8,7 +8,7 @@
     "clean": "rm -rf *.tgz"
   },
   "dependencies": {
-    "js-convert-case": "file:js-convert-case-4.0.0.tgz"
+    "js-convert-case": "file:js-convert-case-4.1.0.tgz"
   },
   "devDependencies": {
     "@babel/core": "^7.10.1",

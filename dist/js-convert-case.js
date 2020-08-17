@@ -1,6 +1,8 @@
 var jsConvert = (function () {
 	'use strict';
 
+	var commonjsGlobal = typeof globalThis !== 'undefined' ? globalThis : typeof window !== 'undefined' ? window : typeof global !== 'undefined' ? global : typeof self !== 'undefined' ? self : {};
+
 	function unwrapExports (x) {
 		return x && x.__esModule && Object.prototype.hasOwnProperty.call(x, 'default') ? x['default'] : x;
 	}
@@ -151,9 +153,26 @@ var jsConvert = (function () {
 
 	var utils = createCommonjsModule(function (module, exports) {
 	Object.defineProperty(exports, "__esModule", { value: true });
-	exports.isValidObject = exports.DefaultOption = void 0;
+	exports.isValidObject = exports.isArrayObject = exports.validateOptions = exports.DefaultOption = void 0;
+	/**
+	 * Default options for convert function. This option is not recursive.
+	 */
 	exports.DefaultOption = {
 	    recursive: false,
+	    recursiveInArray: false
+	};
+	exports.validateOptions = function (opt) {
+	    if (opt === void 0) { opt = exports.DefaultOption; }
+	    if (opt.recursive == null) {
+	        opt = exports.DefaultOption;
+	    }
+	    else if (opt.recursiveInArray == null) {
+	        opt.recursiveInArray = false;
+	    }
+	    return opt;
+	};
+	exports.isArrayObject = function (obj) {
+	    return obj != null && Array.isArray(obj);
 	};
 	exports.isValidObject = function (obj) {
 	    return obj != null && typeof obj === 'object' && !Array.isArray(obj);
@@ -162,19 +181,30 @@ var jsConvert = (function () {
 
 	unwrapExports(utils);
 	var utils_1 = utils.isValidObject;
-	var utils_2 = utils.DefaultOption;
+	var utils_2 = utils.isArrayObject;
+	var utils_3 = utils.validateOptions;
+	var utils_4 = utils.DefaultOption;
 
 	var lowercaseKeysObject = createCommonjsModule(function (module, exports) {
+	var __spreadArrays = (commonjsGlobal && commonjsGlobal.__spreadArrays) || function () {
+	    for (var s = 0, i = 0, il = arguments.length; i < il; i++) s += arguments[i].length;
+	    for (var r = Array(s), k = 0, i = 0; i < il; i++)
+	        for (var a = arguments[i], j = 0, jl = a.length; j < jl; j++, k++)
+	            r[k] = a[j];
+	    return r;
+	};
 	Object.defineProperty(exports, "__esModule", { value: true });
 
 	/**
 	 * Convert string keys in an object to lowercase format.
-	 * If `obj` isn't a json object, `null` is returned.
+	 * @param obj: object to convert keys. If `obj` isn't a json object, `null` is returned.
+	 * @param opt: (optional) Options parameter, default is non-recursive.
 	 */
 	function lowerKeys(obj, opt) {
 	    if (opt === void 0) { opt = utils.DefaultOption; }
 	    if (!utils.isValidObject(obj))
 	        return null;
+	    opt = utils.validateOptions(opt);
 	    var res = {};
 	    Object.keys(obj).forEach(function (key) {
 	        var value = obj[key];
@@ -182,6 +212,22 @@ var jsConvert = (function () {
 	        if (opt.recursive) {
 	            if (utils.isValidObject(value)) {
 	                value = lowerKeys(value, opt);
+	            }
+	            else if (opt.recursiveInArray && utils.isArrayObject(value)) {
+	                value = __spreadArrays(value).map(function (v) {
+	                    var ret = v;
+	                    if (utils.isValidObject(v)) {
+	                        // object in array
+	                        ret = lowerKeys(v, opt);
+	                    }
+	                    else if (utils.isArrayObject(v)) {
+	                        // array in array
+	                        // workaround by using an object holding array value
+	                        var temp = lowerKeys({ key: v }, opt);
+	                        ret = temp.key;
+	                    }
+	                    return ret;
+	                });
 	            }
 	        }
 	        res[nkey] = value;
@@ -194,16 +240,25 @@ var jsConvert = (function () {
 	unwrapExports(lowercaseKeysObject);
 
 	var uppercaseKeysObject = createCommonjsModule(function (module, exports) {
+	var __spreadArrays = (commonjsGlobal && commonjsGlobal.__spreadArrays) || function () {
+	    for (var s = 0, i = 0, il = arguments.length; i < il; i++) s += arguments[i].length;
+	    for (var r = Array(s), k = 0, i = 0; i < il; i++)
+	        for (var a = arguments[i], j = 0, jl = a.length; j < jl; j++, k++)
+	            r[k] = a[j];
+	    return r;
+	};
 	Object.defineProperty(exports, "__esModule", { value: true });
 
 	/**
 	 * Convert string keys in an object to UPPERCASE format.
-	 * If `obj` isn't a json object, `null` is returned.
+	 * @param obj: object to convert keys. If `obj` isn't a json object, `null` is returned.
+	 * @param opt: (optional) Options parameter, default is non-recursive.
 	 */
 	function upperKeys(obj, opt) {
 	    if (opt === void 0) { opt = utils.DefaultOption; }
 	    if (!utils.isValidObject(obj))
 	        return null;
+	    opt = utils.validateOptions(opt);
 	    var res = {};
 	    Object.keys(obj).forEach(function (key) {
 	        var value = obj[key];
@@ -211,6 +266,22 @@ var jsConvert = (function () {
 	        if (opt.recursive) {
 	            if (utils.isValidObject(value)) {
 	                value = upperKeys(value, opt);
+	            }
+	            else if (opt.recursiveInArray && utils.isArrayObject(value)) {
+	                value = __spreadArrays(value).map(function (v) {
+	                    var ret = v;
+	                    if (utils.isValidObject(v)) {
+	                        // object in array
+	                        ret = upperKeys(v, opt);
+	                    }
+	                    else if (utils.isArrayObject(v)) {
+	                        // array in array
+	                        // workaround by using an object holding array value
+	                        var temp = upperKeys({ key: v }, opt);
+	                        ret = temp.key;
+	                    }
+	                    return ret;
+	                });
 	            }
 	        }
 	        res[nkey] = value;
@@ -223,17 +294,26 @@ var jsConvert = (function () {
 	unwrapExports(uppercaseKeysObject);
 
 	var camelcaseKeysObject = createCommonjsModule(function (module, exports) {
+	var __spreadArrays = (commonjsGlobal && commonjsGlobal.__spreadArrays) || function () {
+	    for (var s = 0, i = 0, il = arguments.length; i < il; i++) s += arguments[i].length;
+	    for (var r = Array(s), k = 0, i = 0; i < il; i++)
+	        for (var a = arguments[i], j = 0, jl = a.length; j < jl; j++, k++)
+	            r[k] = a[j];
+	    return r;
+	};
 	Object.defineProperty(exports, "__esModule", { value: true });
 
 
 	/**
 	 * Convert string keys in an object to camelCase format.
-	 * If `obj` isn't a json object, `null` is returned.
+	 * @param obj: object to convert keys. If `obj` isn't a json object, `null` is returned.
+	 * @param opt: (optional) Options parameter, default is non-recursive.
 	 */
 	function camelKeys(obj, opt) {
 	    if (opt === void 0) { opt = utils.DefaultOption; }
 	    if (!utils.isValidObject(obj))
 	        return null;
+	    opt = utils.validateOptions(opt);
 	    var res = {};
 	    Object.keys(obj).forEach(function (key) {
 	        var value = obj[key];
@@ -241,6 +321,22 @@ var jsConvert = (function () {
 	        if (opt.recursive) {
 	            if (utils.isValidObject(value)) {
 	                value = camelKeys(value, opt);
+	            }
+	            else if (opt.recursiveInArray && utils.isArrayObject(value)) {
+	                value = __spreadArrays(value).map(function (v) {
+	                    var ret = v;
+	                    if (utils.isValidObject(v)) {
+	                        // object in array
+	                        ret = camelKeys(v, opt);
+	                    }
+	                    else if (utils.isArrayObject(v)) {
+	                        // array in array
+	                        // workaround by using an object holding array value
+	                        var temp = camelKeys({ key: v }, opt);
+	                        ret = temp.key;
+	                    }
+	                    return ret;
+	                });
 	            }
 	        }
 	        res[nkey] = value;
@@ -253,17 +349,26 @@ var jsConvert = (function () {
 	unwrapExports(camelcaseKeysObject);
 
 	var snakecaseKeysObject = createCommonjsModule(function (module, exports) {
+	var __spreadArrays = (commonjsGlobal && commonjsGlobal.__spreadArrays) || function () {
+	    for (var s = 0, i = 0, il = arguments.length; i < il; i++) s += arguments[i].length;
+	    for (var r = Array(s), k = 0, i = 0; i < il; i++)
+	        for (var a = arguments[i], j = 0, jl = a.length; j < jl; j++, k++)
+	            r[k] = a[j];
+	    return r;
+	};
 	Object.defineProperty(exports, "__esModule", { value: true });
 
 
 	/**
 	 * Convert string keys in an object to snake_case format.
-	 * If `obj` isn't a json object, `null` is returned.
+	 * @param obj: object to convert keys. If `obj` isn't a json object, `null` is returned.
+	 * @param opt: (optional) Options parameter, default is non-recursive.
 	 */
 	function snakeKeys(obj, opt) {
 	    if (opt === void 0) { opt = utils.DefaultOption; }
 	    if (!utils.isValidObject(obj))
 	        return null;
+	    opt = utils.validateOptions(opt);
 	    var res = {};
 	    Object.keys(obj).forEach(function (key) {
 	        var value = obj[key];
@@ -271,6 +376,22 @@ var jsConvert = (function () {
 	        if (opt.recursive) {
 	            if (utils.isValidObject(value)) {
 	                value = snakeKeys(value, opt);
+	            }
+	            else if (opt.recursiveInArray && utils.isArrayObject(value)) {
+	                value = __spreadArrays(value).map(function (v) {
+	                    var ret = v;
+	                    if (utils.isValidObject(v)) {
+	                        // object in array
+	                        ret = snakeKeys(v, opt);
+	                    }
+	                    else if (utils.isArrayObject(v)) {
+	                        // array in array
+	                        // workaround by using an object holding array value
+	                        var temp = snakeKeys({ key: v }, opt);
+	                        ret = temp.key;
+	                    }
+	                    return ret;
+	                });
 	            }
 	        }
 	        res[nkey] = value;
@@ -283,17 +404,26 @@ var jsConvert = (function () {
 	unwrapExports(snakecaseKeysObject);
 
 	var pascalcaseKeysObject = createCommonjsModule(function (module, exports) {
+	var __spreadArrays = (commonjsGlobal && commonjsGlobal.__spreadArrays) || function () {
+	    for (var s = 0, i = 0, il = arguments.length; i < il; i++) s += arguments[i].length;
+	    for (var r = Array(s), k = 0, i = 0; i < il; i++)
+	        for (var a = arguments[i], j = 0, jl = a.length; j < jl; j++, k++)
+	            r[k] = a[j];
+	    return r;
+	};
 	Object.defineProperty(exports, "__esModule", { value: true });
 
 
 	/**
 	 * Convert string keys in an object to PascalCase format.
-	 * If `obj` isn't a json object, `null` is returned.
+	 * @param obj: object to convert keys. If `obj` isn't a json object, `null` is returned.
+	 * @param opt: (optional) Options parameter, default is non-recursive.
 	 */
 	function pascalKeys(obj, opt) {
 	    if (opt === void 0) { opt = utils.DefaultOption; }
 	    if (!utils.isValidObject(obj))
 	        return null;
+	    opt = utils.validateOptions(opt);
 	    var res = {};
 	    Object.keys(obj).forEach(function (key) {
 	        var value = obj[key];
@@ -301,6 +431,22 @@ var jsConvert = (function () {
 	        if (opt.recursive) {
 	            if (utils.isValidObject(value)) {
 	                value = pascalKeys(value, opt);
+	            }
+	            else if (opt.recursiveInArray && utils.isArrayObject(value)) {
+	                value = __spreadArrays(value).map(function (v) {
+	                    var ret = v;
+	                    if (utils.isValidObject(v)) {
+	                        // object in array
+	                        ret = pascalKeys(v, opt);
+	                    }
+	                    else if (utils.isArrayObject(v)) {
+	                        // array in array
+	                        // workaround by using an object holding array value
+	                        var temp = pascalKeys({ key: v }, opt);
+	                        ret = temp.key;
+	                    }
+	                    return ret;
+	                });
 	            }
 	        }
 	        res[nkey] = value;
@@ -365,7 +511,7 @@ var jsConvert = (function () {
 	    upperKeys: uppercaseKeysObject.default,
 	    camelKeys: camelcaseKeysObject.default,
 	    snakeKeys: snakecaseKeysObject.default,
-	    pascalKeys: pascalcaseKeysObject.default,
+	    pascalKeys: pascalcaseKeysObject.default
 	};
 	exports.default = jsConvert;
 	});

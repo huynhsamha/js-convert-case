@@ -161,24 +161,24 @@ You can see more examples in directory [`./test/browser`](./test/browser)
 
 #### Convert String
 
-* [`toCamelCase`](#tocamelcase)
-* [`toSnakeCase`](#tosnakecase)
-* [`toPascalCase`](#topascalcase)
-* [`toDotCase`](#todotcase)
-* [`toPathCase`](#topathcase)
-* [`toTextCase`](#totextcase)
-* [`toSentenceCase`](#tosentencecase)
-* [`toHeaderCase`](#toheadercase)
-* [`toLowerCase`](#tolowercase)
-* [`toUpperCase`](#touppercase)
+- [`toCamelCase`](#tocamelcase)
+- [`toSnakeCase`](#tosnakecase)
+- [`toPascalCase`](#topascalcase)
+- [`toDotCase`](#todotcase)
+- [`toPathCase`](#topathcase)
+- [`toTextCase`](#totextcase)
+- [`toSentenceCase`](#tosentencecase)
+- [`toHeaderCase`](#toheadercase)
+- [`toLowerCase`](#tolowercase)
+- [`toUpperCase`](#touppercase)
 
 #### Convert Keys of Object
 
-* [`lowerKeys`](#lowerkeys)
-* [`upperKeys`](#upperkeys)
-* [`camelKeys`](#camelkeys)
-* [`snakeKeys`](#snakekeys)
-* [`pascalKeys`](#pascalkeys)
+- [`lowerKeys`](#lowerkeys)
+- [`upperKeys`](#upperkeys)
+- [`camelKeys`](#camelkeys)
+- [`snakeKeys`](#snakekeys)
+- [`pascalKeys`](#pascalkeys)
 
 #### toCamelCase
 
@@ -263,15 +263,17 @@ console.log(jsConvert.toUpperCase('param-case')); // PARAM-CASE
 #### lowerKeys
 
 ```ts
-const lowerKeys(obj: any, { recursive: boolean = false }): object | null
+const lowerKeys(obj: any, { recursive: boolean = false, recursiveInArray: boolean = false }): object | null
 ```
 
-Return a new object which keys is *lowercase* format. Support lowerKeys **recursively**. Default is `false`.
+Return a new object which keys is _lowercase_ format. Support lowerKeys **recursively**. Default is `false`.
 
 ```js
 console.log(jsConvert.lowerKeys(obj));
 // or recursive
 console.log(jsConvert.lowerKeys(obj, { recursive: true }));
+// or recursive in sub-keys with value is an array
+console.log(jsConvert.lowerKeys(obj, { recursive: true, recursiveInArray: true }));
 
 /**
 { camelcase: 1,
@@ -298,15 +300,17 @@ console.log(jsConvert.lowerKeys([1, 2, 3]));
 #### upperKeys
 
 ```ts
-const upperKeys(obj: any, { recursive: boolean = false }): object | null
+const upperKeys(obj: any, { recursive: boolean = false, recursiveInArray: boolean = false }): object | null
 ```
 
-Return a new object which keys is *UPPERCASE* format. Support upperKeys **recursively**. Default is `false`
+Return a new object which keys is _UPPERCASE_ format. Support upperKeys **recursively**. Default is `false`
 
 ```js
 console.log(jsConvert.upperKeys(obj));
 // or recursive
 console.log(jsConvert.upperKeys(obj, { recursive: true }));
+// or recursive in sub-keys with value is an array
+console.log(jsConvert.upperKeys(obj, { recursive: true, recursiveInArray: true }));
 
 /**
 { CAMELCASE: 1,
@@ -333,15 +337,17 @@ console.log(jsConvert.upperKeys([1, 2, 3]));
 #### camelKeys
 
 ```ts
-const camelKeys(obj: any, { recursive: boolean = false }): object | null
+const camelKeys(obj: any, { recursive: boolean = false, recursiveInArray: boolean = false }): object | null
 ```
 
-Return a new object which keys is *camelCase* format. Support camelKeys **recursively**. Default is `false`.
+Return a new object which keys is _camelCase_ format. Support camelKeys **recursively**. Default is `false`.
 
 ```js
 console.log(jsConvert.camelKeys(obj));
 // or recursive
 console.log(jsConvert.camelKeys(obj, { recursive: true }));
+// or recursive in sub-keys with value is an array
+console.log(jsConvert.camelKeys(obj, { recursive: true, recursiveInArray: true }));
 
 /**
 { camelCase: 1,
@@ -368,15 +374,17 @@ console.log(jsConvert.camelKeys([1, 2, 3]));
 #### snakeKeys
 
 ```ts
-const snakeKeys(obj: any, { recursive: boolean = false }): object | null
+const snakeKeys(obj: any, { recursive: boolean = false, recursiveInArray: boolean = false }): object | null
 ```
 
-Return a new object which keys is *snake_case* format. Support snakeKeys **recursively**. Default is `false`.
+Return a new object which keys is _snake_case_ format. Support snakeKeys **recursively**. Default is `false`.
 
 ```js
 console.log(jsConvert.snakeKeys(obj));
 // or recursive
 console.log(jsConvert.snakeKeys(obj, { recursive: true }));
+// or recursive in sub-keys with value is an array
+console.log(jsConvert.snakeKeys(obj, { recursive: true, recursiveInArray: true }));
 
 /**
 { camel_case: 1,
@@ -403,15 +411,17 @@ console.log(jsConvert.snakeKeys([1, 2, 3]));
 #### pascalKeys
 
 ```ts
-const pascalKeys(obj: any, { recursive: boolean = false }): object | null
+const pascalKeys(obj: any, { recursive: boolean = false, recursiveInArray: boolean = false }): object | null
 ```
 
-Return a new object which keys is *PascalCase* format. Support pascalKeys **recursively**. Default is `false`.
+Return a new object which keys is _PascalCase_ format. Support pascalKeys **recursively**. Default is `false`.
 
 ```js
 console.log(jsConvert.pascalKeys(obj));
 // or recursive
 console.log(jsConvert.pascalKeys(obj, { recursive: true }));
+// or recursive in sub-keys with value is an array
+console.log(jsConvert.pascalKeys(obj, { recursive: true, recursiveInArray: true }));
 
 /**
 { CamelCase: 1,
@@ -434,7 +444,6 @@ console.log(jsConvert.pascalKeys(1));
 console.log(jsConvert.pascalKeys('abc'));
 console.log(jsConvert.pascalKeys([1, 2, 3]));
 ```
-
 
 ## Examples
 
@@ -490,7 +499,8 @@ console.log(jsConvert.toPascalCase(undefined)); // => ''
 ### Complicated values
 
 ```js
-const str = '!@#$  	-- Hello___world ..<>| \\ 123_ _456 &\l sn_ca - cmCa - PcCa - dot.ca - txt ca - Sen ca - Hd Ca %^$^%&';
+const str =
+	'!@#$  	-- Hello___world ..<>| \\ 123_ _456 &l sn_ca - cmCa - PcCa - dot.ca - txt ca - Sen ca - Hd Ca %^$^%&';
 console.log(jsConvert.toCamelCase(str)); // => 'helloWorld123456LSnCaCmCaPcCaDotCaTxtCaSenCaHdCa'
 console.log(jsConvert.toPascalCase(str)); // => 'HelloWorld123456LSnCaCmCaPcCaDotCaTxtCaSenCaHdCa'
 console.log(jsConvert.toSnakeCase(str)); // => 'hello_world_123_456_l_sn_ca_cm_ca_pc_ca_dot_ca_txt_ca_sen_ca_hd_ca'
@@ -507,27 +517,27 @@ console.log(jsConvert.toHeaderCase(str)); // => 'Hello World 123 456 L Sn Ca Cm 
 
 ```js
 const core = {
-  camelCase: 1,
-  UPPERCASE: 2,
-  lowercase: 3,
-  snake_case: 4,
-  PascalCase: 5,
-  'Title Case': 6,
-  'dot.case': 7,
-  'param-case': 8,
-  'Sentence case': 9,
-  'path/case': 10,
-  'Header-Case': 11
+	camelCase: 1,
+	UPPERCASE: 2,
+	lowercase: 3,
+	snake_case: 4,
+	PascalCase: 5,
+	'Title Case': 6,
+	'dot.case': 7,
+	'param-case': 8,
+	'Sentence case': 9,
+	'path/case': 10,
+	'Header-Case': 11
 };
 
 const obj = {
-  ...core,
-  lv1: {
-    ...core,
-    lv2: {
-      ...core
-    }
-  }
+	...core,
+	lv1: {
+		...core,
+		lv2: {
+			...core
+		}
+	}
 };
 ```
 
@@ -542,43 +552,43 @@ Output
 
 ```json
 {
-  "CAMELCASE": 1,
-  "UPPERCASE": 2,
-  "LOWERCASE": 3,
-  "SNAKE_CASE": 4,
-  "PASCALCASE": 5,
-  "TITLE CASE": 6,
-  "DOT.CASE": 7,
-  "PARAM-CASE": 8,
-  "SENTENCE CASE": 9,
-  "PATH/CASE": 10,
-  "HEADER-CASE": 11,
-  "LV1": {
-    "CAMELCASE": 1,
-    "UPPERCASE": 2,
-    "LOWERCASE": 3,
-    "SNAKE_CASE": 4,
-    "PASCALCASE": 5,
-    "TITLE CASE": 6,
-    "DOT.CASE": 7,
-    "PARAM-CASE": 8,
-    "SENTENCE CASE": 9,
-    "PATH/CASE": 10,
-    "HEADER-CASE": 11,
-    "LV2": {
-      "CAMELCASE": 1,
-      "UPPERCASE": 2,
-      "LOWERCASE": 3,
-      "SNAKE_CASE": 4,
-      "PASCALCASE": 5,
-      "TITLE CASE": 6,
-      "DOT.CASE": 7,
-      "PARAM-CASE": 8,
-      "SENTENCE CASE": 9,
-      "PATH/CASE": 10,
-      "HEADER-CASE": 11
-    }
-  }
+	"CAMELCASE": 1,
+	"UPPERCASE": 2,
+	"LOWERCASE": 3,
+	"SNAKE_CASE": 4,
+	"PASCALCASE": 5,
+	"TITLE CASE": 6,
+	"DOT.CASE": 7,
+	"PARAM-CASE": 8,
+	"SENTENCE CASE": 9,
+	"PATH/CASE": 10,
+	"HEADER-CASE": 11,
+	"LV1": {
+		"CAMELCASE": 1,
+		"UPPERCASE": 2,
+		"LOWERCASE": 3,
+		"SNAKE_CASE": 4,
+		"PASCALCASE": 5,
+		"TITLE CASE": 6,
+		"DOT.CASE": 7,
+		"PARAM-CASE": 8,
+		"SENTENCE CASE": 9,
+		"PATH/CASE": 10,
+		"HEADER-CASE": 11,
+		"LV2": {
+			"CAMELCASE": 1,
+			"UPPERCASE": 2,
+			"LOWERCASE": 3,
+			"SNAKE_CASE": 4,
+			"PASCALCASE": 5,
+			"TITLE CASE": 6,
+			"DOT.CASE": 7,
+			"PARAM-CASE": 8,
+			"SENTENCE CASE": 9,
+			"PATH/CASE": 10,
+			"HEADER-CASE": 11
+		}
+	}
 }
 ```
 
@@ -593,47 +603,76 @@ Output
 
 ```json
 {
-  "CamelCase": 1,
-  "Uppercase": 2,
-  "Lowercase": 3,
-  "SnakeCase": 4,
-  "PascalCase": 5,
-  "TitleCase": 6,
-  "DotCase": 7,
-  "ParamCase": 8,
-  "SentenceCase": 9,
-  "PathCase": 10,
-  "HeaderCase": 11,
-  "Lv1": {
-    "CamelCase": 1,
-    "Uppercase": 2,
-    "Lowercase": 3,
-    "SnakeCase": 4,
-    "PascalCase": 5,
-    "TitleCase": 6,
-    "DotCase": 7,
-    "ParamCase": 8,
-    "SentenceCase": 9,
-    "PathCase": 10,
-    "HeaderCase": 11,
-    "Lv2": {
-      "CamelCase": 1,
-      "Uppercase": 2,
-      "Lowercase": 3,
-      "SnakeCase": 4,
-      "PascalCase": 5,
-      "TitleCase": 6,
-      "DotCase": 7,
-      "ParamCase": 8,
-      "SentenceCase": 9,
-      "PathCase": 10,
-      "HeaderCase": 11
-    }
-  }
+	"CamelCase": 1,
+	"Uppercase": 2,
+	"Lowercase": 3,
+	"SnakeCase": 4,
+	"PascalCase": 5,
+	"TitleCase": 6,
+	"DotCase": 7,
+	"ParamCase": 8,
+	"SentenceCase": 9,
+	"PathCase": 10,
+	"HeaderCase": 11,
+	"Lv1": {
+		"CamelCase": 1,
+		"Uppercase": 2,
+		"Lowercase": 3,
+		"SnakeCase": 4,
+		"PascalCase": 5,
+		"TitleCase": 6,
+		"DotCase": 7,
+		"ParamCase": 8,
+		"SentenceCase": 9,
+		"PathCase": 10,
+		"HeaderCase": 11,
+		"Lv2": {
+			"CamelCase": 1,
+			"Uppercase": 2,
+			"Lowercase": 3,
+			"SnakeCase": 4,
+			"PascalCase": 5,
+			"TitleCase": 6,
+			"DotCase": 7,
+			"ParamCase": 8,
+			"SentenceCase": 9,
+			"PathCase": 10,
+			"HeaderCase": 11
+		}
+	}
 }
 ```
 
-*Note: You can browse more examples at folder [`./test/example`](./test/example)*.
+**Example with `snakeKeys` use recursive in array-sub-keys**
+
+```js
+const obj = {
+	camelCase: 1,
+	PascalCase: {
+		camelCase: [1, 'a', null, { PascalCase: 1 }, undefined],
+		PascalCase: [{ PascalCase: [1] }, [1, { PascalCase: 2 }]],
+		snake_case: { camelCase: [{ PascalCase: 1 }] }
+	}
+};
+
+const res = jsConvert.snakeKeys(obj, { recursive: true, recursiveInArray: true });
+console.log(JSON.stringify(res));
+```
+
+Output
+
+```json
+{
+	"camel_case": 1,
+	"pascal_case": {
+		"camel_case": [1, "a", null, { "pascal_case": 1 }, null],
+		"pascal_case": [{ "pascal_case": [1] }, [1, { "pascal_case": 2 }]],
+		"snake_case": { "camel_case": [{ "pascal_case": 1 }] }
+	}
+}
+```
+
+_Note: You can browse more examples at folder [`./test/example`](./test/example)_.
 
 ## Dependencies
 
@@ -643,27 +682,27 @@ No dependencies
 
 ### Quickstart
 
-+ Clone the repository and enter the project
+- Clone the repository and enter the project
 
 ```bash
 git clone https://github.com/huynhsamha/js-convert-case.git
 cd js-convert-case
 ```
 
-+ Install dependencies
+- Install dependencies
 
 ```bash
 yarn
 ```
 
-+ Lint and format source (directory `src`)
+- Lint and format source (directory `src`)
 
 ```bash
 yarn format # defined in package.json
 yarn lint   # defined in package.json
 ```
 
-+ Build package for Node
+- Build package for Node
 
 ```bash
 yarn dist:node  # defined in package.json
@@ -671,13 +710,13 @@ yarn dist:node  # defined in package.json
 
 Output directory is `dist` (defined in file `tsconfig.json`)
 
-+ Build package for Browser
+- Build package for Browser
 
 ```bash
 yarn dist:browser  # defined in package.json and rollup.config.js
 ```
 
-+ Build dist (both Node and Browser)
+- Build dist (both Node and Browser)
 
 ```bash
 yarn dist  # defined in package.json

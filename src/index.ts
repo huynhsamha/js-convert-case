@@ -37,7 +37,7 @@ const jsConvert = {
   upperKeys,
   camelKeys,
   snakeKeys,
-  pascalKeys,
+  pascalKeys
 };
 
 export {
@@ -55,7 +55,7 @@ export {
   upperKeys,
   camelKeys,
   snakeKeys,
-  pascalKeys,
+  pascalKeys
 };
 
 export default jsConvert;
