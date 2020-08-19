@@ -12,7 +12,8 @@
     "clean:node": "rm -rf lib",
     "clean:browser": "rm -rf dist",
     "dist:node": "yarn clean:node && yarn format && yarn lint && yarn build",
-    "dist:browser": "yarn dist:node && yarn clean:browser && yarn rollup"
+    "dist:browser": "yarn dist:node && yarn clean:browser && yarn rollup",
+    "build:release:binary": "./scripts/build_release_binary.sh $npm_package_version"
   },
   "devDependencies": {
     "babel-eslint": "^8.2.6",

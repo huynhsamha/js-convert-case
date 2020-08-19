@@ -722,6 +722,12 @@ yarn dist:browser  # defined in package.json and rollup.config.js
 yarn dist  # defined in package.json
 ```
 
+- Build release files
+
+```bash
+yarn build:release:binary
+```
+
 ### Testing
 
 In directory `test`, we can test the package in environments NodeJS, Browser, pre-published NPM package and the released package.
