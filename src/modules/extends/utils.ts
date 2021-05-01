@@ -5,10 +5,13 @@
  * @param recursiveInArray: recursive if ${recursive} is `true` and value of subkey
  * is an array. All elements in array (value of subkey) will be recursive.
  * If ${recursiveInArray} is not set, default is `false`.
+ * @param keepTypesOnRecursion: list of types will be keep value on recursion.
+ * Example Date, RegExp. These types will be right-hand side of 'instanceof' operator.
  */
 export interface Options {
   recursive: boolean;
   recursiveInArray?: boolean;
+  keepTypesOnRecursion?: any[];
 }
 
 /**
@@ -16,7 +19,8 @@ export interface Options {
  */
 export const DefaultOption: Options = {
   recursive: false,
-  recursiveInArray: false
+  recursiveInArray: false,
+  keepTypesOnRecursion: []
 };
 
 export const validateOptions = (opt: Options = DefaultOption): Options => {
@@ -28,10 +32,8 @@ export const validateOptions = (opt: Options = DefaultOption): Options => {
   return opt;
 };
 
-export const isArrayObject = (obj: any): boolean => {
-  return obj != null && Array.isArray(obj);
-};
+export const isArrayObject = (obj: any): boolean => obj != null && Array.isArray(obj);
 
-export const isValidObject = (obj: any): boolean => {
-  return obj != null && typeof obj === 'object' && !Array.isArray(obj);
-};
+export const isValidObject = (obj: any): boolean => obj != null && typeof obj === 'object' && !Array.isArray(obj);
+
+export const belongToTypes = (obj: any, types?: any[]): boolean => (types || []).some((Type) => obj instanceof Type);

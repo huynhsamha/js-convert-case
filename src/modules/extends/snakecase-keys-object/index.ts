@@ -1,4 +1,4 @@
-import { isValidObject, Options, DefaultOption, isArrayObject, validateOptions } from '../utils';
+import { isValidObject, Options, DefaultOption, isArrayObject, validateOptions, belongToTypes } from '../utils';
 import toSnakeCase from '../../js-snakecase';
 
 /**
@@ -16,13 +16,17 @@ export default function snakeKeys(obj: any, opt: Options = DefaultOption): objec
     const nkey = toSnakeCase(key);
     if (opt.recursive) {
       if (isValidObject(value)) {
-        value = snakeKeys(value, opt);
+        if (!belongToTypes(value, opt.keepTypesOnRecursion)) {
+          value = snakeKeys(value, opt);
+        }
       } else if (opt.recursiveInArray && isArrayObject(value)) {
         value = [...value].map((v) => {
           let ret = v;
           if (isValidObject(v)) {
             // object in array
-            ret = snakeKeys(v, opt);
+            if (!belongToTypes(ret, opt.keepTypesOnRecursion)) {
+              ret = snakeKeys(v, opt);
+            }
           } else if (isArrayObject(v)) {
             // array in array
             // workaround by using an object holding array value

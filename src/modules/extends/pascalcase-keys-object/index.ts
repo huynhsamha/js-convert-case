@@ -1,4 +1,4 @@
-import { isValidObject, Options, DefaultOption, isArrayObject, validateOptions } from '../utils';
+import { isValidObject, Options, DefaultOption, isArrayObject, validateOptions, belongToTypes } from '../utils';
 import toPascalCase from '../../js-pascalcase';
 
 /**
@@ -16,13 +16,17 @@ export default function pascalKeys(obj: any, opt: Options = DefaultOption): obje
     const nkey = toPascalCase(key);
     if (opt.recursive) {
       if (isValidObject(value)) {
-        value = pascalKeys(value, opt);
+        if (!belongToTypes(value, opt.keepTypesOnRecursion)) {
+          value = pascalKeys(value, opt);
+        }
       } else if (opt.recursiveInArray && isArrayObject(value)) {
         value = [...value].map((v) => {
           let ret = v;
           if (isValidObject(v)) {
             // object in array
-            ret = pascalKeys(v, opt);
+            if (!belongToTypes(ret, opt.keepTypesOnRecursion)) {
+              ret = pascalKeys(v, opt);
+            }
           } else if (isArrayObject(v)) {
             // array in array
             // workaround by using an object holding array value

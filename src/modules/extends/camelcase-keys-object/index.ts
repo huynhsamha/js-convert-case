@@ -1,4 +1,4 @@
-import { isValidObject, Options, DefaultOption, isArrayObject, validateOptions } from '../utils';
+import { isValidObject, Options, DefaultOption, isArrayObject, validateOptions, belongToTypes } from '../utils';
 import toCamelCase from '../../js-camelcase';
 
 /**
@@ -16,13 +16,17 @@ export default function camelKeys(obj: any, opt: Options = DefaultOption): objec
     const nkey = toCamelCase(key);
     if (opt.recursive) {
       if (isValidObject(value)) {
-        value = camelKeys(value, opt);
+        if (!belongToTypes(value, opt.keepTypesOnRecursion)) {
+          value = camelKeys(value, opt);
+        }
       } else if (opt.recursiveInArray && isArrayObject(value)) {
         value = [...value].map((v) => {
           let ret = v;
           if (isValidObject(v)) {
             // object in array
-            ret = camelKeys(v, opt);
+            if (!belongToTypes(ret, opt.keepTypesOnRecursion)) {
+              ret = camelKeys(v, opt);
+            }
           } else if (isArrayObject(v)) {
             // array in array
             // workaround by using an object holding array value

@@ -1,4 +1,4 @@
-import { isValidObject, Options, DefaultOption, isArrayObject, validateOptions } from '../utils';
+import { isValidObject, Options, DefaultOption, isArrayObject, validateOptions, belongToTypes } from '../utils';
 
 /**
  * Convert string keys in an object to lowercase format.
@@ -15,13 +15,17 @@ export default function lowerKeys(obj: any, opt: Options = DefaultOption): objec
     const nkey = key.toLowerCase();
     if (opt.recursive) {
       if (isValidObject(value)) {
-        value = lowerKeys(value, opt);
+        if (!belongToTypes(value, opt.keepTypesOnRecursion)) {
+          value = lowerKeys(value, opt);
+        }
       } else if (opt.recursiveInArray && isArrayObject(value)) {
         value = [...value].map((v) => {
           let ret = v;
           if (isValidObject(v)) {
             // object in array
-            ret = lowerKeys(v, opt);
+            if (!belongToTypes(ret, opt.keepTypesOnRecursion)) {
+              ret = lowerKeys(v, opt);
+            }
           } else if (isArrayObject(v)) {
             // array in array
             // workaround by using an object holding array value

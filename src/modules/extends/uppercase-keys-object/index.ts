@@ -1,4 +1,4 @@
-import { isValidObject, Options, DefaultOption, isArrayObject, validateOptions } from '../utils';
+import { isValidObject, Options, DefaultOption, isArrayObject, validateOptions, belongToTypes } from '../utils';
 
 /**
  * Convert string keys in an object to UPPERCASE format.
@@ -15,13 +15,17 @@ export default function upperKeys(obj: any, opt: Options = DefaultOption): objec
     const nkey = key.toUpperCase();
     if (opt.recursive) {
       if (isValidObject(value)) {
-        value = upperKeys(value, opt);
+        if (!belongToTypes(value, opt.keepTypesOnRecursion)) {
+          value = upperKeys(value, opt);
+        }
       } else if (opt.recursiveInArray && isArrayObject(value)) {
         value = [...value].map((v) => {
           let ret = v;
           if (isValidObject(v)) {
             // object in array
-            ret = upperKeys(v, opt);
+            if (!belongToTypes(ret, opt.keepTypesOnRecursion)) {
+              ret = upperKeys(v, opt);
+            }
           } else if (isArrayObject(v)) {
             // array in array
             // workaround by using an object holding array value
