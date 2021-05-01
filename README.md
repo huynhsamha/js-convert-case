@@ -263,7 +263,11 @@ console.log(jsConvert.toUpperCase('param-case')); // PARAM-CASE
 #### lowerKeys
 
 ```ts
-const lowerKeys(obj: any, { recursive: boolean = false, recursiveInArray: boolean = false }): object | null
+const lowerKeys(obj: any, { 
+	recursive: boolean = false, 
+	recursiveInArray: boolean = false, 
+	keepTypesOnRecursion: any[] = [] // example: Date
+}): object | null
 ```
 
 Return a new object which keys is _lowercase_ format. Support lowerKeys **recursively**. Default is `false`.
@@ -300,7 +304,11 @@ console.log(jsConvert.lowerKeys([1, 2, 3]));
 #### upperKeys
 
 ```ts
-const upperKeys(obj: any, { recursive: boolean = false, recursiveInArray: boolean = false }): object | null
+const upperKeys(obj: any, { 
+	recursive: boolean = false, 
+	recursiveInArray: boolean = false, 
+	keepTypesOnRecursion: any[] = [] // example: Date 
+}): object | null
 ```
 
 Return a new object which keys is _UPPERCASE_ format. Support upperKeys **recursively**. Default is `false`
@@ -337,7 +345,11 @@ console.log(jsConvert.upperKeys([1, 2, 3]));
 #### camelKeys
 
 ```ts
-const camelKeys(obj: any, { recursive: boolean = false, recursiveInArray: boolean = false }): object | null
+const camelKeys(obj: any, { 
+	recursive: boolean = false, 
+	recursiveInArray: boolean = false, 
+	keepTypesOnRecursion: any[] = [] // example: Date 
+}): object | null
 ```
 
 Return a new object which keys is _camelCase_ format. Support camelKeys **recursively**. Default is `false`.
@@ -374,7 +386,11 @@ console.log(jsConvert.camelKeys([1, 2, 3]));
 #### snakeKeys
 
 ```ts
-const snakeKeys(obj: any, { recursive: boolean = false, recursiveInArray: boolean = false }): object | null
+const snakeKeys(obj: any, { 
+	recursive: boolean = false, 
+	recursiveInArray: boolean = false, 
+	keepTypesOnRecursion: any[] = [] // example: Date 
+}): object | null
 ```
 
 Return a new object which keys is _snake_case_ format. Support snakeKeys **recursively**. Default is `false`.
@@ -411,7 +427,11 @@ console.log(jsConvert.snakeKeys([1, 2, 3]));
 #### pascalKeys
 
 ```ts
-const pascalKeys(obj: any, { recursive: boolean = false, recursiveInArray: boolean = false }): object | null
+const pascalKeys(obj: any, { 
+	recursive: boolean = false, 
+	recursiveInArray: boolean = false, 
+	keepTypesOnRecursion: any[] = [] // example: Date 
+}): object | null
 ```
 
 Return a new object which keys is _PascalCase_ format. Support pascalKeys **recursively**. Default is `false`.
