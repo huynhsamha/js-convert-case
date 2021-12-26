@@ -1,7 +1,7 @@
 {
   "name": "js-convert-case",
-  "version": "4.1.2",
-  "description": "JavaScript Convert String and Keys of Object between cases (camelCase, snake_case, PascalCase, dot.case, path/case, text case, Sentence case, Header Case, UPPERCASE, lowercase). Use for both Node.JS and Browser",
+  "version": "4.2.0",
+  "description": "JavaScript Convert String and Keys of Object between cases (camelCase, snake_case, PascalCase, dot.case, path/case, text case, Sentence case, Header Case, UPPERCASE, lowercase, kebab-case). Use for both Node.JS and Browser",
   "scripts": {
     "build": "tsc",
     "format": "prettier --write \"src/**/*.ts\"",
@@ -66,10 +66,12 @@
     "js-sentencecase",
     "js-snakecase",
     "js-textcase",
+    "js-kebabcase",
     "lowercase-keys-object",
     "uppercase-keys-object",
     "snakecase-keys-object",
     "camelcase-keys-object",
-    "pascalcase-keys-object"
+    "pascalcase-keys-object",
+    "kebabcase-keys-object"
   ]
 }

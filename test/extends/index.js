@@ -11,6 +11,7 @@ console.log(jsConvert.snakeKeys(undefined));
 console.log(jsConvert.snakeKeys(null));
 console.log(jsConvert.pascalKeys(undefined));
 console.log(jsConvert.pascalKeys(null));
+console.log(jsConvert.kebabKeys(null));
 
 // invalid json object, output is `null`
 console.log(jsConvert.lowerKeys(1));
@@ -28,6 +29,9 @@ console.log(jsConvert.snakeKeys([1, 2, 3]));
 console.log(jsConvert.pascalKeys(1));
 console.log(jsConvert.pascalKeys('abc'));
 console.log(jsConvert.pascalKeys([1, 2, 3]));
+console.log(jsConvert.kebabKeys(1));
+console.log(jsConvert.kebabKeys('abc'));
+console.log(jsConvert.kebabKeys([1, 2, 3]));
 
 // Object convert case
 const obj = {
@@ -49,6 +53,7 @@ console.log(jsConvert.upperKeys(obj));
 console.log(jsConvert.camelKeys(obj));
 console.log(jsConvert.snakeKeys(obj));
 console.log(jsConvert.pascalKeys(obj));
+console.log(jsConvert.kebabKeys(obj));
 
 /**
 { camelcase: 1,
@@ -110,4 +115,16 @@ console.log(jsConvert.pascalKeys(obj));
   SentenceCase: 9,
   PathCase: 10,
   HeaderCase: 11 }
+
+{ 'camel-case': 1,
+  uppercase: 2,
+  lowercase: 3,
+  'snake-case': 4,
+  'pascal-case': 5,
+  'title-case': 6,
+  'dot-case': 7,
+  'param-case': 8,
+  'sentence-case': 9,
+  'path-case': 10,
+  'header-case': 11 }
  */

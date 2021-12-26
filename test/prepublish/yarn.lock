@@ -922,9 +922,9 @@ is-symbol@^1.0.2:
   dependencies:
     has-symbols "^1.0.1"
 
-"js-convert-case@file:js-convert-case-4.1.0.tgz":
-  version "4.1.0"
-  resolved "file:js-convert-case-4.1.0.tgz#fca0d6ff202dfee487e531d986a10f97525d09c4"
+"js-convert-case@file:../../releases/js-convert-case-4.2.0.tar.gz":
+  version "0.0.0"
+  resolved "file:../../releases/js-convert-case-4.2.0.tar.gz#27104cf639a5de8e014232e0ab200890cc9e538a"
 
 "js-tokens@^3.0.0 || ^4.0.0", js-tokens@^4.0.0:
   version "4.0.0"

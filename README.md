@@ -13,7 +13,7 @@
 
 ⛹️‍♂️ JavaScript Convert Cases Package 🏌️‍♀️ Use for both Node.JS and Browser 🎯🎯
 
-Convert String and Keys of Object between cases (camelCase, snake_case, PascalCase, dot.case, path/case, text case, Sentence case, Header Case, UPPERCASE, lowercase).
+Convert String and Keys of Object between cases (camelCase, snake_case, PascalCase, dot.case, path/case, text case, Sentence case, Header Case, UPPERCASE, lowercase, kebab-case).
 
 <!-- <br>
 <img src="https://github.com/huynhsamha/js-convert-case/raw/master/docs/img/banner.png" width="50%" justify="center">
@@ -80,6 +80,7 @@ console.log(jsConvert.toSentenceCase('param-case')); // Param case
 console.log(jsConvert.toHeaderCase('param-case')); // Param Case
 console.log(jsConvert.toLowerCase('param-case')); // param-case
 console.log(jsConvert.toUpperCase('param-case')); // PARAM-CASE
+console.log(jsConvert.toKebabCase('param-case')); // param-case
 
 // Convert Keys of Object
 const obj = {
@@ -101,6 +102,7 @@ console.log(jsConvert.upperKeys(obj));
 console.log(jsConvert.camelKeys(obj));
 console.log(jsConvert.snakeKeys(obj));
 console.log(jsConvert.pascalKeys(obj));
+console.log(jsConvert.kebabKeys(obj));
 ```
 
 ### Browser
@@ -123,6 +125,7 @@ After file `js-convert-case.min.js` is loaded, object `jsConvert` will be export
 	console.log(jsConvert.toHeaderCase('param-case')); // Param Case
 	console.log(jsConvert.toLowerCase('param-case')); // param-case
 	console.log(jsConvert.toUpperCase('param-case')); // PARAM-CASE
+	console.log(jsConvert.toKebabCase('param-case')); // param-case
 
 	// Convert Keys of Object case
 	const obj = {
@@ -144,6 +147,7 @@ After file `js-convert-case.min.js` is loaded, object `jsConvert` will be export
 	console.log(jsConvert.camelKeys(obj));
 	console.log(jsConvert.snakeKeys(obj));
 	console.log(jsConvert.pascalKeys(obj));
+	console.log(jsConvert.kebabKeys(obj));
 </script>
 ```
 
@@ -169,6 +173,7 @@ You can see more examples in directory [`./test/browser`](./test/browser)
 - [`toTextCase`](#totextcase)
 - [`toSentenceCase`](#tosentencecase)
 - [`toHeaderCase`](#toheadercase)
+- [`toKebabCase`](#tokebabcase)
 - [`toLowerCase`](#tolowercase)
 - [`toUpperCase`](#touppercase)
 
@@ -179,6 +184,7 @@ You can see more examples in directory [`./test/browser`](./test/browser)
 - [`camelKeys`](#camelkeys)
 - [`snakeKeys`](#snakekeys)
 - [`pascalKeys`](#pascalkeys)
+- [`kebabKeys`](#kebabkeys)
 
 #### toCamelCase
 
@@ -242,6 +248,14 @@ Return as a space separated string with the first character of every word upper 
 
 ```js
 console.log(jsConvert.toHeaderCase('param-case')); // Param Case
+```
+
+#### toKebabCase
+
+Return as a lower case, hyphen separated string.
+
+```js
+console.log(jsConvert.toKebabCase('Title Case')); // title-case
 ```
 
 #### toLowerCase
@@ -465,6 +479,47 @@ console.log(jsConvert.pascalKeys('abc'));
 console.log(jsConvert.pascalKeys([1, 2, 3]));
 ```
 
+#### kebabKeys
+
+```ts
+const kebabKeys(obj: any, { 
+	recursive: boolean = false, 
+	recursiveInArray: boolean = false, 
+	keepTypesOnRecursion: any[] = [] // example: Date 
+}): object | null
+```
+
+Return a new object which keys is _kebab-case_ format. Support kebabKeys **recursively**. Default is `false`.
+
+```js
+console.log(jsConvert.kebabKeys(obj));
+// or recursive
+console.log(jsConvert.kebabKeys(obj, { recursive: true }));
+// or recursive in sub-keys with value is an array
+console.log(jsConvert.kebabKeys(obj, { recursive: true, recursiveInArray: true }));
+
+/**
+{ 'camel-case': 1,
+  uppercase: 2,
+  lowercase: 3,
+  'snake-case': 4,
+  'pascal-case': 5,
+  'title-case': 6,
+  'dot-case': 7,
+  'param-case': 8,
+  'sentence-case': 9,
+  'path-case': 10,
+  'header-case': 11 }
+**/
+
+// All output are `null`
+console.log(jsConvert.kebabKeys(undefined));
+console.log(jsConvert.kebabKeys(null));
+console.log(jsConvert.kebabKeys(1));
+console.log(jsConvert.kebabKeys('abc'));
+console.log(jsConvert.kebabKeys([1, 2, 3]));
+```
+
 ## Examples
 
 ### Convert string between cases
@@ -506,6 +561,11 @@ console.log(jsConvert.toLowerCase('param-case')); // param-case
 console.log(jsConvert.toLowerCase('Title Case')); // title case
 console.log(jsConvert.toUpperCase('param-case')); // PARAM-CASE
 console.log(jsConvert.toUpperCase('Title Case')); // TITLE CASE
+
+console.log(jsConvert.toKebabCase('param-case')); // param-case
+console.log(jsConvert.toKebabCase('Title Case')); // title-case
+console.log(jsConvert.toKebabCase('param-case')); // PARAM-CASE
+console.log(jsConvert.toKebabCase('Title Case')); // TITLE-CASE
 ```
 
 ### Speical values
@@ -529,6 +589,7 @@ console.log(jsConvert.toPathCase(str)); // => 'hello/world/123/456/l/sn/ca/cm/ca
 console.log(jsConvert.toTextCase(str)); // => 'hello world 123 456 l sn ca cm ca pc ca dot ca txt ca sen ca hd ca'
 console.log(jsConvert.toSentenceCase(str)); // => 'Hello world 123 456 l sn ca cm ca pc ca dot ca txt ca sen ca hd ca'
 console.log(jsConvert.toHeaderCase(str)); // => 'Hello World 123 456 L Sn Ca Cm Ca Pc Ca Dot Ca Txt Ca Sen Ca Hd Ca'
+console.log(jsConvert.toKebabCase(str)); // => 'hello-world-123-456-l-sn-ca-cm-ca-pc-ca-dot-ca-txt-ca-sen-ca-hd-ca'
 ```
 
 ### Recursive convert in object

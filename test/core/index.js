@@ -37,11 +37,19 @@ console.log(jsConvert.toLowerCase('Title Case')); // title case
 console.log(jsConvert.toUpperCase('param-case')); // PARAM-CASE
 console.log(jsConvert.toUpperCase('Title Case')); // TITLE CASE
 
+console.log(jsConvert.toKebabCase('param-case')); // param-case
+console.log(jsConvert.toKebabCase('Title Case')); // title-case
+console.log(jsConvert.toKebabCase('param-case')); // PARAM-CASE
+console.log(jsConvert.toKebabCase('Title Case')); // TITLE-CASE
 
 // Specific values
 console.log(jsConvert.toCamelCase('')); // => ''
 console.log(jsConvert.toSnakeCase(null)); // => ''
 console.log(jsConvert.toPascalCase(undefined)); // => ''
+
+console.log(jsConvert.toKebabCase('')); // => ''
+console.log(jsConvert.toKebabCase(null)); // => ''
+console.log(jsConvert.toKebabCase(undefined)); // => ''
 
 // Complicated values
 const str = '!@#$  = Hello___world ..<>| \\ 123_ _456 & l sn_ca - cmCa - PcCa - dot.ca - txt ca - Sen ca - Hd Ca %^$^%&';
@@ -53,3 +61,4 @@ console.log(jsConvert.toPathCase(str)); // => 'hello/world/123/456/l/sn/ca/cm/ca
 console.log(jsConvert.toTextCase(str)); // => 'hello world 123 456 l sn ca cm ca pc ca dot ca txt ca sen ca hd ca'
 console.log(jsConvert.toSentenceCase(str)); // => 'Hello world 123 456 l sn ca cm ca pc ca dot ca txt ca sen ca hd ca'
 console.log(jsConvert.toHeaderCase(str)); // => 'Hello World 123 456 L Sn Ca Cm Ca Pc Ca Dot Ca Txt Ca Sen Ca Hd Ca'
+console.log(jsConvert.toKebabCase(str)); // => 'hello-world-123-456-l-sn-ca-cm-ca-pc-ca-dot-ca-txt-ca-sen-ca-hd-ca'
